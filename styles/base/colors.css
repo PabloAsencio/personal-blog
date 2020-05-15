@@ -1,3 +1,29 @@
-html {
-    --color-primary: red;
+body {
+    --color-primary: #05aff2;
+    --color-primary-light: #07c7f2;
+    --color-primary-dark: #035e73;
+
+    --color-secondary: #d98032;
+    --color-secondary-light: #e0a824;
+    --color-secondary-dark: #f0780e;
+
+    --color-tertiary: #f27457;
+    --color-tertiary-light: #f29d8a;
+    --color-tertiary-dark: #e35839;
+
+    --gray-primary: #6c828b;
+    --gray-primary-light: #708e90;
+    --gray-primary-dark: #333f42;
+
+    --gray-secondary: #858585;
+    --gray-secondary-light: #828282;
+
+    --gray-tertiary: #a4a4a4;
+
+    --on-color-primary: #000;
+    --on-color-primary-dark: #fff9ea;
+    --on-color-secondary: #020208;
+    --on-color-tertiary: #020208;
+
+    --white-primary: #e5f7ff;
 }
