@@ -9,6 +9,8 @@
     </head>
     <body>
         <!-- TODO: Replace lorem ipsum placeholders with meaningful text -->
+        <!-- TODO: Replace image placeholders with real images -->
+        <!-- TODO: Make images responsive -->
         <header>
             <p><a href="#main">Skip to main</a></p>
             <nav>
@@ -16,10 +18,16 @@
                     <li>
                         <a href="design-system/index.html">Design System</a>
                     </li>
+                    <!-- TODO: Create about and contact pages -->
                     <li><a href="about.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
+            <form>
+                <label for="search-box">Search: </label>
+                <input type="search" name="search" id="search-box" />
+                <input type="submit" value="Search" />
+            </form>
             <h1>Personal Blog Homepage</h1>
             <p>
                 Short website description. Lorem ipsum dolor sit amet,
@@ -44,12 +52,38 @@
         <main id="main">
             <h2>Main Content</h2>
             <article>
-                <h3>Latest blog post</h3>
+                <header>
+                    <p>
+                        Latest post
+                        <time datetime="2020-05-16">May 16, 2020</time>
+                    </p>
+                    <h3><a href="#">Blog post title</a></h3>
+                    <a href="#">
+                        <img
+                            src="https://via.placeholder.com/75x75?text=Author+Avatar"
+                            alt="Author avatar"
+                        />
+                        <p>Author Name</p>
+                    </a>
+                </header>
                 <figure>
                     <picture>
-                        <source />
-                        <source />
-                        <img src="#" alt="Something about the post" />
+                        <source
+                            srcset="
+                                https://via.placeholder.com/728x520?text=Latest+Post+Picture
+                            "
+                            media="(min-width: 768px)"
+                        />
+                        <source
+                            srcset="
+                                https://via.placeholder.com/320x260?text=Latest+Post+Picture
+                            "
+                            media="(min-width: 460px)"
+                        />
+                        <img
+                            src="https://via.placeholder.com/170x120?text=Latest+Post+Picture"
+                            alt="Something about the post"
+                        />
                     </picture>
                     <figcaption>A caption for the picture.</figcaption>
                 </figure>
@@ -83,11 +117,34 @@
                     dolore optio eum eligendi necessitatibus dolores temporibus
                     vel nesciunt quibusdam?
                 </p>
-                <p><a href="#">Keep reading</a></p>
+                <footer>
+                    <p><a href="#">Keep reading</a></p>
+                    <ul>
+                        <li><a href="#" rel="tag"></a>Tag 1</li>
+                        <li><a href="#" rel="tag"></a>Tag 2</li>
+                        <li><a href="#" rel="tag"></a>Tag 3</li>
+                    </ul>
+                </footer>
             </article>
             <article>
-                <h3>Post title</h3>
-                <img src="#" alt="Post thumbnail" />
+                <header>
+                    <p>
+                        Recent post
+                        <time datetime="2020-05-16">May 16, 2020</time>
+                    </p>
+                    <h3><a href="#">Post title</a></h3>
+                    <a href="#">
+                        <img
+                            src="https://via.placeholder.com/75x75?text=Author+Avatar"
+                            alt="Author avatar"
+                        />
+                        <p>Author Name</p>
+                    </a>
+                </header>
+                <img
+                    src="https://via.placeholder.com/150x150?text=Post+Thumbnail"
+                    alt="Post thumbnail"
+                />
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Ducimus excepturi deleniti aliquam a autem tenetur delectus
@@ -95,11 +152,34 @@
                     Laborum reiciendis labore reprehenderit inventore minus
                     fuga.
                 </p>
-                <p><a href="#">Keep reading</a></p>
+                <footer>
+                    <p><a href="#">Keep reading</a></p>
+                    <ul>
+                        <li><a href="#" rel="tag"></a>Tag 1</li>
+                        <li><a href="#" rel="tag"></a>Tag 2</li>
+                        <li><a href="#" rel="tag"></a>Tag 3</li>
+                    </ul>
+                </footer>
             </article>
             <article>
-                <h3>Post title</h3>
-                <img src="#" alt="Post thumbnail" />
+                <header>
+                    <p>
+                        Recent post
+                        <time datetime="2020-05-16">May 16, 2020</time>
+                    </p>
+                    <h3><a href="#">Post title</a></h3>
+                    <a href="#">
+                        <img
+                            src="https://via.placeholder.com/75x75?text=Author+Avatar"
+                            alt="Author avatar"
+                        />
+                        <p>Author Name</p>
+                    </a>
+                </header>
+                <img
+                    src="https://via.placeholder.com/150x150?text=Post+Thumbnail"
+                    alt="Post thumbnail"
+                />
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Ducimus excepturi deleniti aliquam a autem tenetur delectus
@@ -107,11 +187,34 @@
                     Laborum reiciendis labore reprehenderit inventore minus
                     fuga.
                 </p>
-                <p><a href="#">Keep reading</a></p>
+                <footer>
+                    <p><a href="#">Keep reading</a></p>
+                    <ul>
+                        <li><a href="#" rel="tag"></a>Tag 1</li>
+                        <li><a href="#" rel="tag"></a>Tag 2</li>
+                        <li><a href="#" rel="tag"></a>Tag 3</li>
+                    </ul>
+                </footer>
             </article>
             <article>
-                <h3>Post title</h3>
-                <img src="#" alt="Post thumbnail" />
+                <header>
+                    <p>
+                        Recent post
+                        <time datetime="2020-05-16">May 16, 2020</time>
+                    </p>
+                    <h3><a href="#">Post title</a></h3>
+                    <a href="#">
+                        <img
+                            src="https://via.placeholder.com/75x75?text=Author+Avatar"
+                            alt="Author avatar"
+                        />
+                        <p>Author Name</p>
+                    </a>
+                </header>
+                <img
+                    src="https://via.placeholder.com/150x150?text=Post+Thumbnail"
+                    alt="Post thumbnail"
+                />
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Ducimus excepturi deleniti aliquam a autem tenetur delectus
@@ -119,7 +222,14 @@
                     Laborum reiciendis labore reprehenderit inventore minus
                     fuga.
                 </p>
-                <p><a href="#">Keep reading</a></p>
+                <footer>
+                    <p><a href="#">Keep reading</a></p>
+                    <ul>
+                        <li><a href="#" rel="tag"></a>Tag 1</li>
+                        <li><a href="#" rel="tag"></a>Tag 2</li>
+                        <li><a href="#" rel="tag"></a>Tag 3</li>
+                    </ul>
+                </footer>
             </article>
         </main>
         <footer>
