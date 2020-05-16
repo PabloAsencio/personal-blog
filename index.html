@@ -8,13 +8,137 @@
         <link rel="stylesheet" href="styles/main.css" />
     </head>
     <body>
-        <h1>Personal Blog Homepage</h1>
-        <p><a href="posts/post01.html">Visit the first post</a></p>
-        <p><a href="posts/post02.html">Visit the second post</a></p>
-        <p>
-            <a href="design-system/index.html"
-                >View the design system for this site</a
-            >
-        </p>
+        <!-- TODO: Replace lorem ipsum placeholders with meaningful text -->
+        <header>
+            <p><a href="#main">Skip to main</a></p>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="design-system/index.html">Design System</a>
+                    </li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <h1>Personal Blog Homepage</h1>
+            <p>
+                Short website description. Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit. Eos repudiandae voluptate,
+                explicabo, repellendus beatae animi nisi molestiae, placeat quod
+                aliquid facere incidunt quis. Excepturi cum deleniti repudiandae
+                commodi eveniet doloribus?
+            </p>
+        </header>
+        <aside>
+            <h2>Don't miss a post!</h2>
+            <p>Sign up for our newsletter</p>
+            <!-- TODO: Change method to post and handle the data gracefully in a new url -->
+            <form action="index.html">
+                <label for="fullname">Name: </label>
+                <input type="text" name="fullname" id="fullname" />
+                <label for="email">Email: </label>
+                <input type="email" name="email" id="email" />
+                <input type="submit" value="Sign Up" />
+            </form>
+        </aside>
+        <main id="main">
+            <h2>Main Content</h2>
+            <article>
+                <h3>Latest blog post</h3>
+                <figure>
+                    <picture>
+                        <source />
+                        <source />
+                        <img src="#" alt="Something about the post" />
+                    </picture>
+                    <figcaption>A caption for the picture.</figcaption>
+                </figure>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Pariatur impedit assumenda eligendi, exercitationem nemo
+                    ipsa voluptatem error nulla, eius optio officiis aperiam
+                    ipsam mollitia quasi, reprehenderit aliquam dolorum tempore
+                    quisquam. Lorem ipsum dolor sit, amet consectetur
+                    adipisicing elit. Quibusdam sunt maxime beatae ducimus
+                    molestiae consectetur? Aperiam explicabo tempore adipisci
+                    omnis consequatur itaque quam pariatur at cum velit, nulla
+                    natus vitae. Lorem ipsum, dolor sit amet consectetur
+                    adipisicing elit. Repellat quo, maiores vero suscipit
+                    ratione quos, dolorem odit perspiciatis nihil voluptatum
+                    dolore optio eum eligendi necessitatibus dolores temporibus
+                    vel nesciunt quibusdam?
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Pariatur impedit assumenda eligendi, exercitationem nemo
+                    ipsa voluptatem error nulla, eius optio officiis aperiam
+                    ipsam mollitia quasi, reprehenderit aliquam dolorum tempore
+                    quisquam. Lorem ipsum dolor sit, amet consectetur
+                    adipisicing elit. Quibusdam sunt maxime beatae ducimus
+                    molestiae consectetur? Aperiam explicabo tempore adipisci
+                    omnis consequatur itaque quam pariatur at cum velit, nulla
+                    natus vitae. Lorem ipsum, dolor sit amet consectetur
+                    adipisicing elit. Repellat quo, maiores vero suscipit
+                    ratione quos, dolorem odit perspiciatis nihil voluptatum
+                    dolore optio eum eligendi necessitatibus dolores temporibus
+                    vel nesciunt quibusdam?
+                </p>
+                <p><a href="#">Keep reading</a></p>
+            </article>
+            <article>
+                <h3>Post title</h3>
+                <img src="#" alt="Post thumbnail" />
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Ducimus excepturi deleniti aliquam a autem tenetur delectus
+                    doloribus reprehenderit accusantium magni veniam, omnis et?
+                    Laborum reiciendis labore reprehenderit inventore minus
+                    fuga.
+                </p>
+                <p><a href="#">Keep reading</a></p>
+            </article>
+            <article>
+                <h3>Post title</h3>
+                <img src="#" alt="Post thumbnail" />
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Ducimus excepturi deleniti aliquam a autem tenetur delectus
+                    doloribus reprehenderit accusantium magni veniam, omnis et?
+                    Laborum reiciendis labore reprehenderit inventore minus
+                    fuga.
+                </p>
+                <p><a href="#">Keep reading</a></p>
+            </article>
+            <article>
+                <h3>Post title</h3>
+                <img src="#" alt="Post thumbnail" />
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Ducimus excepturi deleniti aliquam a autem tenetur delectus
+                    doloribus reprehenderit accusantium magni veniam, omnis et?
+                    Laborum reiciendis labore reprehenderit inventore minus
+                    fuga.
+                </p>
+                <p><a href="#">Keep reading</a></p>
+            </article>
+        </main>
+        <footer>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="design-system/index.html">Design System</a>
+                    </li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <p>Follow us on social media</p>
+            <ul>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">LinkedIn</a></li>
+            </ul>
+            <p><small>&copy; Pablo Asencio Sánchez 2020</small></p>
+        </footer>
     </body>
 </html>
