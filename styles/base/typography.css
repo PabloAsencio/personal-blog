@@ -4,6 +4,7 @@
 body {
     font-family: 'Montserrat', sans-serif;
     padding: 1.424rem 1rem 1.424rem 1.424rem;
+    color: var(--on-color-primary);
 }
 
 h1,
@@ -20,23 +21,29 @@ h1 {
     font-size: 2.027rem;
     line-height: 1.4798;
     margin: 0.7399em 0;
+    font-weight: 800;
+    text-transform: uppercase;
 }
 
 h2 {
-    font-size: 1.424rem;
-    line-height: 1.1852;
-    margin: 1.1852em 0;
-}
-
-h3 {
     font-size: 1.602rem;
     line-height: 1.8729;
     margin: 0.9365em 0;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+h3 {
+    font-size: 1.802rem;
+    line-height: 1.6648;
+    margin: 0.8324em 0;
+    font-weight: 600;
 }
 
 p {
     line-height: 1.5;
     margin: 0 0 1.5rem 0;
+    text-rendering: optimizeLegibility;
 }
 
 small {

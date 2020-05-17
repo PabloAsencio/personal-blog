@@ -59,22 +59,62 @@
                     reprehenderit, sequi assumenda? Nulla quisquam magnam ipsam
                     corporis eius minus beatae.
                 </p>
-                <h3>Card Header</h3>
-                <div class="card-header">
-                    <p class="card-metadata">
-                        Popular post
-                        <time datetime="2020-05-16">May 16, 2020</time>
-                    </p>
-                    <h3><a href="posts/post04.html">Post title</a></h3>
-                    <p class="author-name"><a href="#">Author Name</a></p>
-                    <p>
+                <h2>Cards</h2>
+                <article class="card">
+                    <header class="card__header">
+                        <div class="card__info">
+                            <p class="card__type">Popular post</p>
+                            <p>
+                                <time class="card__date" datetime="2020-05-16">
+                                    May 16, 2020
+                                </time>
+                            </p>
+                        </div>
+                        <div class="card__heading-wrapper">
+                            <img
+                                class="card__thumbnail"
+                                src="https://via.placeholder.com/150x150?text=Post+Thumbnail"
+                                alt="Post thumbnail"
+                            />
+                            <div class="card__heading">
+                                <h3 class="card__title">
+                                    <a href="posts/post04.html">Post title</a>
+                                </h3>
+                                <p class="card__author">
+                                    <a href="#">Author Name</a>
+                                </p>
+                            </div>
+                        </div>
+                    </header>
+                    <p class="card__text">
                         Lorem ipsum dolor sit, amet consectetur adipisicing
                         elit. Alias asperiores rem totam, ullam eveniet
                         molestias quisquam soluta. Amet accusantium
                         voluptatibus, placeat dicta asperiores dolor. Expedita
                         quibusdam mollitia voluptatem minus molestias!
                     </p>
-                </div>
+                    <footer>
+                        <p class="card__cta">
+                            <a href="posts/post04.html"
+                                >Keep reading
+                                <span class="screen-reader-only"
+                                    >the blog post 1</span
+                                ></a
+                            >
+                        </p>
+                        <ul class="card__tag-area">
+                            <li class="card__tag">
+                                <a href="#" rel="tag"></a>Tag 1
+                            </li>
+                            <li class="card__tag">
+                                <a href="#" rel="tag"></a>Tag 2
+                            </li>
+                            <li class="card__tag">
+                                <a href="#" rel="tag"></a>Tag 3
+                            </li>
+                        </ul>
+                    </footer>
+                </article>
             </section>
             <footer>
                 <nav>

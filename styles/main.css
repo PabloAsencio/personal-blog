@@ -9,6 +9,9 @@
 @import 'layout/header.css';
 @import 'layout/footer.css';
 
+/* Specific component styles */
+@import 'components/card.css';
+
 /* Specific page styles */
 @import 'pages/home.css';
 @import 'pages/post.css';

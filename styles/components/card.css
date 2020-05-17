@@ -1,0 +1,116 @@
+.card {
+    background-color: var(--white-primary);
+    box-shadow: 1rem 1.5rem 2rem var(--gray-primary-shadow);
+    border-radius: 0.214rem;
+    padding: 0 1rem 1.424rem 1.424rem;
+    transition: transform 0.3s;
+    margin-bottom: 3rem;
+}
+
+.card:hover {
+    transform: translateY(-1rem) scale(1.001);
+}
+
+/* Card Header */
+.card__header {
+    font-family: 'Eczar', serif;
+    position: relative;
+    bottom: 1.5rem;
+}
+
+.card__info {
+    position: relative;
+    bottom: -0.788rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card__type {
+    position: relative;
+    bottom: -1.5rem;
+    font-weight: 500;
+    color: var(--gray-primary-dark);
+}
+
+.card__date {
+    position: relative;
+    bottom: -1.5rem;
+    color: var(--gray-primary-light);
+}
+
+.card__heading-wrapper {
+    display: flex;
+    align-items: baseline;
+    margin-top: 0.712rem;
+}
+
+.card__thumbnail {
+    width: 4.5rem;
+    height: 4.5rem;
+    margin-top: 0.712rem;
+}
+
+.card__heading {
+    align-self: flex-start;
+    margin: -1.5rem 0 0 0.712rem;
+}
+
+.card__title {
+    transition: transform 0.3s;
+}
+/* TODO: Move all hover effects to the media queries */
+.card__title:hover {
+    text-decoration: underline;
+    transform: translateY(-0.1rem) scale(1.03);
+}
+
+.card__author {
+    position: relative;
+    bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-weight: 400;
+    transition: transform 0.3s;
+}
+
+.card__author:hover {
+    text-decoration: underline;
+    transform: translateY(-0.1rem) scale(1.03);
+}
+
+.card__text {
+    margin-top: -3rem;
+}
+
+.card__cta {
+    display: inline-block;
+    background-color: var(--color-secondary);
+    color: var(--on-color-secondary);
+    padding: 0.712rem 1.412rem;
+    border-radius: 10rem;
+    box-shadow: 0.1rem 0.1rem 0.1rem var(--gray-primary-shadow);
+    transition: transform 0.3s;
+}
+
+.card__cta:hover {
+    transform: translateY(-0.2rem) scale(1.03);
+}
+
+.card__tag-area {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.card__tag {
+    background-color: var(--color-secondary-light);
+    padding: 0.712rem 0.712rem;
+    margin-right: 0.3rem;
+    text-align: left;
+    border-radius: 10rem;
+    box-shadow: 0.1rem 0.1rem 0.1rem var(--gray-primary-shadow);
+    transition: transform 0.3s;
+}
+
+.card__tag:hover {
+    transform: translateY(-0.2rem) scale(1.03);
+}
