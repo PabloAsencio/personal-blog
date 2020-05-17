@@ -8,9 +8,92 @@
         <link rel="stylesheet" href="../styles/main.css" />
     </head>
     <body>
-        <h1>Design System</h1>
-        <p><a href="../index.html">Go to the homepage</a></p>
-        <p><a href="../posts/post01.html">Visit the first post</a></p>
-        <p><a href="../posts/post02.html">Visit the second post</a></p>
+        <header>
+            <p><a href="#main">Skip to main</a></p>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="../index.html">Home</a>
+                    </li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <form>
+                <label for="search-box">Search: </label>
+                <input type="search" name="search" id="search-box" />
+                <input type="submit" value="Search" />
+            </form>
+        </header>
+        <main id="main">
+            <header>
+                <h1>Design System</h1>
+            </header>
+            <section>
+                <h2>Typography</h2>
+                <h3>Headings</h3>
+                <ol>
+                    <li><h1>Heading 1</h1></li>
+                    <li><h2>Heading 2</h2></li>
+                    <li><h3>Heading 3</h3></li>
+                </ol>
+                <h3>Paragraph</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Odio quaerat modi delectus. Ipsam quos possimus maxime nam
+                    in sequi iure architecto ullam eos minus laboriosam unde,
+                    aspernatur a voluptatibus cum. Lorem ipsum dolor sit amet
+                    consectetur adipisicing elit. Id rerum magni accusamus
+                    reiciendis. Corporis ipsa dicta adipisci. Facilis autem
+                    perferendis consectetur, soluta numquam ullam laboriosam
+                    maiores quas exercitationem pariatur iure?
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Praesentium provident officia nisi consequuntur.
+                    Reprehenderit nulla velit sequi quis minima delectus rem
+                    nesciunt deserunt culpa eius aliquid, quasi accusantium,
+                    minus laboriosam? Lorem ipsum dolor sit amet consectetur,
+                    adipisicing elit. Maiores, vero ut laborum non facilis
+                    doloribus blanditiis doloremque pariatur nisi,
+                    reprehenderit, sequi assumenda? Nulla quisquam magnam ipsam
+                    corporis eius minus beatae.
+                </p>
+                <h3>Card Header</h3>
+                <div class="card-header">
+                    <p class="card-metadata">
+                        Popular post
+                        <time datetime="2020-05-16">May 16, 2020</time>
+                    </p>
+                    <h3><a href="posts/post04.html">Post title</a></h3>
+                    <p class="author-name"><a href="#">Author Name</a></p>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Alias asperiores rem totam, ullam eveniet
+                        molestias quisquam soluta. Amet accusantium
+                        voluptatibus, placeat dicta asperiores dolor. Expedita
+                        quibusdam mollitia voluptatem minus molestias!
+                    </p>
+                </div>
+            </section>
+            <footer>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="../index.html">Home</a>
+                        </li>
+                        <li><a href="../about.html">About</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <p>Follow us on social media</p>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                </ul>
+                <p><small>&copy; Pablo Asencio Sánchez 2020</small></p>
+            </footer>
+        </main>
     </body>
 </html>

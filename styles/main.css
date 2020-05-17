@@ -1,7 +1,7 @@
 /* Basic styles for the whole site */
+@import 'base/base.css';
 @import 'base/colors.css';
 @import 'base/typography.css';
-@import 'base/base.css';
 
 /* Main layout elements for the site */
 @import 'layout/grid.css';

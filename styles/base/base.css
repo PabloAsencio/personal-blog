@@ -1,0 +1,32 @@
+/* Browser reset */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-synthesis: none;
+    font-size: 100%;
+    font-weight: normal;
+    vertical-align: baseline;
+    box-sizing: inherit;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    box-sizing: border-box;
+    line-height: 1;
+}
+
+/* Root font size */
+html {
+    font-size: 87.5%; /* 14px: 14/16 = 0.875 */
+}

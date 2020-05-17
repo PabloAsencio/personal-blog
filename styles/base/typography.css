@@ -3,9 +3,44 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
+    padding: 1.424rem 1rem 1.424rem 1.424rem;
 }
 
-h1 {
+h1,
+h2,
+h3 {
     font-family: 'Eczar', serif;
-    color: var(--color-primary);
+}
+
+/* Typographic scale: 8:9 ratio
+   Calculated using https://modularscale.com and https://drewish.com/tools/vertical-rhythm/
+   to achieve vertical rhythm
+*/
+h1 {
+    font-size: 2.027rem;
+    line-height: 1.4798;
+    margin: 0.7399em 0;
+}
+
+h2 {
+    font-size: 1.424rem;
+    line-height: 1.1852;
+    margin: 1.1852em 0;
+}
+
+h3 {
+    font-size: 1.602rem;
+    line-height: 1.8729;
+    margin: 0.9365em 0;
+}
+
+p {
+    line-height: 1.5;
+    margin: 0 0 1.5rem 0;
+}
+
+small {
+    font-size: 0.79rem;
+    line-height: 1.8984;
+    margin: 1.8984em 0;
 }
