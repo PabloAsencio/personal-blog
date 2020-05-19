@@ -1,0 +1,119 @@
+.navigation__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 1.424rem 0;
+    background-color: var(--color-primary-dark);
+}
+
+/* TODO: Set margin-left to 1rem for desktop */
+.navigation__button--open {
+    font-size: 1.802rem;
+    background-color: transparent;
+    padding: 0.4rem 0.5rem 0.1rem 0.5rem;
+    margin: 0.712rem 0;
+}
+
+.navigation__slide-out {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: var(--color-primary-dark);
+    overflow-x: hidden;
+    transition: width 0.5s;
+    padding: 6rem 0;
+    visibility: hidden;
+}
+
+.navigation__search {
+    display: flex;
+    margin-right: 1rem;
+}
+
+.navigation__search-bar {
+    font-size: 1.424rem;
+    border-radius: 10rem;
+    padding: 0.356rem 1rem;
+    width: 15rem;
+    margin-right: -3rem;
+    background-color: var(--white-primary);
+    color: var(--on-color-primary);
+}
+
+.navigation__search-bar::placeholder {
+    color: var(--gray-primary-dark);
+}
+
+.navigation__button-search {
+    background-color: var(--color-secondary);
+    font-size: 1.424rem;
+    padding: 0.356rem 1rem;
+    border-radius: 0 10rem 10rem 0;
+    color: var(--on-color-secondary);
+}
+
+.navigation__item {
+    padding: 0.624rem 0.624rem 0.624rem 2.281rem;
+    font-size: 1.802rem;
+    color: var(--on-color-primary-dark);
+    display: block;
+}
+
+.navigation__button--open:focus,
+.navigation__search-bar:focus,
+.navigation__button-search:focus,
+.navigation__item:focus,
+.navigation__button--close:focus {
+    /* outline: 2px solid var(--color-secondary-light); */
+    border: 3px solid var(--color-secondary-light);
+    outline: none;
+}
+
+.navigation__button--open:focus,
+.navigation__button--close:focus {
+    border-radius: 50%;
+}
+
+.navigation__button--close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 1.802rem;
+    color: var(--on-color-primary-dark);
+    background-color: var(--color-primary-dark);
+    border: none;
+    margin: 0.712rem 0.712rem;
+    padding: 0.5rem 0.5rem 0.1rem 0.5rem;
+}
+
+.navigation__item:hover,
+.navigation__item:focus {
+    text-decoration: underline;
+}
+
+.visible {
+    visibility: visible;
+}
+
+.active {
+    width: 17.857rem;
+}
+
+.icon {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+}
+
+.navigation__icon-menu,
+.navigation__icon-cross {
+    width: 2.027rem;
+    height: 2.027rem;
+    color: var(--on-color-primary-dark);
+}

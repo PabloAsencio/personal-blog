@@ -8,22 +8,101 @@
         <link rel="stylesheet" href="../styles/main.css" />
     </head>
     <body>
-        <header>
-            <p><a href="#main">Skip to main</a></p>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="../index.html">Home</a>
-                    </li>
-                    <li><a href="../about.html">About</a></li>
-                    <li><a href="../contact.html">Contact</a></li>
-                </ul>
+        <header class="header">
+            <p>
+                <a href="#main" class="header__skip-link">
+                    Skip to Content (Press Enter)
+                </a>
+            </p>
+            <nav class="navigation__nav">
+                <div class="navigation__slide">
+                    <button
+                        type="button"
+                        class="navigation__button--open"
+                        aria-label="Open navigation menu"
+                        aria-controls="navigation-content"
+                        aria-expanded="false"
+                    >
+                        <svg
+                            class="icon navigation__icon-menu"
+                            aria-hidden="true"
+                            focusable="false"
+                        >
+                            <use
+                                xlink:href="../images/sprite.svg#icon-menu"
+                            ></use>
+                        </svg>
+                    </button>
+                    <div class="navigation__slide-out">
+                        <button
+                            class="navigation__button--close"
+                            aria-label="Close navigation menu"
+                        >
+                            <svg
+                                class="icon navigation__icon-cross"
+                                aria-hidden="true"
+                                focusable="false"
+                            >
+                                <use
+                                    xlink:href="../images/sprite.svg#icon-cross"
+                                ></use>
+                            </svg>
+                        </button>
+                        <div id="navigation-content">
+                            <ul>
+                                <li>
+                                    <a
+                                        href="../index.html"
+                                        class="navigation__item"
+                                        >Home</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="../about.html"
+                                        class="navigation__item"
+                                        >About</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        href="../contact.html"
+                                        class="navigation__item"
+                                        >Contact</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <form class="navigation__search">
+                    <label for="search-bar" class="screen-reader-only"
+                        >Search:
+                    </label>
+                    <input
+                        class="navigation__search-bar"
+                        type="search"
+                        name="search"
+                        id="search-bar"
+                        placeholder="Search"
+                    />
+                    <button
+                        type="submit"
+                        class="navigation__button-search"
+                        aria-label="Search"
+                    >
+                        <svg
+                            class="icon navigation__icon-search"
+                            aria-hidden="true"
+                            focusable="false"
+                        >
+                            <use
+                                xlink:href="../images/sprite.svg#icon-search"
+                            ></use>
+                        </svg>
+                    </button>
+                </form>
             </nav>
-            <form>
-                <label for="search-box">Search: </label>
-                <input type="search" name="search" id="search-box" />
-                <input type="submit" value="Search" />
-            </form>
         </header>
         <main id="main">
             <header>
@@ -104,13 +183,13 @@
                         </p>
                         <ul class="card__tag-area">
                             <li class="card__tag">
-                                <a href="#" rel="tag"></a>Tag 1
+                                <a href="#" rel="tag">Tag 1</a>
                             </li>
                             <li class="card__tag">
-                                <a href="#" rel="tag"></a>Tag 2
+                                <a href="#" rel="tag">Tag 2</a>
                             </li>
                             <li class="card__tag">
-                                <a href="#" rel="tag"></a>Tag 3
+                                <a href="#" rel="tag">Tag 3</a>
                             </li>
                         </ul>
                     </footer>
@@ -135,5 +214,66 @@
                 <p><small>&copy; Pablo Asencio Sánchez 2020</small></p>
             </footer>
         </main>
+        <script>
+            const openButton = document.querySelector(
+                '.navigation__button--open'
+            );
+            const slideOut = document.querySelector('.navigation__slide-out');
+            const closeButton = document.querySelector(
+                '.navigation__button--close'
+            );
+            const main = document.querySelector('main');
+            const firstFocusableElement = closeButton;
+            const links = slideOut.getElementsByTagName('a');
+            const lastFocusableElement = links[links.length - 1];
+
+            openButton.addEventListener('click', openNavigation);
+            closeButton.addEventListener('click', closeNavigation);
+            slideOut.addEventListener('keyup', closeNavigation);
+            firstFocusableElement.addEventListener(
+                'keydown',
+                moveFocusToBottom
+            );
+            lastFocusableElement.addEventListener('keydown', moveFocusToTop);
+
+            function openNavigation() {
+                slideOut.classList.add('visible', 'active');
+                setTimeout(function () {
+                    firstFocusableElement.focus();
+                }, 1);
+                main.setAttribute('aria-hidden', 'true');
+                openButton.setAttribute('aria-hidden', 'true');
+            }
+
+            function closeNavigation(e) {
+                if (e.type == 'keyup' && e.key !== 'Escape') {
+                    return;
+                }
+
+                slideOut.classList.remove('active');
+                main.removeAttribute('aria-hidden');
+                openButton.removeAttribute('aria-hidden');
+                setTimeout(function () {
+                    openButton.focus();
+                }, 1);
+                setTimeout(function () {
+                    slideOut.classList.remove('visible');
+                }, 501);
+            }
+
+            function moveFocusToTop(e) {
+                if (e.key === 'Tab' && !e.shiftKey) {
+                    e.preventDefault();
+                    firstFocusableElement.focus();
+                }
+            }
+
+            function moveFocusToBottom(e) {
+                if (e.key === 'Tab' && e.shiftKey) {
+                    e.preventDefault();
+                    lastFocusableElement.focus();
+                }
+            }
+        </script>
     </body>
 </html>
