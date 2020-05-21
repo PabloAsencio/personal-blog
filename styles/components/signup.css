@@ -1,0 +1,115 @@
+.signup {
+    margin: 1.424rem 1.424rem 1rem 1.424rem;
+    padding: 1.424rem;
+    border: 3px solid var(--on-color-primary);
+    border-radius: 0.214rem;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.signup__header {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.signup__heading {
+    text-align: center;
+}
+
+.signup__subheading {
+    position: relative;
+    bottom: 1.5rem;
+}
+
+.signup__form {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.signup__name,
+.signup__email {
+    display: flex;
+    flex-flow: column nowrap;
+    margin-bottom: 1.5rem;
+}
+
+.signup__label {
+    margin: 0 0 0.356rem 0.712rem;
+}
+
+.signup__error {
+    color: red;
+}
+
+.signup__field {
+    border: 1px solid var(--gray-secondary-light);
+    border-radius: 10rem;
+    line-height: 1.5;
+    padding: 0.356rem 0.712rem;
+}
+
+.signup__icon {
+    align-self: flex-end;
+    position: relative;
+    bottom: 1.702rem;
+    right: 1.802rem;
+}
+/* TODO: Replace green and red colors with some more appropriate variable */
+.signup__icon--valid {
+    color: green;
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+.signup__icon--invalid {
+    color: red;
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+.signup__button {
+    align-self: center;
+    background-color: var(--color-secondary);
+    color: var(--on-color-secondary);
+    padding: 0.712rem 1.412rem;
+    border-radius: 10rem;
+    box-shadow: 0.1rem 0.1rem 0.1rem var(--gray-primary-shadow);
+    transition: transform 0.3s;
+    -webkit-appearance: none; /* Necessary for styling to work on iOS */
+}
+
+.signup__button:hover {
+    transform: translateY(-0.2rem) scale(1.03);
+}
+
+.signup__field:focus,
+.signup__field:active,
+.signup__button:focus,
+.signup__buton:active {
+    outline: none;
+    border: 3px solid var(--color-secondary-light);
+}
+
+.signup__field:not(:placeholder-shown):invalid,
+.signup__field:not(:placeholder-shown):focus:invalid {
+    border: 3px solid var(--color-tertiary-light);
+}
+
+.signup__field:focus:valid {
+    border: 3px solid green;
+}
+
+.signup__field:not(:placeholder-shown):invalid
+    + .signup__icon
+    .signup__icon--invalid,
+.signup__field:not(:placeholder-shown):focus:invalid
+    + .signup__icon
+    .signup__icon--invalid,
+.signup__field:valid + .signup__icon .signup__icon--valid {
+    visibility: visible;
+}

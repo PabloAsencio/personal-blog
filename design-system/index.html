@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+o<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
@@ -202,6 +202,108 @@
                     </footer>
                 </article>
             </section>
+            <section>
+                <h2>Sign-up form</h2>
+                <aside class="signup">
+                    <div class="signup__header">
+                        <h2 class="signup__heading">Don't miss a post!</h2>
+                        <p class="signup__subheading">
+                            Sign up for our newsletter
+                        </p>
+                    </div>
+
+                    <!-- TODO: Change method to post and handle the data gracefully in a new url -->
+                    <form action="index.html" class="signup__form">
+                        <div class="signup__name">
+                            <label class="signup__label" for="name"
+                                >Name:
+                                <span
+                                    class="signup__error"
+                                    aria-live="assertive"
+                                    id="name-error"
+                                ></span>
+                            </label>
+                            <input
+                                class="signup__field"
+                                type="text"
+                                name="name"
+                                id="name"
+                                placeholder="Name"
+                                autocomplete="name"
+                                aria-invalid="false"
+                                aria-required="true"
+                                required
+                            />
+                            <div class="signup__icon">
+                                <svg
+                                    class="icon signup__icon--valid"
+                                    aria-hidden="true"
+                                    focusable="false"
+                                >
+                                    <use
+                                        xlink:href="../images/sprite.svg#icon-checkmark"
+                                    ></use>
+                                </svg>
+                                <svg
+                                    class="icon signup__icon--invalid"
+                                    aria-hidden="true"
+                                    focusable="false"
+                                >
+                                    <use
+                                        xlink:href="../images/sprite.svg#icon-cross"
+                                    ></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="signup__email">
+                            <label class="signup__label" for="email"
+                                >Email:
+                                <span
+                                    class="signup__error"
+                                    aria-live="assertive"
+                                    id="email-error"
+                                ></span>
+                            </label>
+                            <input
+                                class="signup__field"
+                                type="email"
+                                name="email"
+                                id="email"
+                                placeholder="Email"
+                                autocomplete="email"
+                                aria-invalid="false"
+                                aria-required="true"
+                                required
+                            />
+                            <div class="signup__icon">
+                                <svg
+                                    class="icon signup__icon--valid"
+                                    aria-hidden="true"
+                                    focusable="false"
+                                >
+                                    <use
+                                        xlink:href="../images/sprite.svg#icon-checkmark"
+                                    ></use>
+                                </svg>
+                                <svg
+                                    class="icon signup__icon--invalid"
+                                    aria-hidden="true"
+                                    focusable="false"
+                                >
+                                    <use
+                                        xlink:href="../images/sprite.svg#icon-cross"
+                                    ></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <input
+                            class="signup__button"
+                            type="submit"
+                            value="Sign Up!"
+                        />
+                    </form>
+                </aside>
+            </section>
             <footer class="footer">
                 <nav class="footer__navigation">
                     <ul class="footer__list">
@@ -364,6 +466,54 @@
                     lastFocusableElement.focus();
                 }
             }
+
+            const nameField = document.getElementById('name');
+            const emailField = document.getElementById('email');
+            const nameError = document.getElementById('name-error');
+            const emailError = document.getElementById('email-error');
+
+            nameField.addEventListener('blur', () => {
+                if (nameField.checkValidity()) {
+                    nameField.setAttribute('aria-invalid', 'false');
+                    nameError.innerHTML = '';
+                } else {
+                    nameField.setAttribute('aria-invalid', 'true');
+                    nameField.nextElementSibling.querySelector(
+                        '.signup__icon--invalid'
+                    ).style.visibility = 'visible';
+                    nameError.innerHTML = 'Please enter your name';
+                }
+            });
+
+            nameField.addEventListener('focus', () => {
+                nameField.nextElementSibling.querySelector(
+                    '.signup__icon--invalid'
+                ).style.visibility = 'hidden';
+            });
+
+            emailField.addEventListener('blur', () => {
+                if (emailField.checkValidity()) {
+                    emailField.setAttribute('aria-invalid', 'false');
+                    emailError.innerHTML = '';
+                } else {
+                    emailField.setAttribute('aria-invalid', 'true');
+                    emailField.nextElementSibling.querySelector(
+                        '.signup__icon--invalid'
+                    ).style.visibility = 'visible';
+                    if (emailField.value.length === 0) {
+                        emailError.innerHTML = 'Please enter an email address';
+                    } else {
+                        emailError.innerHTML =
+                            'Please enter a valid email address';
+                    }
+                }
+            });
+
+            emailField.addEventListener('focus', () => {
+                emailField.nextElementSibling.querySelector(
+                    '.signup__icon--invalid'
+                ).style.visibility = 'hidden';
+            });
         </script>
     </body>
 </html>
