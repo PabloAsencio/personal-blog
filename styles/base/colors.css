@@ -1,11 +1,11 @@
 body {
-    --color-primary: rgb(5, 175, 242);
-    --color-primary-light: rgb(7, 199, 242);
-    --color-primary-dark: rgb(3, 94, 114);
+    --color-primary: rgb(167, 219, 216);
+    --color-primary-light: rgb(167, 219, 216);
+    --color-primary-dark: rgb(105, 210, 231);
 
-    --color-secondary: #d98032;
+    --color-secondary: #f38630;
     --color-secondary-light: #e0a824;
-    --color-secondary-dark: #f0780e;
+    --color-secondary-dark: #fa6900;
 
     --color-tertiary: #f27457;
     --color-tertiary-light: #f29d8a;
@@ -26,7 +26,7 @@ body {
     --on-color-secondary: #020208;
     --on-color-tertiary: #020208;
 
-    --white-primary: #e5f7ff;
+    --white-primary: #e0e4cc;
 
     --color-facebook: #3b5998;
     --color-twitter: #1da1f2;
