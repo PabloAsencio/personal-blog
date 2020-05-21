@@ -26,7 +26,8 @@
     text-decoration: underline;
     padding: 0.624rem;
     outline: none;
-    border: 3px solid var(--color-secondary-light);
+    box-shadow: 0 0 3px 3px var(--color-secondary-light);
+    border-radius: 10rem;
 }
 
 .header {

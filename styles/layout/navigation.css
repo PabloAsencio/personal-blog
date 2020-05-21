@@ -17,7 +17,7 @@
     font-size: 1.802rem;
     background-color: transparent;
     padding: 0.4rem 0.5rem 0.1rem 0.5rem;
-    margin: 0.712rem 0;
+    margin: 1.424rem 0.712rem 0.712rem 0.712rem;
 }
 
 .navigation__slide-out {
@@ -36,17 +36,17 @@
 
 .navigation__search {
     display: flex;
-    margin-right: 1rem;
+    margin: 1.424rem 1rem 0.712rem 0;
 }
 
 .navigation__search-bar {
     font-size: 1.424rem;
-    border-radius: 10rem;
+    border-radius: 10rem 0 0 10rem;
     padding: 0.356rem 1rem;
-    width: 15rem;
-    margin-right: -3rem;
+    width: 12rem;
     background-color: var(--white-primary);
     color: var(--on-color-primary);
+    -webkit-appearance: none; /* Necessary to make the shape work on Safari for iOS*/
 }
 
 .navigation__search-bar::placeholder {
@@ -64,6 +64,7 @@
 .navigation__item {
     padding: 0.624rem 0.624rem 0.624rem 2.281rem;
     font-size: 1.802rem;
+    margin: 0 1.802rem;
     color: var(--on-color-primary-dark);
     display: block;
 }
@@ -73,8 +74,7 @@
 .navigation__button-search:focus,
 .navigation__item:focus,
 .navigation__button--close:focus {
-    /* outline: 2px solid var(--color-secondary-light); */
-    border: 3px solid var(--color-secondary-light);
+    box-shadow: 0 0 3px 3px var(--color-secondary-light);
     outline: none;
 }
 
@@ -91,7 +91,7 @@
     color: var(--on-color-primary-dark);
     background-color: var(--color-primary-dark);
     border: none;
-    margin: 0.712rem 0.712rem;
+    margin: 3.228rem 1.424rem;
     padding: 0.5rem 0.5rem 0.1rem 0.5rem;
 }
 

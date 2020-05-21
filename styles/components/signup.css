@@ -92,16 +92,16 @@
 .signup__button:focus,
 .signup__buton:active {
     outline: none;
-    border: 3px solid var(--color-secondary-light);
+    box-shadow: 0 0 3px 3px var(--color-tertiary-dark);
 }
 
 .signup__field:not(:placeholder-shown):invalid,
 .signup__field:not(:placeholder-shown):focus:invalid {
-    border: 3px solid var(--color-tertiary-light);
+    box-shadow: 0 0 3px 3px var(--color-tertiary-light);
 }
 
 .signup__field:focus:valid {
-    border: 3px solid green;
+    box-shadow: 0 0 3px 3px green;
 }
 
 .signup__field:not(:placeholder-shown):invalid

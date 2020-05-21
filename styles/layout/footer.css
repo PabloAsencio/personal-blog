@@ -47,6 +47,10 @@
     justify-content: space-between;
 }
 
+.footer__icon-link {
+    padding: 0.712rem;
+}
+
 .footer__credits {
     grid-area: credits;
     justify-self: center;
@@ -67,13 +71,18 @@
 .footer__link:active,
 .footer__icon-link:focus,
 .footer__icon-link:active {
-    border: 3px solid var(--on-color-primary-dark);
+    box-shadow: 0 0 3px 3px var(--on-color-primary-dark);
     outline: none;
+}
+
+.footer__link:focus,
+.footer__link:active {
+    border-radius: 3px;
 }
 
 .footer__icon-link:focus,
 .footer__icon-link:active {
-    padding: 0.356rem;
+    border-radius: 50%;
 }
 
 .footer__icon-link:hover .footer__icon-facebook {
@@ -93,4 +102,6 @@
 .footer__icon-linkedin {
     width: 1.424rem;
     height: 1.424rem;
+    position: relative;
+    top: 0.3rem;
 }

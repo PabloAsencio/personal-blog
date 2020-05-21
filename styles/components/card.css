@@ -85,8 +85,14 @@
     transform: translateY(-0.1rem) scale(1.03);
 }
 
+.card__title:focus-within,
+.card__author:focus-within {
+    box-shadow: 0 0 3px 3px var(--on-color-primary);
+    border-radius: 3px;
+}
+
 .card__text {
-    /* margin-top: -3rem; */
+    max-width: 50rem;
 }
 
 .card__cta {
@@ -101,6 +107,10 @@
 
 .card__cta:hover {
     transform: translateY(-0.2rem) scale(1.03);
+}
+
+.card__cta:focus-within {
+    box-shadow: 0 0 3px 3px var(--color-tertiary-dark);
 }
 
 .card__tag-area {
@@ -121,27 +131,36 @@
     transform: translateY(-0.2rem) scale(1.03);
 }
 
-figure {
-    margin: 1.424rem 0 0.712rem 0;
+.card__tag:focus-within {
+    box-shadow: 0 0 3px 3px var(--color-tertiary-dark);
+}
+
+.card__link:focus,
+.card__link:active {
+    outline: none;
+}
+
+.card__figure {
     max-width: 100%;
     max-height: 100%;
 }
 
-picture {
+.card__picture {
     max-width: 100%;
     max-height: 100%;
 }
 
-img {
+.card__img {
     max-width: 100%;
     max-height: 100%;
 }
 
-figcaption {
+.card__figcaption {
     font-family: 'Montserrat', sans-serif;
     font-size: 0.79rem;
     line-height: 1.8984;
     padding bottom: 0.356rem;
     margin-bottom: 1.89884em;
+    max-width: 100%;
     border-bottom: 1px solid var(--on-color-primary);
 }
