@@ -1,5 +1,6 @@
 .card {
     background-color: var(--white-primary);
+    color: var(--on-color-primary);
     box-shadow: 1rem 1.5rem 2rem var(--gray-primary-shadow);
     border-radius: 0.214rem;
     padding: 0 1rem 1.424rem 1.424rem;

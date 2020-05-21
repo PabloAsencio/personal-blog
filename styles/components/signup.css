@@ -1,7 +1,7 @@
 .signup {
     margin: 1.424rem 1.424rem 1rem 1.424rem;
     padding: 1.424rem;
-    border: 3px solid var(--on-color-primary);
+    border: 3px solid var(--on-color-primary-dark);
     border-radius: 0.214rem;
     display: flex;
     flex-flow: column nowrap;
