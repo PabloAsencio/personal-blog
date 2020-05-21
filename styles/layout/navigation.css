@@ -3,7 +3,8 @@
     align-items: center;
     justify-content: space-between;
     margin: 0 0 1.424rem 0;
-    background-color: var(--color-primary-dark);
+    /* background-color: var(--color-primary-dark); */
+    background-color: white;
     position: absolute;
     top: 0;
     left: 0;
@@ -27,7 +28,8 @@
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: var(--color-primary-dark);
+    /* background-color: var(--color-primary-dark); */
+    background-color: white;
     overflow-x: hidden;
     transition: width 0.5s;
     padding: 6rem 0;
@@ -46,6 +48,8 @@
     width: 12rem;
     background-color: var(--white-primary);
     color: var(--on-color-primary);
+    border: solid #666;
+    border-width: 0.4px 0 0.4px 0.4px;
     -webkit-appearance: none; /* Necessary to make the shape work on Safari for iOS*/
 }
 
@@ -65,7 +69,8 @@
     padding: 0.624rem 0.624rem 0.624rem 2.281rem;
     font-size: 1.802rem;
     margin: 0 1.802rem;
-    color: var(--on-color-primary-dark);
+    /* color: var(--on-color-primary-dark); */
+    color: var(--color-secondary);
     display: block;
 }
 
@@ -88,8 +93,10 @@
     top: 0;
     right: 0;
     font-size: 1.802rem;
-    color: var(--on-color-primary-dark);
-    background-color: var(--color-primary-dark);
+    /* color: var(--on-color-primary-dark); */
+    color: var(--color-secondary);
+    /* background-color: var(--color-primary-dark); */
+    color: white;
     border: none;
     margin: 3.228rem 1.424rem;
     padding: 0.5rem 0.5rem 0.1rem 0.5rem;
@@ -121,5 +128,6 @@
 .navigation__icon-cross {
     width: 2.027rem;
     height: 2.027rem;
-    color: var(--on-color-primary-dark);
+    /* color: var(--on-color-primary-dark); */
+    color: var(--color-secondary);
 }

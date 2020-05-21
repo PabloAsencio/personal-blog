@@ -27,8 +27,7 @@ li {
 body {
     box-sizing: border-box;
     line-height: 1;
-    background-color: var(--color-primary-dark);
-    color: var(--on-color-primary-dark);
+    /* background-color: var(--color-primary-dark); */
 }
 
 /* Root font size */

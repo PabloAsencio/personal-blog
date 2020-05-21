@@ -1,7 +1,7 @@
 .header__skip-link-container {
     position: absolute;
     z-index: 999;
-    top: -6rem;
+    top: -9rem;
     left: 0;
     right: 0;
     color: var(--on-color-primary-dark);
@@ -13,7 +13,7 @@
 }
 
 .header__skip-link-container:focus-within {
-    transform: translateY(6rem);
+    transform: translateY(9rem);
 }
 
 .header__skip-link {
@@ -89,7 +89,7 @@
     font-family: 'Eczar', serif;
     font-size: 1.125rem;
     line-height: 1.3333;
-    color: var(--white-primary);
+    color: var(--on-color-primary);
     position: absolute;
     top: 67%;
     left: 46.66%;

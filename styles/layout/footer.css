@@ -1,6 +1,6 @@
 .footer {
     background-color: var(--gray-primary-dark);
-    color: var(--on-color-primary-dark);
+    color: var(--on-color-secondary);
     padding: 1.424rem;
     margin-top: 3rem;
     display: grid;

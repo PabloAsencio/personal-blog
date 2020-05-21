@@ -7,7 +7,7 @@ body {
     --color-primary-dark-transparent: rgba(199, 239, 207, 0.5);
 
     --color-secondary: #fd0a54;
-    --color-secondary-light: #f57576;
+    --color-secondary-light: rgba(254, 191, 151, 0.8);
     --color-secondary-light-transparent: rgba(255, 206, 58, 0.5);
     --color-secondary-dark: #fa6900;
 
@@ -32,7 +32,7 @@ body {
     --on-color-secondary: rgba(241, 250, 238, 1);
     --on-color-tertiary: #020208;
 
-    --white-primary: #f5ecb7;
+    --white-primary: rgba(254, 253, 202, 0.5);
 
     --color-facebook: #3b5998;
     --color-twitter: #1da1f2;
