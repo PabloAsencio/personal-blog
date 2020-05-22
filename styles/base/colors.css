@@ -1,21 +1,21 @@
 body {
     --color-primary: rgba(0, 159, 253, 1);
-    --color-primary-transparent: rgba(148, 197, 149, 0.5);
+    --color-primary-transparent: rgba(69, 123, 157, 0.5);
     --color-primary-light: rgb(206, 232, 121);
     --color-primary-light-transparent: rgba(238, 245, 219, 0.5);
     --color-primary-dark: #febf97;
-    --color-primary-dark-transparent: rgba(199, 239, 207, 0.5);
+    --color-primary-dark-transparent: rgba(168, 218, 220, 0.5);
 
-    --color-secondary: #fd0a54;
-    --color-secondary-light: rgba(254, 191, 151, 0.8);
+    --color-secondary: rgba(29, 53, 87, 1);
+    --color-secondary-light: rgba(168, 218, 220, 1);
     --color-secondary-light-transparent: rgba(255, 206, 58, 0.5);
     --color-secondary-dark: #fa6900;
 
-    --color-tertiary: rgb(255, 82, 84);
+    --color-tertiary: rgba(230, 57, 70, 1);
     --color-tertiary-light: #f29d8a;
-    --color-tertiary-light-transparent: rgba(242, 157, 138, 0.5);
+    --color-tertiary-light-transparent: rgba(230, 57, 70, 0.5);
     --color-tertiary-dark: rgb(227, 88, 57);
-    --color-tertiary-dark-transparent: rgba(240, 182, 127, 0.5);
+    --color-tertiary-dark-transparent: rgba(241, 250, 238, 0.5);
 
     --gray-primary: #6c828b;
     --gray-primary-light: rgb(112, 142, 144);
@@ -32,7 +32,7 @@ body {
     --on-color-secondary: rgba(241, 250, 238, 1);
     --on-color-tertiary: #020208;
 
-    --white-primary: rgba(254, 253, 202, 0.5);
+    --white-primary: rgba(241, 250, 238, 1);
 
     --color-facebook: #3b5998;
     --color-twitter: #1da1f2;
