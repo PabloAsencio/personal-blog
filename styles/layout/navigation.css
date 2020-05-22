@@ -4,7 +4,7 @@
     justify-content: space-between;
     margin: 0 0 1.424rem 0;
     /* background-color: var(--color-primary-dark); */
-    background-color: white;
+    background-color: var(--navigation-background-color);
     position: absolute;
     top: 0;
     left: 0;
@@ -29,7 +29,7 @@
     top: 0;
     left: 0;
     /* background-color: var(--color-primary-dark); */
-    background-color: white;
+    background-color: var(--navigation-background-color);
     overflow-x: hidden;
     transition: width 0.5s;
     padding: 6rem 0;
@@ -46,23 +46,30 @@
     border-radius: 10rem 0 0 10rem;
     padding: 0.356rem 1rem;
     width: 12rem;
-    background-color: var(--white-primary);
-    color: var(--on-color-primary);
-    border: solid #666;
+    background-color: var(--input-background-color);
+    color: var(--input-on-color);
+    border: solid var(--input-border-color);
     border-width: 0.4px 0 0.4px 0.4px;
+    box-shadow: 0.1rem 0.1rem 0.1rem var(--input-shadow-color);
     -webkit-appearance: none; /* Necessary to make the shape work on Safari for iOS*/
 }
 
 .navigation__search-bar::placeholder {
-    color: var(--gray-primary-dark);
+    color: var(--input-placeholder-color);
 }
 
 .navigation__button-search {
-    background-color: var(--color-secondary);
+    background-color: var(--button-background-color);
+    color: var(--button-on-color);
     font-size: 1.424rem;
     padding: 0.356rem 1rem;
     border-radius: 0 10rem 10rem 0;
-    color: var(--on-color-secondary);
+    box-shadow: 0.1rem 0.1rem 0.1rem var(--button-shadow-color);
+}
+
+.navigation__button-search:hover {
+    background-color: var(--button-hover-color);
+    color: var(--button-hover-on-color);
 }
 
 .navigation__item {
@@ -70,16 +77,20 @@
     font-size: 1.802rem;
     margin: 0 1.802rem;
     /* color: var(--on-color-primary-dark); */
-    color: var(--color-secondary);
+    color: var(--navigation-on-color);
     display: block;
 }
 
 .navigation__button--open:focus,
 .navigation__search-bar:focus,
-.navigation__button-search:focus,
 .navigation__item:focus,
 .navigation__button--close:focus {
-    box-shadow: 0 0 3px 3px var(--color-secondary-light);
+    box-shadow: 0 0 3px 3px var(--navigation-outline-color);
+    outline: none;
+}
+
+.navigation__button-search:focus {
+    box-shadow: 0 0 3px 3px var(--button-outline-color);
     outline: none;
 }
 
@@ -93,10 +104,8 @@
     top: 0;
     right: 0;
     font-size: 1.802rem;
-    /* color: var(--on-color-primary-dark); */
-    color: var(--color-secondary);
-    /* background-color: var(--color-primary-dark); */
-    color: white;
+    background-color: transparent;
+    color: var(--navigation-on-color);
     border: none;
     margin: 3.228rem 1.424rem;
     padding: 0.5rem 0.5rem 0.1rem 0.5rem;
@@ -129,5 +138,5 @@
     width: 2.027rem;
     height: 2.027rem;
     /* color: var(--on-color-primary-dark); */
-    color: var(--color-secondary);
+    color: var(--navigation-on-color);
 }

@@ -1,38 +1,92 @@
 body {
-    --color-primary: rgba(0, 159, 253, 1);
-    --color-primary-transparent: rgba(69, 123, 157, 0.5);
-    --color-primary-light: rgb(206, 232, 121);
-    --color-primary-light-transparent: rgba(238, 245, 219, 0.5);
-    --color-primary-dark: #febf97;
-    --color-primary-dark-transparent: rgba(168, 218, 220, 0.5);
+    /* Color palette */
+    --color-primary: #a8dadc;
+    --color-primary-transparent: rgba(168, 218, 220, 0.5);
 
-    --color-secondary: #de1d2c;
-    --color-secondary-light: rgba(168, 218, 220, 1);
-    --color-secondary-light-transparent: rgba(255, 206, 58, 0.5);
-    --color-secondary-dark: #fa6900;
+    --color-primary-dark: #457b9d;
+    --color-primary-dark-transparent: rgba(69, 123, 157, 0.5);
 
-    --color-tertiary: rgba(230, 57, 70, 1);
-    --color-tertiary-light: #f29d8a;
-    --color-tertiary-light-transparent: rgba(230, 57, 70, 0.5);
-    --color-tertiary-dark: rgb(227, 88, 57);
-    --color-tertiary-dark-transparent: rgba(241, 250, 238, 0.5);
+    --color-secondary: #df323f;
 
-    --gray-primary: #6c828b;
-    --gray-primary-light: #727171;
-    --gray-primary-dark: #474646;
-    --gray-primary-shadow: rgba(71, 70, 70, 0.8);
+    --color-tertiary: #ee8434;
+    --color-tertiary-transparent: rgb(238, 132, 52, 0.5);
 
-    --gray-secondary: #858585;
-    --gray-secondary-light: #828282;
+    --on-color-primary: #1d3557;
+    --on-color-secondary: #fff;
 
-    --gray-tertiary: #a4a4a4;
-
-    --on-color-primary-dark: rgba(29, 53, 87, 1);
-    --on-color-primary: rgba(29, 53, 87, 1);
-    --on-color-secondary: #f1faee;
-    --on-color-tertiary: #020208;
+    --color-red: var(--color-secondary);
+    --color-green: #3ab795;
 
     --white-primary: #f1faee;
+    --white-primary-transparent: rgba(241, 250, 238, 0.5);
+
+    --gray-primary: #5a5a5a;
+    --gray-primary-dark: #404141;
+    --gray-primary-shadow: rgba(90, 90, 90, 0.8);
+
+    --gray-secondary-light: rgb(114, 113, 113);
+    --gray-secondary-dark: #474646;
+    --gray-secondary-shadow: rgba(114, 113, 113, 0.8);
+
+
+    /* Color scheme */
+    --background-color: var(--color-primary);
+    --on-color: var(--on-color-primary);
+
+    --skiplink-background-color: var(--color-primary);
+    --skiplink-on-color: var(--color-secondary);
+    --skiplink-outline-color: var(--color-tertiary);
+
+    --navigation-background-color: var(--color-primary);
+    --navigation-on-color: var(--color-secondary);
+    --navigation-outline-color: var(--color-tertiary);
+
+    --header-heading-color: var(--color-secondary);
+    --header-intro-color: var(--on-color-primary);
+    --header-gradient-color-top: var(--color-primary-dark-transparent);
+    --header-gradient-color-bottom: var(--color-primary-transparent);
+    --header-intro-gradient-color-top: var(--color-tertiary-transparent);
+    --header-intro-gradient-color-bottom: var(
+        --white-primary-transparent
+    );
+
+    --card-background-color: var(--white-primary);
+    --card-on-color: var(--on-color-primary);
+    --card-type-color: var(--gray-secondary-dark);
+    --card-date-color: var(--gray-secondary-light);
+    --card-heading-outline-color: var(--on-color-primary);
+    --card-shadow-color: var(--gray-primary-shadow);
+
+    --button-background-color: var(--color-secondary);
+    --button-on-color: var(--on-color-secondary);
+    --button-outline-color: var(--color-tertiary);
+    --button-shadow-color: var(--gray-secondary-shadow);
+    --button-hover-color: var(--color-tertiary);
+    --button-hover-on-color: var(--on-color-secondary);
+
+
+    --tag-background-color: var(--color-primary);
+    --tag-on-color: var(--on-color-primary);
+    --tag-outline-color: var(--color-tertiary);
+    --tag-shadow-color: var(--gray-primary-shadow);
+
+    --input-background-color: var(--white-primary);
+    --input-on-color: var(--on-color-primary);
+    --input-placeholder-color:
+    --input-border-color: var(--gray-secondary-light);
+    --input-shadow-color: var(--gray-secondary-shadow);
+    --input-outline-color: var(--color-tertiary);
+    --input-invalid-color: var(--color-red);
+    --input-valid-color: var(--color-green);
+
+    --signup-background-color: var(--color-primary);
+    --signup-on-color: var(--on-color-primary);
+    --signup-border-color: var(--on-color-primary);
+
+    --footer-background-color: var(--gray-secondary-dark);
+    --footer-on-color: var(--on-color-secondary);
+    --footer-outline-color: var(--on-color-primary);
+
 
     --color-facebook: #3b5998;
     --color-twitter: #1da1f2;

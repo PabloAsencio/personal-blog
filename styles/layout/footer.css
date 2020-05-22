@@ -1,6 +1,6 @@
 .footer {
-    background-color: var(--gray-primary-dark);
-    color: var(--on-color-secondary);
+    background-color: var(--footer-background-color);
+    color: var(--footer-on-color);
     padding: 1.424rem;
     margin-top: 3rem;
     display: grid;
@@ -71,7 +71,7 @@
 .footer__link:active,
 .footer__icon-link:focus,
 .footer__icon-link:active {
-    box-shadow: 0 0 3px 3px var(--on-color-primary-dark);
+    box-shadow: 0 0 3px 3px var(--footer-outline-color);
     outline: none;
 }
 
