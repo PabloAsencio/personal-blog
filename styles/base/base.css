@@ -20,6 +20,11 @@ a {
     color: inherit;
 }
 
+a:focus,
+a:active {
+    outline: none;
+}
+
 li {
     list-style: none;
 }
@@ -28,6 +33,10 @@ body {
     box-sizing: border-box;
     line-height: 1;
     background-color: var(--background-color);
+}
+
+::-moz-focus-inner {
+    border: 0;
 }
 
 /* Root font size */

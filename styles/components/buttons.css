@@ -1,0 +1,35 @@
+.button {
+    display: inline-block;
+    background-color: var(--button-background-color);
+    color: var(--button-on-color);
+    font-weight: 600;
+    box-shadow: 0.1rem 0.1rem 0.1rem var(--button-shadow-color);
+}
+
+.button:hover {
+    background-color: var(--button-hover-color);
+    color: var(--button-hover-on-color);
+}
+
+.button:focus,
+.button:active,
+.button:focus-within {
+    outline: none;
+    box-shadow: 0 0 3px 3px var(--button-outline-color);
+}
+
+.button--raising {
+    padding: 0.712rem 1.412rem;
+    border-radius: 10rem;
+    transition: transform 0.3s;
+}
+
+.button--raising:hover {
+    transform: translateY(-0.2rem) scale(1.03);
+}
+
+.button--search {
+    font-size: 1.424rem;
+    padding: 0.356rem 1rem;
+    border-radius: 0 10rem 10rem 0;
+}

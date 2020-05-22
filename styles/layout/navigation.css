@@ -58,20 +58,6 @@
     color: var(--input-placeholder-color);
 }
 
-.navigation__button-search {
-    background-color: var(--button-background-color);
-    color: var(--button-on-color);
-    font-size: 1.424rem;
-    padding: 0.356rem 1rem;
-    border-radius: 0 10rem 10rem 0;
-    box-shadow: 0.1rem 0.1rem 0.1rem var(--button-shadow-color);
-}
-
-.navigation__button-search:hover {
-    background-color: var(--button-hover-color);
-    color: var(--button-hover-on-color);
-}
-
 .navigation__item {
     padding: 0.624rem 0.624rem 0.624rem 2.281rem;
     font-size: 1.802rem;
@@ -84,12 +70,17 @@
 .navigation__button--open:focus,
 .navigation__search-bar:focus,
 .navigation__item:focus,
-.navigation__button--close:focus {
+.navigation__button--close:focus,
+.navigation__button--open:active,
+.navigation__search-bar:active,
+.navigation__item:active,
+.navigation__button--close:active {
     box-shadow: 0 0 3px 3px var(--navigation-outline-color);
     outline: none;
 }
 
-.navigation__button-search:focus {
+.navigation__button-search:focus,
+.navigation__button-search:active {
     box-shadow: 0 0 3px 3px var(--button-outline-color);
     outline: none;
 }
@@ -137,6 +128,5 @@
 .navigation__icon-cross {
     width: 2.027rem;
     height: 2.027rem;
-    /* color: var(--on-color-primary-dark); */
     color: var(--navigation-on-color);
 }

@@ -8,432 +8,432 @@
         <link rel="stylesheet" href="../styles/main.css" />
     </head>
     <body>
-        <header class="header">
-            <p class="header__skip-link-container">
-                <a href="#main" class="header__skip-link">
-                    Skip to Content (Press Enter)
-                </a>
-            </p>
-            <nav class="navigation__nav">
-                <div class="navigation__slide">
-                    <button
-                        type="button"
-                        class="navigation__button--open"
-                        aria-label="Open navigation menu"
-                        aria-controls="navigation-content"
-                        aria-expanded="false"
-                    >
-                        <svg
-                            class="icon navigation__icon-menu"
-                            aria-hidden="true"
-                            focusable="false"
-                        >
-                            <use
-                                xlink:href="../images/sprite.svg#icon-menu"
-                            ></use>
-                        </svg>
-                    </button>
-                    <div class="navigation__slide-out">
+        <div class="grid">
+            <header class="header">
+                <p class="header__skip-link-container">
+                    <a href="#main" class="header__skip-link">
+                        Skip to Content (Press Enter)
+                    </a>
+                </p>
+                <nav class="navigation__nav">
+                    <div class="navigation__slide">
                         <button
-                            class="navigation__button--close"
-                            aria-label="Close navigation menu"
+                            type="button"
+                            class="navigation__button--open"
+                            aria-label="Open navigation menu"
+                            aria-controls="navigation-content"
+                            aria-expanded="false"
                         >
                             <svg
-                                class="icon navigation__icon-cross"
+                                class="icon navigation__icon-menu"
                                 aria-hidden="true"
                                 focusable="false"
                             >
                                 <use
-                                    xlink:href="../images/sprite.svg#icon-cross"
+                                    xlink:href="../images/sprite.svg#icon-menu"
                                 ></use>
                             </svg>
                         </button>
-                        <div id="navigation-content">
-                            <ul>
-                                <li>
-                                    <a
-                                        href="../index.html"
-                                        class="navigation__item"
-                                        >Home</a
+                        <div class="navigation__slide-out">
+                            <button
+                                class="navigation__button--close"
+                                aria-label="Close navigation menu"
+                            >
+                                <svg
+                                    class="icon navigation__icon-cross"
+                                    aria-hidden="true"
+                                    focusable="false"
+                                >
+                                    <use
+                                        xlink:href="../images/sprite.svg#icon-cross"
+                                    ></use>
+                                </svg>
+                            </button>
+                            <div id="navigation-content">
+                                <ul>
+                                    <li>
+                                        <a
+                                            href="../index.html"
+                                            class="navigation__item"
+                                            >Home</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="../about.html"
+                                            class="navigation__item"
+                                            >About</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="../contact.html"
+                                            class="navigation__item"
+                                            >Contact</a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="navigation__search">
+                        <label for="search-bar" class="screen-reader-only"
+                            >Search:
+                        </label>
+                        <input
+                            class="navigation__search-bar"
+                            type="search"
+                            name="search"
+                            id="search-bar"
+                            placeholder="Search"
+                        />
+                        <button
+                            type="submit"
+                            class="button button--search"
+                            aria-label="Search"
+                        >
+                            <svg
+                                class="icon navigation__icon-search"
+                                aria-hidden="true"
+                                focusable="false"
+                            >
+                                <use
+                                    xlink:href="../images/sprite.svg#icon-search"
+                                ></use>
+                            </svg>
+                        </button>
+                    </form>
+                </nav>
+                <div class="header__head">
+                    <h1 class="header__headline">Design System</h1>
+                    <div class="header__intro-container">
+                        <p class="header__intro">
+                            Short website description. Lorem ipsum dolor sit
+                            amet, consectetur adipisicing elit. Eos repudiandae
+                            voluptate, explicabo, repellendus beatae animi nisi
+                            molestiae.
+                        </p>
+                    </div>
+                </div>
+            </header>
+            <main id="main">
+                <section>
+                    <h2>Typography</h2>
+                    <h3>Headings</h3>
+                    <ol>
+                        <li><h1>Heading 1</h1></li>
+                        <li><h2>Heading 2</h2></li>
+                        <li><h3>Heading 3</h3></li>
+                    </ol>
+                    <h3>Paragraph</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit. Odio quaerat modi delectus. Ipsam quos possimus
+                        maxime nam in sequi iure architecto ullam eos minus
+                        laboriosam unde, aspernatur a voluptatibus cum. Lorem
+                        ipsum dolor sit amet consectetur adipisicing elit. Id
+                        rerum magni accusamus reiciendis. Corporis ipsa dicta
+                        adipisci. Facilis autem perferendis consectetur, soluta
+                        numquam ullam laboriosam maiores quas exercitationem
+                        pariatur iure?
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Praesentium provident officia nisi consequuntur.
+                        Reprehenderit nulla velit sequi quis minima delectus rem
+                        nesciunt deserunt culpa eius aliquid, quasi accusantium,
+                        minus laboriosam? Lorem ipsum dolor sit amet
+                        consectetur, adipisicing elit. Maiores, vero ut laborum
+                        non facilis doloribus blanditiis doloremque pariatur
+                        nisi, reprehenderit, sequi assumenda? Nulla quisquam
+                        magnam ipsam corporis eius minus beatae.
+                    </p>
+                    <h2>Cards</h2>
+                    <h3>Featured Card</h3>
+                    <article class="card">
+                        <header class="card__header">
+                            <div class="card__info">
+                                <p class="card__type">
+                                    Featured post
+                                </p>
+                                <p>
+                                    <time
+                                        class="card__date"
+                                        datetime="2020-05-16"
+                                        >May 16, 2020</time
                                     >
+                                </p>
+                            </div>
+                            <div class="card__heading-wrapper">
+                                <img
+                                    class="card__thumbnail"
+                                    src="https://via.placeholder.com/75x75?text=Author+Avatar"
+                                    alt="Author avatar"
+                                />
+                                <div class="card__heading">
+                                    <h3 class="card__title">
+                                        <a href="posts/post01.html"
+                                            >Blog post title</a
+                                        >
+                                    </h3>
+                                    <p class="card__author">
+                                        <a href="#">
+                                            Author Name
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </header>
+                        <figure class="card__figure">
+                            <picture class="card__picture">
+                                <source
+                                    srcset="
+                                        https://via.placeholder.com/728x520?text=Latest+Post+Picture
+                                    "
+                                    media="(min-width: 768px)"
+                                />
+                                <source
+                                    srcset="
+                                        https://via.placeholder.com/360x270?text=Latest+Post+Picture
+                                    "
+                                    media="(min-width: 460px)"
+                                />
+                                <img
+                                    src="https://via.placeholder.com/300x200?text=Latest+Post+Picture"
+                                    alt="Something about the post"
+                                    class="card__img"
+                                />
+                            </picture>
+                            <figcaption class="card__figcaption">
+                                A caption for the picture.
+                            </figcaption>
+                        </figure>
+                        <div class="card__text">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Pariatur impedit assumenda
+                                eligendi, exercitationem nemo ipsa voluptatem
+                                error nulla, eius optio officiis aperiam ipsam
+                                mollitia quasi, reprehenderit aliquam dolorum
+                                tempore quisquam. Lorem ipsum dolor sit, amet
+                                consectetur adipisicing elit. Quibusdam sunt
+                                maxime beatae ducimus molestiae consectetur?
+                                Aperiam explicabo tempore adipisci omnis
+                                consequatur itaque quam pariatur at cum velit,
+                                nulla natus vitae. Lorem ipsum, dolor sit amet
+                                consectetur adipisicing elit. Repellat quo,
+                                maiores vero suscipit ratione quos, dolorem odit
+                                perspiciatis nihil voluptatum dolore optio eum
+                                eligendi necessitatibus dolores temporibus vel
+                                nesciunt quibusdam?
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Pariatur impedit assumenda
+                                eligendi, exercitationem nemo ipsa voluptatem
+                                error nulla, eius optio officiis aperiam ipsam
+                                mollitia quasi, reprehenderit aliquam dolorum
+                                tempore quisquam. Lorem ipsum dolor sit, amet
+                                consectetur adipisicing elit. Quibusdam sunt
+                                maxime beatae ducimus molestiae consectetur?
+                                Aperiam explicabo tempore adipisci omnis
+                                consequatur itaque quam pariatur at cum velit,
+                                nulla natus vitae. Lorem ipsum, dolor sit amet
+                                consectetur adipisicing elit. Repellat quo,
+                                maiores vero suscipit ratione quos, dolorem odit
+                                perspiciatis nihil voluptatum dolore optio eum
+                                eligendi necessitatibus dolores temporibus vel
+                                nesciunt quibusdam?
+                            </p>
+                        </div>
+                        <footer>
+                            <p class="button button--raising">
+                                <a href="posts/post01.html"
+                                    >Keep reading
+                                    <span class="screen-reader-only"
+                                        >the blog post 1</span
+                                    ></a
+                                >
+                            </p>
+                            <ul class="card__tag-area">
+                                <li class="card__tag">
+                                    <a href="#" rel="tag">Tag 1</a>
                                 </li>
-                                <li>
-                                    <a
-                                        href="../about.html"
-                                        class="navigation__item"
-                                        >About</a
-                                    >
+                                <li class="card__tag">
+                                    <a href="#" rel="tag">Tag 2</a>
                                 </li>
-                                <li>
-                                    <a
-                                        href="../contact.html"
-                                        class="navigation__item"
-                                        >Contact</a
-                                    >
+                                <li class="card__tag">
+                                    <a href="#" rel="tag">Tag 3</a>
                                 </li>
                             </ul>
-                        </div>
-                    </div>
-                </div>
-                <form class="navigation__search">
-                    <label for="search-bar" class="screen-reader-only"
-                        >Search:
-                    </label>
-                    <input
-                        class="navigation__search-bar"
-                        type="search"
-                        name="search"
-                        id="search-bar"
-                        placeholder="Search"
-                    />
-                    <button
-                        type="submit"
-                        class="navigation__button-search"
-                        aria-label="Search"
-                    >
-                        <svg
-                            class="icon navigation__icon-search"
-                            aria-hidden="true"
-                            focusable="false"
-                        >
-                            <use
-                                xlink:href="../images/sprite.svg#icon-search"
-                            ></use>
-                        </svg>
-                    </button>
-                </form>
-            </nav>
-            <div class="header__head">
-                <h1 class="header__headline">Design System</h1>
-                <div class="header__intro-container">
-                    <p class="header__intro">
-                        Short website description. Lorem ipsum dolor sit amet,
-                        consectetur adipisicing elit. Eos repudiandae voluptate,
-                        explicabo, repellendus beatae animi nisi molestiae.
-                    </p>
-                </div>
-            </div>
-        </header>
-        <main id="main">
-            <section>
-                <h2>Typography</h2>
-                <h3>Headings</h3>
-                <ol>
-                    <li><h1>Heading 1</h1></li>
-                    <li><h2>Heading 2</h2></li>
-                    <li><h3>Heading 3</h3></li>
-                </ol>
-                <h3>Paragraph</h3>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Odio quaerat modi delectus. Ipsam quos possimus maxime nam
-                    in sequi iure architecto ullam eos minus laboriosam unde,
-                    aspernatur a voluptatibus cum. Lorem ipsum dolor sit amet
-                    consectetur adipisicing elit. Id rerum magni accusamus
-                    reiciendis. Corporis ipsa dicta adipisci. Facilis autem
-                    perferendis consectetur, soluta numquam ullam laboriosam
-                    maiores quas exercitationem pariatur iure?
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Praesentium provident officia nisi consequuntur.
-                    Reprehenderit nulla velit sequi quis minima delectus rem
-                    nesciunt deserunt culpa eius aliquid, quasi accusantium,
-                    minus laboriosam? Lorem ipsum dolor sit amet consectetur,
-                    adipisicing elit. Maiores, vero ut laborum non facilis
-                    doloribus blanditiis doloremque pariatur nisi,
-                    reprehenderit, sequi assumenda? Nulla quisquam magnam ipsam
-                    corporis eius minus beatae.
-                </p>
-                <h2>Cards</h2>
-                <h3>Featured Card</h3>
-                <article class="card">
-                    <header class="card__header">
-                        <div class="card__info">
-                            <p class="card__type">
-                                Featured post
-                            </p>
-                            <p>
-                                <time class="card__date" datetime="2020-05-16"
-                                    >May 16, 2020</time
-                                >
-                            </p>
-                        </div>
-                        <div class="card__heading-wrapper">
-                            <img
-                                class="card__thumbnail"
-                                src="https://via.placeholder.com/75x75?text=Author+Avatar"
-                                alt="Author avatar"
-                            />
-                            <div class="card__heading">
-                                <h3 class="card__title">
-                                    <a
-                                        href="posts/post01.html"
-                                        class="card__link"
-                                        >Blog post title</a
+                        </footer>
+                    </article>
+                    <h3>Regular Card</h3>
+                    <article class="card">
+                        <header class="card__header">
+                            <div class="card__info">
+                                <p class="card__type">Popular post</p>
+                                <p>
+                                    <time
+                                        class="card__date"
+                                        datetime="2020-05-16"
                                     >
-                                </h3>
-                                <p class="card__author">
-                                    <a href="#" class="card__link">
-                                        Author Name
-                                    </a>
+                                        May 16, 2020
+                                    </time>
                                 </p>
                             </div>
-                        </div>
-                    </header>
-                    <figure class="card__figure">
-                        <picture class="card__picture">
-                            <source
-                                srcset="
-                                    https://via.placeholder.com/728x520?text=Latest+Post+Picture
-                                "
-                                media="(min-width: 768px)"
-                            />
-                            <source
-                                srcset="
-                                    https://via.placeholder.com/360x270?text=Latest+Post+Picture
-                                "
-                                media="(min-width: 460px)"
-                            />
-                            <img
-                                src="https://via.placeholder.com/300x200?text=Latest+Post+Picture"
-                                alt="Something about the post"
-                                class="card__img"
-                            />
-                        </picture>
-                        <figcaption class="card__figcaption">
-                            A caption for the picture.
-                        </figcaption>
-                    </figure>
-                    <div class="card__text">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Pariatur impedit assumenda eligendi,
-                            exercitationem nemo ipsa voluptatem error nulla,
-                            eius optio officiis aperiam ipsam mollitia quasi,
-                            reprehenderit aliquam dolorum tempore quisquam.
+                            <div class="card__heading-wrapper">
+                                <img
+                                    class="card__thumbnail"
+                                    src="https://via.placeholder.com/150x150?text=Post+Thumbnail"
+                                    alt="Post thumbnail"
+                                />
+                                <div class="card__heading">
+                                    <h3 class="card__title">
+                                        <a href="posts/post04.html"
+                                            >Post title</a
+                                        >
+                                    </h3>
+                                    <p class="card__author">
+                                        <a href="#">Author Name</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </header>
+                        <p class="card__text">
                             Lorem ipsum dolor sit, amet consectetur adipisicing
-                            elit. Quibusdam sunt maxime beatae ducimus molestiae
-                            consectetur? Aperiam explicabo tempore adipisci
-                            omnis consequatur itaque quam pariatur at cum velit,
-                            nulla natus vitae. Lorem ipsum, dolor sit amet
-                            consectetur adipisicing elit. Repellat quo, maiores
-                            vero suscipit ratione quos, dolorem odit
-                            perspiciatis nihil voluptatum dolore optio eum
-                            eligendi necessitatibus dolores temporibus vel
-                            nesciunt quibusdam?
+                            elit. Alias asperiores rem totam, ullam eveniet
+                            molestias quisquam soluta. Amet accusantium
+                            voluptatibus, placeat dicta asperiores dolor.
+                            Expedita quibusdam mollitia voluptatem minus
+                            molestias!
                         </p>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Pariatur impedit assumenda eligendi,
-                            exercitationem nemo ipsa voluptatem error nulla,
-                            eius optio officiis aperiam ipsam mollitia quasi,
-                            reprehenderit aliquam dolorum tempore quisquam.
-                            Lorem ipsum dolor sit, amet consectetur adipisicing
-                            elit. Quibusdam sunt maxime beatae ducimus molestiae
-                            consectetur? Aperiam explicabo tempore adipisci
-                            omnis consequatur itaque quam pariatur at cum velit,
-                            nulla natus vitae. Lorem ipsum, dolor sit amet
-                            consectetur adipisicing elit. Repellat quo, maiores
-                            vero suscipit ratione quos, dolorem odit
-                            perspiciatis nihil voluptatum dolore optio eum
-                            eligendi necessitatibus dolores temporibus vel
-                            nesciunt quibusdam?
-                        </p>
-                    </div>
-                    <footer>
-                        <p class="card__cta">
-                            <a href="posts/post01.html" class="card__link"
-                                >Keep reading
-                                <span class="screen-reader-only"
-                                    >the blog post 1</span
-                                ></a
-                            >
-                        </p>
-                        <ul class="card__tag-area">
-                            <li class="card__tag">
-                                <a href="#" rel="tag" class="card__link"
-                                    >Tag 1</a
+                        <footer>
+                            <p class="button button--raising">
+                                <a href="posts/post04.html"
+                                    >Keep reading
+                                    <span class="screen-reader-only"
+                                        >the blog post 1</span
+                                    ></a
                                 >
-                            </li>
-                            <li class="card__tag">
-                                <a href="#" rel="tag" class="card__link"
-                                    >Tag 2</a
-                                >
-                            </li>
-                            <li class="card__tag">
-                                <a href="#" rel="tag" class="card__link"
-                                    >Tag 3</a
-                                >
-                            </li>
-                        </ul>
-                    </footer>
-                </article>
-                <h3>Regular Card</h3>
-                <article class="card">
-                    <header class="card__header">
-                        <div class="card__info">
-                            <p class="card__type">Popular post</p>
-                            <p>
-                                <time class="card__date" datetime="2020-05-16">
-                                    May 16, 2020
-                                </time>
+                            </p>
+                            <ul class="card__tag-area">
+                                <li class="card__tag">
+                                    <a href="#" rel="tag">Tag 1</a>
+                                </li>
+                                <li class="card__tag">
+                                    <a href="#" rel="tag">Tag 2</a>
+                                </li>
+                                <li class="card__tag">
+                                    <a href="#" rel="tag">Tag 3</a>
+                                </li>
+                            </ul>
+                        </footer>
+                    </article>
+                </section>
+                <section>
+                    <h2>Sign-up form</h2>
+                    <div class="signup">
+                        <div class="signup__header">
+                            <h2 class="signup__heading">Don't miss a post!</h2>
+                            <p class="signup__subheading">
+                                Sign up for our newsletter
                             </p>
                         </div>
-                        <div class="card__heading-wrapper">
-                            <img
-                                class="card__thumbnail"
-                                src="https://via.placeholder.com/150x150?text=Post+Thumbnail"
-                                alt="Post thumbnail"
-                            />
-                            <div class="card__heading">
-                                <h3 class="card__title">
-                                    <a href="posts/post04.html">Post title</a>
-                                </h3>
-                                <p class="card__author">
-                                    <a href="#">Author Name</a>
-                                </p>
-                            </div>
-                        </div>
-                    </header>
-                    <p class="card__text">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing
-                        elit. Alias asperiores rem totam, ullam eveniet
-                        molestias quisquam soluta. Amet accusantium
-                        voluptatibus, placeat dicta asperiores dolor. Expedita
-                        quibusdam mollitia voluptatem minus molestias!
-                    </p>
-                    <footer>
-                        <p class="card__cta">
-                            <a href="posts/post04.html" class="card__link"
-                                >Keep reading
-                                <span class="screen-reader-only"
-                                    >the blog post 1</span
-                                ></a
-                            >
-                        </p>
-                        <ul class="card__tag-area">
-                            <li class="card__tag">
-                                <a href="#" rel="tag" class="card__link"
-                                    >Tag 1</a
-                                >
-                            </li>
-                            <li class="card__tag">
-                                <a href="#" rel="tag" class="card__link"
-                                    >Tag 2</a
-                                >
-                            </li>
-                            <li class="card__tag">
-                                <a href="#" rel="tag" class="card__link"
-                                    >Tag 3</a
-                                >
-                            </li>
-                        </ul>
-                    </footer>
-                </article>
-            </section>
-            <section>
-                <h2>Sign-up form</h2>
-                <div class="signup">
-                    <div class="signup__header">
-                        <h2 class="signup__heading">Don't miss a post!</h2>
-                        <p class="signup__subheading">
-                            Sign up for our newsletter
-                        </p>
-                    </div>
 
-                    <!-- TODO: Change method to post and handle the data gracefully in a new url -->
-                    <form action="index.html" class="signup__form">
-                        <div class="signup__name">
-                            <label class="signup__label" for="name"
-                                >Name:
-                                <span
-                                    class="signup__error"
-                                    aria-live="assertive"
-                                    id="name-error"
-                                ></span>
-                            </label>
-                            <input
-                                class="signup__field"
-                                type="text"
-                                name="name"
-                                id="name"
-                                placeholder="Name"
-                                autocomplete="name"
-                                aria-invalid="false"
-                                aria-required="true"
-                                required
-                            />
-                            <div class="signup__icon">
-                                <svg
-                                    class="icon signup__icon--valid"
-                                    aria-hidden="true"
-                                    focusable="false"
-                                >
-                                    <use
-                                        xlink:href="../images/sprite.svg#icon-checkmark"
-                                    ></use>
-                                </svg>
-                                <svg
-                                    class="icon signup__icon--invalid"
-                                    aria-hidden="true"
-                                    focusable="false"
-                                >
-                                    <use
-                                        xlink:href="../images/sprite.svg#icon-cross"
-                                    ></use>
-                                </svg>
+                        <!-- TODO: Change method to post and handle the data gracefully in a new url -->
+                        <form action="index.html" class="signup__form">
+                            <div class="signup__name">
+                                <label class="signup__label" for="name"
+                                    >Name:
+                                    <span
+                                        class="signup__error"
+                                        aria-live="assertive"
+                                        id="name-error"
+                                    ></span>
+                                </label>
+                                <input
+                                    class="signup__field"
+                                    type="text"
+                                    name="name"
+                                    id="name"
+                                    placeholder="Name"
+                                    autocomplete="name"
+                                    aria-invalid="false"
+                                    aria-required="true"
+                                    required
+                                />
+                                <div class="signup__icon">
+                                    <svg
+                                        class="icon signup__icon--valid"
+                                        aria-hidden="true"
+                                        focusable="false"
+                                    >
+                                        <use
+                                            xlink:href="../images/sprite.svg#icon-checkmark"
+                                        ></use>
+                                    </svg>
+                                    <svg
+                                        class="icon signup__icon--invalid"
+                                        aria-hidden="true"
+                                        focusable="false"
+                                    >
+                                        <use
+                                            xlink:href="../images/sprite.svg#icon-cross"
+                                        ></use>
+                                    </svg>
+                                </div>
                             </div>
-                        </div>
-                        <div class="signup__email">
-                            <label class="signup__label" for="email"
-                                >Email:
-                                <span
-                                    class="signup__error"
-                                    aria-live="assertive"
-                                    id="email-error"
-                                ></span>
-                            </label>
-                            <input
-                                class="signup__field"
-                                type="email"
-                                name="email"
-                                id="email"
-                                placeholder="Email"
-                                autocomplete="email"
-                                aria-invalid="false"
-                                aria-required="true"
-                                required
-                            />
-                            <div class="signup__icon">
-                                <svg
-                                    class="icon signup__icon--valid"
-                                    aria-hidden="true"
-                                    focusable="false"
-                                >
-                                    <use
-                                        xlink:href="../images/sprite.svg#icon-checkmark"
-                                    ></use>
-                                </svg>
-                                <svg
-                                    class="icon signup__icon--invalid"
-                                    aria-hidden="true"
-                                    focusable="false"
-                                >
-                                    <use
-                                        xlink:href="../images/sprite.svg#icon-cross"
-                                    ></use>
-                                </svg>
+                            <div class="signup__email">
+                                <label class="signup__label" for="email"
+                                    >Email:
+                                    <span
+                                        class="signup__error"
+                                        aria-live="assertive"
+                                        id="email-error"
+                                    ></span>
+                                </label>
+                                <input
+                                    class="signup__field"
+                                    type="email"
+                                    name="email"
+                                    id="email"
+                                    placeholder="Email"
+                                    autocomplete="email"
+                                    aria-invalid="false"
+                                    aria-required="true"
+                                    required
+                                />
+                                <div class="signup__icon">
+                                    <svg
+                                        class="icon signup__icon--valid"
+                                        aria-hidden="true"
+                                        focusable="false"
+                                    >
+                                        <use
+                                            xlink:href="../images/sprite.svg#icon-checkmark"
+                                        ></use>
+                                    </svg>
+                                    <svg
+                                        class="icon signup__icon--invalid"
+                                        aria-hidden="true"
+                                        focusable="false"
+                                    >
+                                        <use
+                                            xlink:href="../images/sprite.svg#icon-cross"
+                                        ></use>
+                                    </svg>
+                                </div>
                             </div>
-                        </div>
-                        <input
-                            class="signup__button"
-                            type="submit"
-                            value="Sign Up!"
-                        />
-                    </form>
-                </div>
-            </section>
+                            <input
+                                class="button button--raising signup__button"
+                                type="submit"
+                                value="Sign Up!"
+                            />
+                        </form>
+                    </div>
+                </section>
+            </main>
             <footer class="footer">
                 <nav class="footer__navigation">
                     <ul class="footer__list">
@@ -535,7 +535,7 @@
                     <small>&copy; Pablo Asencio Sánchez 2020</small>
                 </p>
             </footer>
-        </main>
+        </div>
         <script>
             const openButton = document.querySelector(
                 '.navigation__button--open'

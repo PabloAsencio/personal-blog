@@ -5,7 +5,7 @@
     border-radius: 0.214rem;
     padding: 0 1rem 1.424rem 1.424rem;
     transition: transform 0.3s;
-    margin-bottom: 3rem;
+    margin: 1.424rem 1.424rem 3rem 1.424rem;
 }
 
 .card:hover {
@@ -96,27 +96,6 @@
     max-width: 50rem;
 }
 
-.card__cta {
-    display: inline-block;
-    background-color: var(--button-background-color);
-    color: var(--button-on-color);
-    font-weight: 600;
-    padding: 0.712rem 1.412rem;
-    border-radius: 10rem;
-    box-shadow: 0.1rem 0.1rem 0.1rem var(--button-shadow-color);
-    transition: transform 0.3s;
-}
-
-.card__cta:hover {
-    background-color: var(--button-hover-color);
-    color: var(--button-hover-on-color);
-    transform: translateY(-0.2rem) scale(1.03);
-}
-
-.card__cta:focus-within {
-    box-shadow: 0 0 3px 3px var(--button-outline-color);
-}
-
 .card__tag-area {
     display: flex;
     flex-flow: row wrap;
@@ -138,11 +117,6 @@
 
 .card__tag:focus-within {
     box-shadow: 0 0 3px 3px var(--tag-outline-color);
-}
-
-.card__link:focus,
-.card__link:active {
-    outline: none;
 }
 
 .card__figure {
