@@ -34,21 +34,21 @@ body {
     --on-color: var(--on-color-primary);
 
     --skiplink-background-color: var(--color-primary);
-    --skiplink-on-color: var(--color-secondary);
+    --skiplink-on-color: var(--on-color-primary);
     --skiplink-outline-color: var(--color-tertiary);
 
     --navigation-background-color: var(--color-primary);
     --navigation-on-color: var(--color-secondary);
     --navigation-outline-color: var(--color-tertiary);
+    --navigation-icon-hover-color: var(--color-tertiary);
+    --navigation-button-background-color: var(--white-primary-transparent);
 
     --header-heading-color: var(--color-secondary);
     --header-intro-color: var(--on-color-primary);
     --header-gradient-color-top: var(--color-primary-dark-transparent);
-    --header-gradient-color-bottom: var(--color-primary-transparent);
-    --header-intro-gradient-color-top: var(--color-tertiary-transparent);
-    --header-intro-gradient-color-bottom: var(
-        --white-primary-transparent
-    );
+    --header-gradient-color-bottom: var(--white-primary-transparent);
+    --header-intro-background-color: var(--white-primary);
+    --header-intro-border-color: var(--white-primary-transparent);
 
     --card-background-color: var(--white-primary);
     --card-on-color: var(--on-color-primary);

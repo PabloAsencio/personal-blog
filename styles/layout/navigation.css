@@ -4,31 +4,30 @@
     justify-content: space-between;
     margin: 0 0 1.424rem 0;
     /* background-color: var(--color-primary-dark); */
-    background-color: var(--navigation-background-color);
-    position: absolute;
+    /* background-color: var(--navigation-background-color); */
+    /* position: absolute;
     top: 0;
-    left: 0;
+    left: 0; */
     width: 100%;
     padding: 0.356rem;
     z-index: 500;
 }
 
-/* TODO: Set margin-left to 1rem for desktop */
 .navigation__button--open {
     font-size: 1.802rem;
-    background-color: transparent;
+    background-color: var(--navigation-button-background-color);
     padding: 0.4rem 0.5rem 0.1rem 0.5rem;
-    margin: 1.424rem 0.712rem 0.712rem 0.712rem;
+    margin: 0.712rem;
+    border-radius: 50%;
 }
 
 .navigation__slide-out {
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 1;
+    z-index: 3;
     top: 0;
     left: 0;
-    /* background-color: var(--color-primary-dark); */
     background-color: var(--navigation-background-color);
     overflow-x: hidden;
     transition: width 0.5s;
@@ -38,7 +37,7 @@
 
 .navigation__search {
     display: flex;
-    margin: 1.424rem 1rem 0.712rem 0;
+    margin: 0.712rem 1rem 0.712rem 0;
 }
 
 .navigation__search-bar {
@@ -62,7 +61,6 @@
     padding: 0.624rem 0.624rem 0.624rem 2.281rem;
     font-size: 1.802rem;
     margin: 0 1.802rem;
-    /* color: var(--on-color-primary-dark); */
     color: var(--navigation-on-color);
     display: block;
 }
@@ -87,7 +85,7 @@
 
 .navigation__button--open:focus,
 .navigation__button--close:focus {
-    border-radius: 50%;
+    background-color: transparent;
 }
 
 .navigation__button--close {
@@ -95,10 +93,11 @@
     top: 0;
     right: 0;
     font-size: 1.802rem;
-    background-color: transparent;
+    background-color: var(--navigation-button-background-color);
     color: var(--navigation-on-color);
     border: none;
-    margin: 3.228rem 1.424rem;
+    border-radius: 50%;
+    margin: 1.424rem 1.424rem;
     padding: 0.5rem 0.5rem 0.1rem 0.5rem;
 }
 
@@ -129,4 +128,9 @@
     width: 2.027rem;
     height: 2.027rem;
     color: var(--navigation-on-color);
+}
+
+.navigation__icon-menu:hover,
+.navigation__icon-cross:hover {
+    color: var(--navigation-icon-hover-color);
 }
