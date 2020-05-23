@@ -96,7 +96,7 @@
     max-width: 50rem;
 }
 
-.card__tag-area {
+.card__tag-list {
     display: flex;
     flex-flow: row wrap;
 }

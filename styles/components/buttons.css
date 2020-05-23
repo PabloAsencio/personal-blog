@@ -33,3 +33,21 @@
     padding: 0.356rem 1rem;
     border-radius: 0 10rem 10rem 0;
 }
+
+.tag {
+    background-color: var(--tag-background-color);
+    color: var(--tag-on-color);
+    padding: 0.712rem 0.712rem;
+    margin-right: 0.3rem;
+    border-radius: 10rem;
+    box-shadow: 0.1rem 0.1rem 0.1rem var(--tag-shadow-color);
+    transition: transform 0.3s;
+}
+
+.tag:hover {
+    transform: translateY(-0.2rem) scale(1.03);
+}
+
+.tag:focus-within {
+    box-shadow: 0 0 3px 3px var(--tag-outline-color);
+}
