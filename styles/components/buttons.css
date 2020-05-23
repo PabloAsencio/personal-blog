@@ -38,7 +38,7 @@
     background-color: var(--tag-background-color);
     color: var(--tag-on-color);
     padding: 0.712rem 0.712rem;
-    margin-right: 0.3rem;
+    margin: 1.5rem 0.3rem 0 0;
     border-radius: 10rem;
     box-shadow: 0.1rem 0.1rem 0.1rem var(--tag-shadow-color);
     transition: transform 0.3s;

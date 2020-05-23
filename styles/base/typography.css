@@ -20,7 +20,7 @@ h3 {
 h1 {
     font-size: 2.027rem;
     line-height: 1.4798;
-    margin: 0.7399em 0;
+    margin-top: 0.7399em;
     font-weight: 800;
     text-transform: uppercase;
 }
@@ -28,7 +28,7 @@ h1 {
 h2 {
     font-size: 1.602rem;
     line-height: 1.8729;
-    margin: 0.9365em 0;
+    margin-top: 0.9365em;
     text-transform: uppercase;
     letter-spacing: 0.2em;
 }
@@ -36,18 +36,18 @@ h2 {
 h3 {
     font-size: 1.802rem;
     line-height: 1.6648;
-    margin: 0.8324em 0;
+    margin-top: 0.8324em;
     font-weight: 600;
 }
 
 p {
     line-height: 1.5;
-    margin: 0 0 1.5rem 0;
+    margin-top: 1.5em;
     text-rendering: optimizeLegibility;
 }
 
 small {
     font-size: 0.79rem;
     line-height: 1.8984;
-    margin: 1.8984em 0 0 0;
+    margin-top: 1.8984em;
 }

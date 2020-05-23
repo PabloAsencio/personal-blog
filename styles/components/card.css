@@ -15,38 +15,30 @@
 /* Card Header */
 .card__header {
     font-family: 'Eczar', serif;
-    position: relative;
-    bottom: 1.5rem;
-}
-
-.card__header + * {
-    margin-top: -3rem;
 }
 
 .card__info {
-    position: relative;
-    bottom: -0.788rem;
     display: flex;
     justify-content: space-between;
 }
 
 .card__type {
-    position: relative;
-    bottom: -1.5rem;
     font-weight: 500;
     color: var(--card-type-color);
 }
 
 .card__date {
-    position: relative;
-    bottom: -1.5rem;
     color: var(--card-date-color);
+}
+
+.card__type, .card__date {
+    margin-top: 0.788rem;
 }
 
 .card__heading-wrapper {
     display: flex;
     align-items: baseline;
-    margin-top: 0.712rem;
+    margin-top: 0.5rem;
 }
 
 .card__thumbnail {
@@ -60,21 +52,21 @@
 
 .card__heading {
     align-self: flex-start;
-    margin: -1.5rem 0 0 0.356rem;
+    margin-left: 0.356rem;
 }
 
 .card__title {
+    margin-top: 0;
     transition: transform 0.3s;
 }
-/* TODO: Move all hover effects to the media queries */
+
 .card__title:hover {
     text-decoration: underline;
     transform: translateY(-0.1rem) scale(1.03);
 }
 
 .card__author {
-    position: relative;
-    bottom: 1.5rem;
+    margin-top: 0;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
     font-weight: 400;
@@ -101,25 +93,8 @@
     flex-flow: row wrap;
 }
 
-.card__tag {
-    background-color: var(--tag-background-color);
-    color: var(--tag-on-color);
-    padding: 0.712rem 0.712rem;
-    margin-right: 0.3rem;
-    border-radius: 10rem;
-    box-shadow: 0.1rem 0.1rem 0.1rem var(--tag-shadow-color);
-    transition: transform 0.3s;
-}
-
-.card__tag:hover {
-    transform: translateY(-0.2rem) scale(1.03);
-}
-
-.card__tag:focus-within {
-    box-shadow: 0 0 3px 3px var(--tag-outline-color);
-}
-
 .card__figure {
+    margin-top: 1.5rem;
     max-width: 100%;
     max-height: 100%;
 }
@@ -139,7 +114,6 @@
     font-size: 0.79rem;
     line-height: 1.8984;
     padding bottom: 0.356rem;
-    margin-bottom: 1.89884em;
     max-width: 100%;
     border-bottom: 1px solid var(--card-on-color);
 }
