@@ -44,11 +44,12 @@ body {
     --navigation-button-background-color: var(--white-primary-transparent);
 
     --header-heading-color: var(--color-secondary);
+    --header-heading-shadow-color: var(--white-primary-transparent);
     --header-intro-color: var(--on-color-primary);
     --header-gradient-color-top: var(--color-primary-dark-transparent);
     --header-gradient-color-bottom: var(--white-primary-transparent);
     --header-intro-background-color: var(--white-primary);
-    --header-intro-border-color: var(--white-primary-transparent);
+    --header-intro-border-color: var(--gray-secondary-shadow);
 
     --card-background-color: var(--white-primary);
     --card-on-color: var(--on-color-primary);
