@@ -35,6 +35,7 @@
 }
 
 .tag {
+    display: inline-block;
     background-color: var(--tag-background-color);
     color: var(--tag-on-color);
     padding: 0.712rem 0.712rem;

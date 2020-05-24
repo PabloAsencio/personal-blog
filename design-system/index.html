@@ -19,7 +19,7 @@
                     <div class="navigation__slide">
                         <button
                             type="button"
-                            class="navigation__button--open"
+                            class="button--open navigation__button--open"
                             aria-label="Open navigation menu"
                             aria-controls="navigation-content"
                             aria-expanded="false"
@@ -36,7 +36,7 @@
                         </button>
                         <div class="navigation__slide-out">
                             <button
-                                class="navigation__button--close"
+                                class="button--close navigation__button--close"
                                 aria-label="Close navigation menu"
                             >
                                 <svg
@@ -146,6 +146,39 @@
                         nisi, reprehenderit, sequi assumenda? Nulla quisquam
                         magnam ipsam corporis eius minus beatae.
                     </p>
+                    <h2>Buttons</h2>
+                    <h3>Primary Button</h3>
+                    <p class="button button--raising">
+                        <a href="#">Primary Button </a>
+                    </p>
+                    <h3>Tag Button</h3>
+                    <p class="tag">
+                        <a href="#" rel="tag">Tag Button</a>
+                    </p>
+                    <h3>Open Menu Button</h3>
+                    <button type="button" class="button--open">
+                        <svg
+                            class="icon navigation__icon-menu"
+                            aria-hidden="true"
+                            focusable="false"
+                        >
+                            <use
+                                xlink:href="../images/sprite.svg#icon-menu"
+                            ></use>
+                        </svg>
+                    </button>
+                    <h3>Close Menu Button</h3>
+                    <button class="button--close">
+                        <svg
+                            class="icon navigation__icon-cross"
+                            aria-hidden="true"
+                            focusable="false"
+                        >
+                            <use
+                                xlink:href="../images/sprite.svg#icon-cross"
+                            ></use>
+                        </svg>
+                    </button>
                     <h2>Cards</h2>
                     <h3>Featured Card</h3>
                     <article class="card">
