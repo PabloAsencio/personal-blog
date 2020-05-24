@@ -65,6 +65,8 @@ body {
     --button-hover-color: var(--color-tertiary);
     --button-hover-on-color: var(--on-color-secondary);
 
+    --menu-button-background-color: var(--color-secondary);
+    --menu-button-outline-color: var(--color-tertiary);
 
     --tag-background-color: var(--color-primary);
     --tag-on-color: var(--on-color-primary);

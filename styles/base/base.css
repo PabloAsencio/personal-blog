@@ -20,8 +20,8 @@ a {
     color: inherit;
 }
 
-a:focus,
-a:active {
+:focus,
+:active {
     outline: none;
 }
 

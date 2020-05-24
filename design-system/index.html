@@ -19,7 +19,7 @@
                     <div class="navigation__slide">
                         <button
                             type="button"
-                            class="button--open navigation__button--open"
+                            class="menu-button navigation__button--open"
                             aria-label="Open navigation menu"
                             aria-controls="navigation-content"
                             aria-expanded="false"
@@ -36,7 +36,7 @@
                         </button>
                         <div class="navigation__slide-out">
                             <button
-                                class="button--close navigation__button--close"
+                                class="menu-button navigation__button--close"
                                 aria-label="Close navigation menu"
                             >
                                 <svg
@@ -151,12 +151,24 @@
                     <p class="button button--raising">
                         <a href="#">Primary Button </a>
                     </p>
+                    <h3>Search Button</h3>
+                    <button type="button" class="button button--search">
+                        <svg
+                            class="icon navigation__icon-search"
+                            aria-hidden="true"
+                            focusable="false"
+                        >
+                            <use
+                                xlink:href="../images/sprite.svg#icon-search"
+                            ></use>
+                        </svg>
+                    </button>
                     <h3>Tag Button</h3>
                     <p class="tag">
                         <a href="#" rel="tag">Tag Button</a>
                     </p>
-                    <h3>Open Menu Button</h3>
-                    <button type="button" class="button--open">
+                    <h3>Menu Buttons</h3>
+                    <button type="button" class="menu-button">
                         <svg
                             class="icon navigation__icon-menu"
                             aria-hidden="true"
@@ -167,8 +179,7 @@
                             ></use>
                         </svg>
                     </button>
-                    <h3>Close Menu Button</h3>
-                    <button class="button--close">
+                    <button class="menu-button">
                         <svg
                             class="icon navigation__icon-cross"
                             aria-hidden="true"

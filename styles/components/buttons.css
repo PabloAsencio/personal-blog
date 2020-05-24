@@ -1,3 +1,4 @@
+/* Primary Button */
 .button {
     display: inline-block;
     background-color: var(--button-background-color);
@@ -14,7 +15,6 @@
 .button:focus,
 .button:active,
 .button:focus-within {
-    outline: none;
     box-shadow: 0 0 3px 3px var(--button-outline-color);
 }
 
@@ -28,11 +28,20 @@
     transform: translateY(-0.2rem) scale(1.03);
 }
 
+/* Search bar button */
+
 .button--search {
     font-size: 1.424rem;
     padding: 0.356rem 1rem;
     border-radius: 0 10rem 10rem 0;
 }
+
+.button-search:focus,
+.button-search:active {
+    box-shadow: 0 0 3px 3px var(--button-outline-color);
+}
+
+/* Tag buttons */
 
 .tag {
     display: inline-block;
@@ -51,4 +60,18 @@
 
 .tag:focus-within {
     box-shadow: 0 0 3px 3px var(--tag-outline-color);
+}
+
+/* Menu buttons */
+.menu-button {
+    font-size: 1.802rem;
+    background-color: var(--navigation-button-background-color);
+    padding: 0.5rem 0.5rem 0.1rem 0.5rem;
+    border-radius: 50%;
+}
+
+.menu-button:focus,
+.menu-button:active {
+    background-color: transparent;
+    box-shadow: 0 0 3px 3px var(--navigation-outline-color);
 }
