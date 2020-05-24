@@ -8,6 +8,10 @@
     margin: 1.424rem 1.424rem 3rem 1.424rem;
 }
 
+.author-card {
+    padding: 1.5rem 1rem 1.424rem 1.424rem;
+}
+
 .card:hover {
     transform: translateY(-1rem) scale(1.001);
 }
@@ -15,6 +19,10 @@
 /* Card Header */
 .card__header {
     font-family: 'Eczar', serif;
+}
+
+.card__header--author {
+    margin-top: 1.5rem;
 }
 
 .card__info {
@@ -57,6 +65,9 @@
 
 .card__title {
     margin-top: 0;
+    font-size: 1.802rem;
+    line-height: 1.6648;
+    font-weight: 600;
     transition: transform 0.3s;
 }
 
@@ -65,7 +76,7 @@
     transform: translateY(-0.1rem) scale(1.03);
 }
 
-.card__author {
+.card__subheading {
     margin-top: 0;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
