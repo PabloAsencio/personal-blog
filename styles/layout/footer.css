@@ -39,10 +39,14 @@
     flex-flow: column nowrap;
 }
 
+.footer__social-media p {
+    margin-top: 0;
+}
+
 .footer__icons {
     margin-top: 1.5rem;
     align-self: flex-start;
-    width: 80%;
+    width: 95%;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -50,6 +54,9 @@
 
 .footer__icon-link {
     padding: 0.712rem;
+    border-radius: 50%;
+    background-color: var(--footer-on-color);
+    color: var(--footer-background-color);
 }
 
 .footer__credits {
@@ -82,5 +89,6 @@
 
 .footer__icon-link:focus,
 .footer__icon-link:active {
-    border-radius: 50%;
+    background-color: var(--footer-background-color);
+    color: var(--footer-on-color);
 }

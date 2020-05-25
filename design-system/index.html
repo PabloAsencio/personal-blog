@@ -116,112 +116,56 @@
                 </div>
             </header>
             <main id="main">
-                <section>
+                <section class="design-section">
                     <h2>Typography</h2>
                     <h3>Headings</h3>
-                    <ol>
-                        <li><h1>Heading 1</h1></li>
-                        <li><h2>Heading 2</h2></li>
-                        <li><h3>Heading 3</h3></li>
-                    </ol>
+                    <div class="display-area">
+                        <ol class="heading-list">
+                            <li><h1>Heading 1</h1></li>
+                            <li><h2>Heading 2</h2></li>
+                            <li><h3>Heading 3</h3></li>
+                        </ol>
+                    </div>
                     <h3>Paragraph</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing
-                        elit. Odio quaerat modi delectus. Ipsam quos possimus
-                        maxime nam in sequi iure architecto ullam eos minus
-                        laboriosam unde, aspernatur a voluptatibus cum. Lorem
-                        ipsum dolor sit amet consectetur adipisicing elit. Id
-                        rerum magni accusamus reiciendis. Corporis ipsa dicta
-                        adipisci. Facilis autem perferendis consectetur, soluta
-                        numquam ullam laboriosam maiores quas exercitationem
-                        pariatur iure?
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Praesentium provident officia nisi consequuntur.
-                        Reprehenderit nulla velit sequi quis minima delectus rem
-                        nesciunt deserunt culpa eius aliquid, quasi accusantium,
-                        minus laboriosam? Lorem ipsum dolor sit amet
-                        consectetur, adipisicing elit. Maiores, vero ut laborum
-                        non facilis doloribus blanditiis doloremque pariatur
-                        nisi, reprehenderit, sequi assumenda? Nulla quisquam
-                        magnam ipsam corporis eius minus beatae.
-                    </p>
-                    <h3>Blockquote</h3>
-                    <blockquote cite="#">
+                    <div class="display-area">
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Perspiciatis, laborum possimus at
-                            necessitatibus magnam ex explicabo sed pariatur,
-                            error fuga dicta facere, cum debitis. Corrupti sit
-                            ex beatae rerum corporis.
+                            Lorem ipsum dolor sit amet consectetur, adipisicing
+                            elit. Odio quaerat modi delectus. Ipsam quos
+                            possimus maxime nam in sequi iure architecto ullam
+                            eos minus laboriosam unde, aspernatur a voluptatibus
+                            cum. Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Id rerum magni accusamus
+                            reiciendis. Corporis ipsa dicta adipisci. Facilis
+                            autem perferendis consectetur, soluta numquam ullam
+                            laboriosam maiores quas exercitationem pariatur
+                            iure?
                         </p>
-                        <footer>—Author, <cite>Source</cite></footer>
-                    </blockquote>
+                    </div>
+                    <h3>Blockquote</h3>
+                    <div class="display-area">
+                        <blockquote cite="#">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Perspiciatis, laborum possimus
+                                at necessitatibus magnam ex explicabo sed
+                                pariatur, error fuga dicta facere, cum debitis.
+                                Corrupti sit ex beatae rerum corporis.
+                            </p>
+                            <footer>—Author, <cite>Source</cite></footer>
+                        </blockquote>
+                    </div>
+                </section>
+                <section class="design-section">
                     <h2>Buttons</h2>
                     <h3>Primary Button</h3>
-                    <p class="button button--raising">
-                        <a href="#">Primary Button </a>
-                    </p>
+                    <div class="display-area">
+                        <p class="button button--raising">
+                            <a href="#">Primary Button </a>
+                        </p>
+                    </div>
                     <h3>Search Button</h3>
-                    <button type="button" class="button button--search">
-                        <svg
-                            class="icon icon-search"
-                            aria-hidden="true"
-                            focusable="false"
-                        >
-                            <use
-                                xlink:href="../images/sprite.svg#icon-search"
-                            ></use>
-                        </svg>
-                    </button>
-                    <h3>Tag Button</h3>
-                    <p class="tag">
-                        <a href="#" rel="tag">Tag Button</a>
-                    </p>
-                    <h3>Menu Buttons</h3>
-                    <button type="button" class="menu-button">
-                        <svg
-                            class="icon icon-menu"
-                            aria-hidden="true"
-                            focusable="false"
-                        >
-                            <use
-                                xlink:href="../images/sprite.svg#icon-menu"
-                            ></use>
-                        </svg>
-                    </button>
-                    <button class="menu-button">
-                        <svg
-                            class="icon icon-menu"
-                            aria-hidden="true"
-                            focusable="false"
-                        >
-                            <use
-                                xlink:href="../images/sprite.svg#icon-cross"
-                            ></use>
-                        </svg>
-                    </button>
-                    <h2>Forms</h2>
-                    <h3>Search Bar</h3>
-                    <form class="navigation__search">
-                        <label
-                            for="sample-search-bar"
-                            class="screen-reader-only"
-                            >Search:
-                        </label>
-                        <input
-                            class="navigation__search-bar"
-                            type="search"
-                            name="search"
-                            id="sample-search-bar"
-                            placeholder="Search"
-                        />
-                        <button
-                            type="submit"
-                            class="button button--search"
-                            aria-label="Search"
-                        >
+                    <div class="display-area">
+                        <button type="button" class="button button--search">
                             <svg
                                 class="icon icon-search"
                                 aria-hidden="true"
@@ -232,39 +176,32 @@
                                 ></use>
                             </svg>
                         </button>
-                    </form>
-                    <h3>Text Fields</h3>
-                    <form>
-                        <div class="signup__email">
-                            <label class="signup__label" for="pristine"
-                                >Label:
-                                <span
-                                    class="signup__error"
-                                    id="sample-error"
-                                ></span>
-                            </label>
-                            <input
-                                class="signup__field"
-                                type="email"
-                                name="sample"
-                                id="sample"
-                                placeholder="Placeholder"
-                                aria-invalid="false"
-                                aria-required="true"
-                                required
-                            />
-                            <div class="signup__icon">
+                    </div>
+                    <h3>Tag Button</h3>
+                    <div class="display-area">
+                        <p class="tag">
+                            <a href="#" rel="tag">Tag Button</a>
+                        </p>
+                    </div>
+                    <h3>Menu Buttons</h3>
+                    <div class="display-area">
+                        <div class="inner-display-area menu-button-area">
+                            <button type="button" class="menu-button">
                                 <svg
-                                    class="icon icon-valid"
+                                    class="icon icon-menu"
                                     aria-hidden="true"
                                     focusable="false"
                                 >
                                     <use
-                                        xlink:href="../images/sprite.svg#icon-checkmark"
+                                        xlink:href="../images/sprite.svg#icon-menu"
                                     ></use>
                                 </svg>
+                            </button>
+                        </div>
+                        <div class="inner-display-area menu-button-area">
+                            <button class="menu-button">
                                 <svg
-                                    class="icon icon-invalid"
+                                    class="icon icon-menu"
                                     aria-hidden="true"
                                     focusable="false"
                                 >
@@ -272,9 +209,94 @@
                                         xlink:href="../images/sprite.svg#icon-cross"
                                     ></use>
                                 </svg>
-                            </div>
+                            </button>
                         </div>
-                    </form>
+                    </div>
+                </section>
+                <section class="design-section">
+                    <h2>Forms</h2>
+                    <h3>Search Bar</h3>
+                    <div class="display-area">
+                        <div class="inner-display-area">
+                            <form class="navigation__search">
+                                <label
+                                    for="sample-search-bar"
+                                    class="screen-reader-only"
+                                    >Search:
+                                </label>
+                                <input
+                                    class="navigation__search-bar"
+                                    type="search"
+                                    name="search"
+                                    id="sample-search-bar"
+                                    placeholder="Search"
+                                />
+                                <button
+                                    type="submit"
+                                    class="button button--search"
+                                    aria-label="Search"
+                                >
+                                    <svg
+                                        class="icon icon-search"
+                                        aria-hidden="true"
+                                        focusable="false"
+                                    >
+                                        <use
+                                            xlink:href="../images/sprite.svg#icon-search"
+                                        ></use>
+                                    </svg>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    <h3>Text Fields</h3>
+                    <div class="display-area">
+                        <div class="inner-display-area">
+                            <form>
+                                <div class="signup__email">
+                                    <label class="signup__label" for="pristine"
+                                        >Label:
+                                        <span
+                                            class="signup__error"
+                                            id="sample-error"
+                                        ></span>
+                                    </label>
+                                    <input
+                                        class="signup__field"
+                                        type="email"
+                                        name="sample"
+                                        id="sample"
+                                        placeholder="Placeholder"
+                                        aria-invalid="false"
+                                        aria-required="true"
+                                        required
+                                    />
+                                    <div class="signup__icon">
+                                        <svg
+                                            class="icon icon-valid"
+                                            aria-hidden="true"
+                                            focusable="false"
+                                        >
+                                            <use
+                                                xlink:href="../images/sprite.svg#icon-checkmark"
+                                            ></use>
+                                        </svg>
+                                        <svg
+                                            class="icon icon-invalid"
+                                            aria-hidden="true"
+                                            focusable="false"
+                                        >
+                                            <use
+                                                xlink:href="../images/sprite.svg#icon-cross"
+                                            ></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+                <section class="design-section">
                     <h2>Cards</h2>
                     <h3>Featured Card</h3>
                     <article class="card">
@@ -488,7 +510,7 @@
                         </footer>
                     </article>
                 </section>
-                <section>
+                <section class="design-section">
                     <h2>Sign-up form</h2>
                     <div class="signup">
                         <div class="signup__header">

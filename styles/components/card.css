@@ -1,11 +1,11 @@
 .card {
     background-color: var(--card-background-color);
     color: var(--card-on-color);
-    box-shadow: 1rem 1.5rem 2rem var(--card-shadow-color);
+    box-shadow: 1rem 1.5rem 1.5rem var(--card-shadow-color);
     border-radius: 0.214rem;
     padding: 0 1rem 1.424rem 1.424rem;
     transition: transform 0.3s;
-    margin: 1.424rem 1.424rem 3rem 1.424rem;
+    margin: 1.424rem 0.5rem 3rem 0.5rem;
 }
 
 .author-card {

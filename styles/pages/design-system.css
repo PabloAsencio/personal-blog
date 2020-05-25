@@ -1,0 +1,32 @@
+.design-section {
+    padding: 1.424rem 1.424rem 1rem 1.424rem;
+}
+
+.heading-list {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.display-area {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--card-background-color);
+    padding: 1rem 1rem 1.424rem 1.424rem;
+    margin: 1.424rem 0.5rem 3rem 0.5rem;
+    box-shadow: 1rem 1.5rem 1.5rem var(--card-shadow-color);
+    border-radius: 0.214rem;
+}
+
+.inner-display-area {
+    background-color: var(--navigation-background-color);
+    border-radius: 0.214rem;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-button-area {
+    width: 4.5rem;
+    height: 4.5rem;
+}

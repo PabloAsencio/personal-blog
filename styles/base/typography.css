@@ -17,6 +17,7 @@ h3 {
    to achieve vertical rhythm
 */
 h1 {
+    color: var(--color-secondary);
     font-size: 2.027rem;
     line-height: 1.4798;
     margin-top: 0.7399em;
@@ -52,7 +53,8 @@ small {
 }
 
 blockquote {
-    width: 25rem;
+    width: 70%;
+    max-width: 25rem;
     margin: 0 auto;
 }
 

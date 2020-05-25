@@ -88,7 +88,7 @@
 
     --footer-background-color: var(--gray-secondary-dark);
     --footer-on-color: var(--on-color-secondary);
-    --footer-outline-color: var(--on-color-primary);
+    --footer-outline-color: var(--on-color-secondary);
 
 
     --color-facebook: #3b5998;
