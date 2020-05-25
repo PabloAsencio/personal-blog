@@ -66,22 +66,5 @@
 
 .signup__button {
     align-self: center;
-    background-color: var(--button-background-color);
-    color: var(--button-on-color);
-    padding: 0.712rem 1.412rem;
-    border-radius: 10rem;
-    box-shadow: 0.1rem 0.1rem 0.1rem var(--button-shadow-color);
-    transition: transform 0.3s;
     -webkit-appearance: none; /* Necessary for styling to work on iOS */
-}
-
-.signup__button:hover {
-    background-color: var(--button-hover-color);
-    color: var(--button-hover-on-color);
-    transform: translateY(-0.2rem) scale(1.03);
-}
-
-.signup__button:focus,
-.signup__buton:active {
-    box-shadow: 0 0 3px 3px var(--button-outline-color);
 }
