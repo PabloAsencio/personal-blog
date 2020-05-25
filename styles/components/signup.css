@@ -64,22 +64,6 @@
     right: 1.802rem;
 }
 
-.signup__icon--valid {
-    color: var(--input-valid-color);
-    position: absolute;
-    top: 0;
-    left: 0;
-    visibility: hidden;
-}
-
-.signup__icon--invalid {
-    color: var(--input-invalid-color);
-    position: absolute;
-    top: 0;
-    left: 0;
-    visibility: hidden;
-}
-
 .signup__button {
     align-self: center;
     background-color: var(--button-background-color);
@@ -116,14 +100,4 @@
 
 .signup__field:focus:valid {
     box-shadow: 0 0 3px 3px var(--input-valid-color);
-}
-
-.signup__field:not(:placeholder-shown):invalid
-    + .signup__icon
-    .signup__icon--invalid,
-.signup__field:not(:placeholder-shown):focus:invalid
-    + .signup__icon
-    .signup__icon--invalid,
-.signup__field:valid + .signup__icon .signup__icon--valid {
-    visibility: visible;
 }

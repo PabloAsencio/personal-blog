@@ -25,7 +25,7 @@
                             aria-expanded="false"
                         >
                             <svg
-                                class="icon navigation__icon-menu"
+                                class="icon icon-menu"
                                 aria-hidden="true"
                                 focusable="false"
                             >
@@ -40,7 +40,7 @@
                                 aria-label="Close navigation menu"
                             >
                                 <svg
-                                    class="icon navigation__icon-cross"
+                                    class="icon icon-menu"
                                     aria-hidden="true"
                                     focusable="false"
                                 >
@@ -93,7 +93,7 @@
                             aria-label="Search"
                         >
                             <svg
-                                class="icon navigation__icon-search"
+                                class="icon icon-search"
                                 aria-hidden="true"
                                 focusable="false"
                             >
@@ -154,7 +154,7 @@
                     <h3>Search Button</h3>
                     <button type="button" class="button button--search">
                         <svg
-                            class="icon navigation__icon-search"
+                            class="icon icon-search"
                             aria-hidden="true"
                             focusable="false"
                         >
@@ -170,7 +170,7 @@
                     <h3>Menu Buttons</h3>
                     <button type="button" class="menu-button">
                         <svg
-                            class="icon navigation__icon-menu"
+                            class="icon icon-menu"
                             aria-hidden="true"
                             focusable="false"
                         >
@@ -181,7 +181,7 @@
                     </button>
                     <button class="menu-button">
                         <svg
-                            class="icon navigation__icon-cross"
+                            class="icon icon-menu"
                             aria-hidden="true"
                             focusable="false"
                         >
@@ -437,7 +437,7 @@
                                 />
                                 <div class="signup__icon">
                                     <svg
-                                        class="icon signup__icon--valid"
+                                        class="icon icon-valid"
                                         aria-hidden="true"
                                         focusable="false"
                                     >
@@ -446,7 +446,7 @@
                                         ></use>
                                     </svg>
                                     <svg
-                                        class="icon signup__icon--invalid"
+                                        class="icon icon-invalid"
                                         aria-hidden="true"
                                         focusable="false"
                                     >
@@ -478,7 +478,7 @@
                                 />
                                 <div class="signup__icon">
                                     <svg
-                                        class="icon signup__icon--valid"
+                                        class="icon icon-valid"
                                         aria-hidden="true"
                                         focusable="false"
                                     >
@@ -487,7 +487,7 @@
                                         ></use>
                                     </svg>
                                     <svg
-                                        class="icon signup__icon--invalid"
+                                        class="icon icon-invalid"
                                         aria-hidden="true"
                                         focusable="false"
                                     >
@@ -536,7 +536,7 @@
                                 class="footer__icon-link"
                             >
                                 <svg
-                                    class="icon footer__icon-facebook"
+                                    class="icon icon-facebook"
                                     aria-hidden="true"
                                     focusable="false"
                                 >
@@ -556,7 +556,7 @@
                                 class="footer__icon-link"
                             >
                                 <svg
-                                    class="icon footer__icon-twitter"
+                                    class="icon icon-twitter"
                                     aria-hidden="true"
                                     focusable="false"
                                 >
@@ -576,7 +576,7 @@
                                 class="footer__icon-link"
                             >
                                 <svg
-                                    class="icon footer__icon-linkedin"
+                                    class="icon icon-linkedin"
                                     aria-hidden="true"
                                     focusable="false"
                                 >
@@ -681,7 +681,7 @@
                 } else {
                     nameField.setAttribute('aria-invalid', 'true');
                     nameField.nextElementSibling.querySelector(
-                        '.signup__icon--invalid'
+                        '.icon-invalid'
                     ).style.visibility = 'visible';
                     nameError.innerHTML = 'Please enter your name';
                 }
@@ -689,7 +689,7 @@
 
             nameField.addEventListener('focus', () => {
                 nameField.nextElementSibling.querySelector(
-                    '.signup__icon--invalid'
+                    '.icon-invalid'
                 ).style.visibility = 'hidden';
             });
 
@@ -700,7 +700,7 @@
                 } else {
                     emailField.setAttribute('aria-invalid', 'true');
                     emailField.nextElementSibling.querySelector(
-                        '.signup__icon--invalid'
+                        '.icon-invalid'
                     ).style.visibility = 'visible';
                     if (emailField.value.length === 0) {
                         emailError.innerHTML = 'Please enter an email address';
@@ -713,7 +713,7 @@
 
             emailField.addEventListener('focus', () => {
                 emailField.nextElementSibling.querySelector(
-                    '.signup__icon--invalid'
+                    '.icon-invalid'
                 ).style.visibility = 'hidden';
             });
         </script>

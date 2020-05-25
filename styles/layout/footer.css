@@ -40,6 +40,7 @@
 }
 
 .footer__icons {
+    margin-top: 1.5rem;
     align-self: flex-start;
     width: 80%;
     display: flex;
@@ -72,7 +73,6 @@
 .footer__icon-link:focus,
 .footer__icon-link:active {
     box-shadow: 0 0 3px 3px var(--footer-outline-color);
-    outline: none;
 }
 
 .footer__link:focus,
@@ -83,25 +83,4 @@
 .footer__icon-link:focus,
 .footer__icon-link:active {
     border-radius: 50%;
-}
-
-.footer__icon-link:hover .footer__icon-facebook {
-    color: var(--color-facebook);
-}
-
-.footer__icon-link:hover .footer__icon-twitter {
-    color: var(--color-twitter);
-}
-
-.footer__icon-link:hover .footer__icon-linkedin {
-    color: var(--color-linkedin);
-}
-
-.footer__icon-facebook,
-.footer__icon-twitter,
-.footer__icon-linkedin {
-    width: 1.424rem;
-    height: 1.424rem;
-    position: relative;
-    top: 0.3rem;
 }

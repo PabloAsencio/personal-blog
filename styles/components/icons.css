@@ -1,0 +1,68 @@
+.icon {
+    display: inline-block;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+}
+
+/* Menu Icons */
+.icon-menu {
+    width: 2.027rem;
+    height: 2.027rem;
+    color: var(--navigation-on-color);
+}
+
+.icon-menu:hover {
+    color: var(--navigation-icon-hover-color);
+}
+
+/* Search Icons */
+.icon-search {
+    width: 1rem;
+    height: 1rem;
+}
+
+/* Input validation icons */
+.icon-valid {
+    color: var(--input-valid-color);
+    position: absolute;
+    top: 0;
+    right: 0;
+    visibility: hidden;
+}
+
+.icon-invalid {
+    color: var(--input-invalid-color);
+    position: absolute;
+    top: 0;
+    right: 0;
+    visibility: hidden;
+}
+
+input:not(:placeholder-shown):invalid + .signup__icon .icon-invalid,
+input:not(:placeholder-shown):focus:invalid + .signup__icon .icon-invalid,
+input:valid + .signup__icon .icon-valid {
+    visibility: visible;
+}
+
+/* Social media icons */
+.icon-facebook,
+.icon-twitter,
+.icon-linkedin {
+    width: 1.424rem;
+    height: 1.424rem;
+    position: relative;
+    top: 0.3rem;
+}
+
+.icon-facebook:hover {
+    color: var(--color-facebook);
+}
+
+.icon-twitter:hover {
+    color: var(--color-twitter);
+}
+
+.icon-linkedin:hover {
+    color: var(--color-linkedin);
+}
