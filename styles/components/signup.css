@@ -81,23 +81,7 @@
     transform: translateY(-0.2rem) scale(1.03);
 }
 
-.signup__field:focus,
-.signup__field:active {
-    outline: none;
-    box-shadow: 0 0 3px 3px var(--input-outline-color);
-}
-
 .signup__button:focus,
 .signup__buton:active {
-    outline: none;
     box-shadow: 0 0 3px 3px var(--button-outline-color);
-}
-
-.signup__field:not(:placeholder-shown):invalid,
-.signup__field:not(:placeholder-shown):focus:invalid {
-    box-shadow: 0 0 3px 3px var(--input-invalid-color);
-}
-
-.signup__field:focus:valid {
-    box-shadow: 0 0 3px 3px var(--input-valid-color);
 }

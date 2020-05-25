@@ -39,12 +39,6 @@
     visibility: hidden;
 }
 
-input:not(:placeholder-shown):invalid + .signup__icon .icon-invalid,
-input:not(:placeholder-shown):focus:invalid + .signup__icon .icon-invalid,
-input:valid + .signup__icon .icon-valid {
-    visibility: visible;
-}
-
 /* Social media icons */
 .icon-facebook,
 .icon-twitter,

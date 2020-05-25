@@ -1,4 +1,5 @@
 window.onload = () => {
+    // Menu functionality
     const openButton = document.querySelector('.navigation__button--open');
     const slideOut = document.querySelector('.navigation__slide-out');
     const closeButton = document.querySelector('.navigation__button--close');
@@ -15,7 +16,7 @@ window.onload = () => {
 
     function openNavigation() {
         slideOut.classList.add('visible', 'active');
-        setTimeout(function () {
+        setTimeout(() => {
             firstFocusableElement.focus();
         }, 1);
         main.setAttribute('aria-hidden', 'true');
@@ -30,10 +31,10 @@ window.onload = () => {
         slideOut.classList.remove('active');
         main.removeAttribute('aria-hidden');
         openButton.removeAttribute('aria-hidden');
-        setTimeout(function () {
+        setTimeout(() => {
             openButton.focus();
         }, 1);
-        setTimeout(function () {
+        setTimeout(() => {
             slideOut.classList.remove('visible');
         }, 501);
     }
@@ -52,50 +53,115 @@ window.onload = () => {
         }
     }
 
+    // Input validation
+
     const nameField = document.getElementById('name');
     const emailField = document.getElementById('email');
     const nameError = document.getElementById('name-error');
     const emailError = document.getElementById('email-error');
+    const inputOutlineColor = getComputedStyle(
+        document.documentElement
+    ).getPropertyValue('--input-outline-color');
+    const validColor = getComputedStyle(
+        document.documentElement
+    ).getPropertyValue('--input-valid-color');
+    const invalidColor = getComputedStyle(
+        document.documentElement
+    ).getPropertyValue('--input-invalid-color');
 
-    nameField.addEventListener('blur', () => {
-        if (nameField.checkValidity()) {
-            nameField.setAttribute('aria-invalid', 'false');
-            nameError.innerHTML = '';
-        } else {
-            nameField.setAttribute('aria-invalid', 'true');
-            nameField.nextElementSibling.querySelector(
-                '.icon-invalid'
-            ).style.visibility = 'visible';
-            nameError.innerHTML = 'Please enter your name';
-        }
-    });
-
+    // Name Validation
     nameField.addEventListener('focus', () => {
         nameField.nextElementSibling.querySelector(
             '.icon-invalid'
         ).style.visibility = 'hidden';
+        nameField.nextElementSibling.querySelector(
+            '.icon-valid'
+        ).style.visibility = 'hidden';
+        nameField.style.boxShadow = `0 0 3px 3px ${inputOutlineColor}`;
     });
 
-    emailField.addEventListener('blur', () => {
+    const validateName = (e) => {
+        if (nameField.checkValidity()) {
+            nameField.setAttribute('aria-invalid', 'false');
+            nameField.nextElementSibling.querySelector(
+                '.icon-invalid'
+            ).style.visibility = 'hidden';
+            nameField.nextElementSibling.querySelector(
+                '.icon-valid'
+            ).style.visibility = 'visible';
+            nameError.innerHTML = '';
+            if (e.type === 'input') {
+                nameField.style.boxShadow = `0 0 3px 3px ${validColor}`;
+            } else {
+                nameField.style.boxShadow = 'none';
+            }
+        } else {
+            nameField.setAttribute('aria-invalid', 'true');
+            nameField.nextElementSibling.querySelector(
+                '.icon-valid'
+            ).style.visibility = 'hidden';
+            nameField.nextElementSibling.querySelector(
+                '.icon-invalid'
+            ).style.visibility = 'visible';
+            nameError.innerHTML = 'Please enter your name';
+            if (e.type === 'input') {
+                nameField.style.boxShadow = `0 0 3px 3px ${invalidColor}`;
+            } else {
+                nameField.style.boxShadow = 'none';
+            }
+        }
+    };
+
+    nameField.addEventListener('input', validateName);
+    nameField.addEventListener('blur', validateName);
+
+    // Email validation
+    emailField.addEventListener('focus', () => {
+        emailField.nextElementSibling.querySelector(
+            '.icon-invalid'
+        ).style.visibility = 'hidden';
+        emailField.nextElementSibling.querySelector(
+            '.icon-valid'
+        ).style.visibility = 'hidden';
+        emailField.style.boxShadow = `0 0 3px 3px ${inputOutlineColor}`;
+    });
+
+    const validateEmail = (e) => {
         if (emailField.checkValidity()) {
             emailField.setAttribute('aria-invalid', 'false');
+            emailField.nextElementSibling.querySelector(
+                '.icon-invalid'
+            ).style.visibility = 'hidden';
+            emailField.nextElementSibling.querySelector(
+                '.icon-valid'
+            ).style.visibility = 'visible';
             emailError.innerHTML = '';
+            if (e.type === 'input') {
+                emailField.style.boxShadow = `0 0 3px 3px ${validColor}`;
+            } else {
+                emailField.style.boxShadow = 'none';
+            }
         } else {
             emailField.setAttribute('aria-invalid', 'true');
             emailField.nextElementSibling.querySelector(
+                '.icon-valid'
+            ).style.visibility = 'hidden';
+            emailField.nextElementSibling.querySelector(
                 '.icon-invalid'
             ).style.visibility = 'visible';
+            if (e.type === 'input') {
+                emailField.style.boxShadow = `0 0 3px 3px ${invalidColor}`;
+            } else {
+                emailField.style.boxShadow = 'none';
+            }
             if (emailField.value.length === 0) {
                 emailError.innerHTML = 'Please enter an email address';
             } else {
                 emailError.innerHTML = 'Please enter a valid email address';
             }
         }
-    });
+    };
 
-    emailField.addEventListener('focus', () => {
-        emailField.nextElementSibling.querySelector(
-            '.icon-invalid'
-        ).style.visibility = 'hidden';
-    });
+    emailField.addEventListener('input', validateEmail);
+    emailField.addEventListener('blur', validateEmail);
 };
