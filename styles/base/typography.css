@@ -50,3 +50,24 @@ small {
     line-height: 1.8984;
     margin-top: 1.8984em;
 }
+
+blockquote {
+    width: 25rem;
+    margin: 0 auto;
+}
+
+blockquote p {
+    font-size: 1.125rem;
+    line-height: 1.3333;
+    margin-top: 1.3333em;
+}
+
+blockquote footer {
+    font-size: 0.889rem;
+    line-height: 1.6876;
+    margin-top: 1.6876em;
+}
+
+cite {
+    font-style: italic;
+}
