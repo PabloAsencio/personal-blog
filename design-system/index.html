@@ -191,6 +191,79 @@
                             ></use>
                         </svg>
                     </button>
+                    <h2>Forms</h2>
+                    <h3>Search Bar</h3>
+                    <form class="navigation__search">
+                        <label
+                            for="sample-search-bar"
+                            class="screen-reader-only"
+                            >Search:
+                        </label>
+                        <input
+                            class="navigation__search-bar"
+                            type="search"
+                            name="search"
+                            id="sample-search-bar"
+                            placeholder="Search"
+                        />
+                        <button
+                            type="submit"
+                            class="button button--search"
+                            aria-label="Search"
+                        >
+                            <svg
+                                class="icon icon-search"
+                                aria-hidden="true"
+                                focusable="false"
+                            >
+                                <use
+                                    xlink:href="../images/sprite.svg#icon-search"
+                                ></use>
+                            </svg>
+                        </button>
+                    </form>
+                    <h3>Text Fields</h3>
+                    <form>
+                        <div class="signup__email">
+                            <label class="signup__label" for="pristine"
+                                >Label:
+                                <span
+                                    class="signup__error"
+                                    id="sample-error"
+                                ></span>
+                            </label>
+                            <input
+                                class="signup__field"
+                                type="email"
+                                name="sample"
+                                id="sample"
+                                placeholder="Placeholder"
+                                aria-invalid="false"
+                                aria-required="true"
+                                required
+                            />
+                            <div class="signup__icon">
+                                <svg
+                                    class="icon icon-valid"
+                                    aria-hidden="true"
+                                    focusable="false"
+                                >
+                                    <use
+                                        xlink:href="../images/sprite.svg#icon-checkmark"
+                                    ></use>
+                                </svg>
+                                <svg
+                                    class="icon icon-invalid"
+                                    aria-hidden="true"
+                                    focusable="false"
+                                >
+                                    <use
+                                        xlink:href="../images/sprite.svg#icon-cross"
+                                    ></use>
+                                </svg>
+                            </div>
+                        </div>
+                    </form>
                     <h2>Cards</h2>
                     <h3>Featured Card</h3>
                     <article class="card">

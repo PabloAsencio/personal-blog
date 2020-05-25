@@ -164,4 +164,57 @@ window.onload = () => {
 
     emailField.addEventListener('input', validateEmail);
     emailField.addEventListener('blur', validateEmail);
+
+    // Sample input field validation for the design system
+    const sampleField = document.getElementById('sample');
+    const sampleError = document.getElementById('sample-error');
+
+    sampleField.addEventListener('focus', () => {
+        sampleField.nextElementSibling.querySelector(
+            '.icon-invalid'
+        ).style.visibility = 'hidden';
+        sampleField.nextElementSibling.querySelector(
+            '.icon-valid'
+        ).style.visibility = 'hidden';
+        sampleField.style.boxShadow = `0 0 3px 3px ${inputOutlineColor}`;
+    });
+
+    const validateSampleField = (e) => {
+        if (sampleField.checkValidity()) {
+            sampleField.setAttribute('aria-invalid', 'false');
+            sampleField.nextElementSibling.querySelector(
+                '.icon-invalid'
+            ).style.visibility = 'hidden';
+            sampleField.nextElementSibling.querySelector(
+                '.icon-valid'
+            ).style.visibility = 'visible';
+            emailError.innerHTML = '';
+            if (e.type === 'input') {
+                sampleField.style.boxShadow = `0 0 3px 3px ${validColor}`;
+            } else {
+                sampleField.style.boxShadow = 'none';
+            }
+        } else {
+            sampleField.setAttribute('aria-invalid', 'true');
+            sampleField.nextElementSibling.querySelector(
+                '.icon-valid'
+            ).style.visibility = 'hidden';
+            sampleField.nextElementSibling.querySelector(
+                '.icon-invalid'
+            ).style.visibility = 'visible';
+            if (e.type === 'input') {
+                sampleField.style.boxShadow = `0 0 3px 3px ${invalidColor}`;
+            } else {
+                sampleField.style.boxShadow = 'none';
+            }
+            sampleError.innerHTML = 'Please enter a valid email address';
+            if (sampleField.value.length === 0) {
+                sampleError.innerHTML = 'Please enter an email address';
+            } else {
+            }
+        }
+    };
+
+    sampleField.addEventListener('input', validateSampleField);
+    sampleField.addEventListener('blur', validateSampleField);
 };
