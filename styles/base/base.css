@@ -44,6 +44,32 @@ html {
     font-size: 87.5%; /* 14px: 14/16 = 0.875 */
 }
 
+/* Big phone portrait */
+@media (min-width: 600px) {
+    html {
+        font-size: 100%;
+    }
+}
+
+/* Laptop */
+@media (min-width: 1441px) {
+    main {
+        max-width: 95%;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 2560px) {
+    html {
+        font-size: 112.5%;
+    }
+
+    main {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}
+
 /* Screen reader */
 .screen-reader-only {
     position: absolute;

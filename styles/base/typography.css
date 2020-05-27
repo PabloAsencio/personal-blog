@@ -41,9 +41,12 @@ h3 {
 }
 
 p {
+    font-size: 1rem;
     line-height: 1.5;
     margin-top: 1.5em;
     text-rendering: optimizeLegibility;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
 }
 
 small {
@@ -72,4 +75,20 @@ blockquote footer {
 
 cite {
     font-style: italic;
+}
+
+@media (min-width: 425px) {
+    h1 {
+        font-size: 2.281rem;
+        line-height: 1.3154;
+        margin-top: 0.6577em;
+    }
+}
+
+@media (min-width: 600px) {
+    h1 {
+        font-size: 3.247rem;
+        line-height: 1.3858;
+        margin-top: 0.4619em;
+    }
 }

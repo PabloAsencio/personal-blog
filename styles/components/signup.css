@@ -1,7 +1,8 @@
 .signup {
     background-color: var(--signup-background-color);
     color: var(--signup-on-color);
-    margin: 1.424rem 0.5rem 3rem 0.5rem;
+    max-width: 30rem;
+    margin: 1.424rem 0.5rem 3rem 0;
     padding: 1.424rem;
     border: 3px solid var(--signup-border-color);
     border-radius: 0.214rem;

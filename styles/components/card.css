@@ -5,7 +5,11 @@
     border-radius: 0.214rem;
     padding: 0 1rem 1.424rem 1.424rem;
     transition: transform 0.3s;
-    margin: 1.424rem 0.5rem 3rem 0.5rem;
+    margin: 1.424rem 0.5rem 3rem 0;
+    max-width: 53rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .author-card {
@@ -95,8 +99,10 @@
     border-radius: 3px;
 }
 
-.card__text {
+.card__text,
+.card__text--featured {
     max-width: 50rem;
+    max-height: 99rem; /* Prevents automatic font resizing on Chrome for Android */
 }
 
 .card__tag-list {
@@ -105,6 +111,7 @@
 }
 
 .card__figure {
+    display: table;
     margin-top: 1.5rem;
     max-width: 100%;
     max-height: 100%;
@@ -121,10 +128,50 @@
 }
 
 .card__figcaption {
+    display: table-caption;
+    caption-side: bottom;
     font-family: 'Montserrat', sans-serif;
     font-size: 0.79rem;
     line-height: 1.8984;
     padding bottom: 0.356rem;
     max-width: 100%;
     border-bottom: 1px solid var(--card-on-color);
+}
+
+/* Laptop */
+@media (min-width: 1240px) {
+
+.card {
+    max-width: 100%;
+}
+
+.card__text--featured {
+    margin-top: 1.5rem;
+    max-width: 100%;
+    column-count: 2;
+    column-gap: 1.5rem;
+}
+
+.card__text--featured p:first-child {
+    margin-top: 0rem;
+}
+
+}
+
+/* Desktop */
+@media (min-width: 1600px) {
+    .card {
+        max-width: 53rem;
+    }
+
+    .card__text--featured {
+        margin-top:0rem;
+        max-width: 50rem;
+        column-count: 1;
+        column-gap: 0;
+    }
+
+    .card__text--featured p:first-child {
+        margin-top: 1.5rem;
+    }
 }

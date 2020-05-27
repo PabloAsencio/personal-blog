@@ -77,3 +77,50 @@
     margin: 1.3333em 0;
     color: var(--header-intro-color);
 }
+
+/* Mobile Landscape */
+@media (max-height: 425px) {
+    .header__intro-container {
+        top: -3rem;
+        left: 3rem;
+    }
+}
+
+/* Mobile S */
+@media (min-width: 360px) and (min-height: 425px) {
+    .header__intro-container {
+        top: 2.5rem;
+        left: 1.424rem;
+    }
+}
+
+/* Mobile M */
+@media (min-width: 425px) and (min-height: 425px) {
+    .header__intro-container {
+        top: 7.5rem;
+        left: 3rem;
+        width: 20rem;
+        height: 20rem;
+    }
+}
+
+/* Mobile L */
+@media (min-width: 600px) and (min-height: 425px) {
+    .header__intro-container {
+        top: 20vh;
+        left: 33vw;
+        width: 22rem;
+        height: 22rem;
+        transform: translate(-55%, -45%);
+    }
+}
+
+/* Desktop 4K */
+@media (min-width: 2560px) {
+    .header__intro-container {
+        top: 29vh;
+        left: 26vw;
+        width: 30rem;
+        height: 30rem;
+    }
+}

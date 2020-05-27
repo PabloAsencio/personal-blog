@@ -54,7 +54,6 @@ window.onload = () => {
     }
 
     // Input validation
-
     const nameField = document.getElementById('name');
     const emailField = document.getElementById('email');
     const nameError = document.getElementById('name-error');
