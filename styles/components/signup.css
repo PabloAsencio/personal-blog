@@ -1,7 +1,7 @@
 .signup {
     background-color: var(--signup-background-color);
     color: var(--signup-on-color);
-    max-width: 30rem;
+    max-width: 20rem;
     margin: 1.424rem 0.5rem 3rem 0;
     padding: 1.424rem;
     border: 3px solid var(--signup-border-color);
@@ -68,4 +68,10 @@
 .signup__button {
     align-self: center;
     -webkit-appearance: none; /* Necessary for styling to work on iOS */
+}
+
+@media (min-width: 460px) {
+    .signup {
+        max-width: 25rem;
+    }
 }

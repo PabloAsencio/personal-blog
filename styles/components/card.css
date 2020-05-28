@@ -6,7 +6,6 @@
     padding: 0 1rem 1.424rem 1.424rem;
     transition: transform 0.3s;
     margin: 1.424rem 0.5rem 3rem 0;
-    max-width: 53rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -99,10 +98,23 @@
     border-radius: 3px;
 }
 
+.card__text {
+    max-width: 50rem;
+}
+
 .card__text,
 .card__text--featured {
-    max-width: 50rem;
     max-height: 99rem; /* Prevents automatic font resizing on Chrome for Android */
+}
+
+.card__text--featured {
+    columns: 2 25rem;
+    column-gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.card__text--featured p:first-child {
+    margin-top: 0;
 }
 
 .card__tag-list {
@@ -138,40 +150,19 @@
     border-bottom: 1px solid var(--card-on-color);
 }
 
-/* Laptop */
-@media (min-width: 1240px) {
-
-.card {
-    max-width: 100%;
-}
-
-.card__text--featured {
-    margin-top: 1.5rem;
-    max-width: 100%;
-    column-count: 2;
-    column-gap: 1.5rem;
-}
-
-.card__text--featured p:first-child {
-    margin-top: 0rem;
-}
-
-}
-
-/* Desktop */
-@media (min-width: 1600px) {
+@media (min-width: 1800px) {
     .card {
-        max-width: 53rem;
+        max-width: 100%;
     }
 
     .card__text--featured {
-        margin-top:0rem;
-        max-width: 50rem;
-        column-count: 1;
-        column-gap: 0;
+        column-count: 2;
+        column-width: calc(100% / 2);
+        column-gap: 1.5rem;
+        margin-top: 1.5rem;
     }
 
     .card__text--featured p:first-child {
-        margin-top: 1.5rem;
+        margin-top: 0;
     }
 }

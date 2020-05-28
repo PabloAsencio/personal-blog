@@ -26,6 +26,7 @@
     justify-self: center;
     font-size: 1.266em;
     line-height: 1.1852;
+    justify-self: flex-start;
 }
 
 .footer__list {
@@ -101,4 +102,10 @@
 .footer__icon-link:active {
     background-color: var(--footer-background-color);
     color: var(--footer-on-color);
+}
+
+@media (min-width: 460px) {
+    .footer__navigation {
+        justify-self: center;
+    }
 }

@@ -109,8 +109,8 @@
     .header__intro-container {
         top: 20vh;
         left: 33vw;
-        width: 22rem;
-        height: 22rem;
+        width: 24rem;
+        height: 24rem;
         transform: translate(-55%, -45%);
     }
 }

@@ -6,437 +6,758 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Personal Blog Homepage</title>
         <link rel="stylesheet" href="styles/main.css" />
+        <script src="scripts/script.js" async></script>
     </head>
     <body>
         <!-- TODO: Replace lorem ipsum placeholders with meaningful text -->
         <!-- TODO: Replace image placeholders with real images -->
         <!-- TODO: Make images responsive -->
-        <header>
-            <p><a href="#main">Skip to main</a></p>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="design-system/index.html">Design System</a>
-                    </li>
-                    <!-- TODO: Create about and contact pages -->
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-            <form>
-                <label for="search-box">Search: </label>
-                <input type="search" name="search" id="search-box" />
-                <input type="submit" value="Search" />
-            </form>
-        </header>
-        <main id="main">
-            <header>
-                <h1>Personal Blog Homepage</h1>
-                <p>
-                    Short website description. Lorem ipsum dolor sit amet,
-                    consectetur adipisicing elit. Eos repudiandae voluptate,
-                    explicabo, repellendus beatae animi nisi molestiae, placeat
-                    quod aliquid facere incidunt quis. Excepturi cum deleniti
-                    repudiandae commodi eveniet doloribus?
+        <div class="grid">
+            <header class="header">
+                <p class="header__skip-link-container">
+                    <a href="#content" class="header__skip-link">
+                        Skip to main (Press Enter)
+                    </a>
                 </p>
+                <nav class="navigation__nav">
+                    <div class="navigation__slide">
+                        <button
+                            type="button"
+                            class="menu-button navigation__button--open"
+                            aria-label="Open navigation menu"
+                            aria-controls="navigation-content"
+                            aria-expanded="false"
+                        >
+                            <svg
+                                class="icon icon-menu"
+                                aria-hidden="true"
+                                focusable="false"
+                            >
+                                <use
+                                    xlink:href="images/sprite.svg#icon-menu"
+                                ></use>
+                            </svg>
+                        </button>
+                        <div class="navigation__slide-out">
+                            <button
+                                class="menu-button navigation__button--close"
+                                aria-label="Close navigation menu"
+                            >
+                                <svg
+                                    class="icon icon-menu"
+                                    aria-hidden="true"
+                                    focusable="false"
+                                >
+                                    <use
+                                        xlink:href="images/sprite.svg#icon-cross"
+                                    ></use>
+                                </svg>
+                            </button>
+                            <div id="navigation-content">
+                                <ul>
+                                    <li>
+                                        <a
+                                            href="design-system/index.html"
+                                            class="navigation__item"
+                                            >Design System</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="about.html"
+                                            class="navigation__item"
+                                            >About</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="contact.html"
+                                            class="navigation__item"
+                                            >Contact</a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="navigation__search">
+                        <label for="search-bar" class="screen-reader-only"
+                            >Search:
+                        </label>
+                        <input
+                            class="navigation__search-bar"
+                            type="search"
+                            name="search"
+                            id="search-bar"
+                            placeholder="Search"
+                        />
+                        <button
+                            type="submit"
+                            class="button button--search"
+                            aria-label="Search"
+                        >
+                            <svg
+                                class="icon icon-search"
+                                aria-hidden="true"
+                                focusable="false"
+                            >
+                                <use
+                                    xlink:href="images/sprite.svg#icon-search"
+                                ></use>
+                            </svg>
+                        </button>
+                    </form>
+                </nav>
+                <div class="header__intro-container" id="content">
+                    <div class="header__heading">
+                        <h1 class="header__headline">
+                            Personal&nbsp;Blog Homepage
+                        </h1>
+                        <p class="header__intro">
+                            Short website description. Lorem ipsum dolor sit
+                            amet, consectetur adipisicing elit.
+                        </p>
+                    </div>
+                </div>
             </header>
-            <section>
+            <main>
                 <h2>Latest posts</h2>
-                <article>
-                    <header>
-                        <p>
-                            Featured post
-                            <time datetime="2020-05-16">May 16, 2020</time>
-                        </p>
-                        <h3><a href="posts/post01.html">Blog post title</a></h3>
-                        <p>
-                            <a href="#">
-                                <img
-                                    src="https://via.placeholder.com/75x75?text=Author+Avatar"
-                                    alt="Author avatar"
-                                />
-                                Author Name
-                            </a>
-                        </p>
-                    </header>
-                    <figure>
-                        <picture>
-                            <source
-                                srcset="
-                                    https://via.placeholder.com/728x520?text=Latest+Post+Picture
-                                "
-                                media="(min-width: 768px)"
-                            />
-                            <source
-                                srcset="
-                                    https://via.placeholder.com/320x260?text=Latest+Post+Picture
-                                "
-                                media="(min-width: 460px)"
-                            />
-                            <img
-                                src="https://via.placeholder.com/170x120?text=Latest+Post+Picture"
-                                alt="Something about the post"
-                            />
-                        </picture>
-                        <figcaption>A caption for the picture.</figcaption>
-                    </figure>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Pariatur impedit assumenda eligendi, exercitationem nemo
-                        ipsa voluptatem error nulla, eius optio officiis aperiam
-                        ipsam mollitia quasi, reprehenderit aliquam dolorum
-                        tempore quisquam. Lorem ipsum dolor sit, amet
-                        consectetur adipisicing elit. Quibusdam sunt maxime
-                        beatae ducimus molestiae consectetur? Aperiam explicabo
-                        tempore adipisci omnis consequatur itaque quam pariatur
-                        at cum velit, nulla natus vitae. Lorem ipsum, dolor sit
-                        amet consectetur adipisicing elit. Repellat quo, maiores
-                        vero suscipit ratione quos, dolorem odit perspiciatis
-                        nihil voluptatum dolore optio eum eligendi
-                        necessitatibus dolores temporibus vel nesciunt
-                        quibusdam?
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Pariatur impedit assumenda eligendi, exercitationem nemo
-                        ipsa voluptatem error nulla, eius optio officiis aperiam
-                        ipsam mollitia quasi, reprehenderit aliquam dolorum
-                        tempore quisquam. Lorem ipsum dolor sit, amet
-                        consectetur adipisicing elit. Quibusdam sunt maxime
-                        beatae ducimus molestiae consectetur? Aperiam explicabo
-                        tempore adipisci omnis consequatur itaque quam pariatur
-                        at cum velit, nulla natus vitae. Lorem ipsum, dolor sit
-                        amet consectetur adipisicing elit. Repellat quo, maiores
-                        vero suscipit ratione quos, dolorem odit perspiciatis
-                        nihil voluptatum dolore optio eum eligendi
-                        necessitatibus dolores temporibus vel nesciunt
-                        quibusdam?
-                    </p>
-                    <footer>
-                        <p>
-                            <a href="posts/post01.html"
-                                >Keep reading
-                                <span class="screen-reader-only"
-                                    >the blog post 1</span
-                                ></a
-                            >
-                        </p>
-                        <ul>
-                            <li><a href="#" rel="tag"></a>Tag 1</li>
-                            <li><a href="#" rel="tag"></a>Tag 2</li>
-                            <li><a href="#" rel="tag"></a>Tag 3</li>
-                        </ul>
-                    </footer>
-                </article>
-                <article class="card">
-                    <header class="card__header">
-                        <div class="card__info">
-                            <p class="card__type">Recent post</p>
-                            <p>
-                                <time class="card__date" datetime="2020-05-16">
-                                    May 16, 2020
-                                </time>
-                            </p>
-                        </div>
-                        <div class="card__heading-wrapper">
-                            <img
-                                class="card__thumbnail"
-                                src="https://via.placeholder.com/150x150?text=Post+Thumbnail"
-                                alt="Post thumbnail"
-                            />
-                            <div class="card__heading">
-                                <h3 class="card__title">
-                                    <a href="posts/post04.html">Post title</a>
-                                </h3>
-                                <p class="card__author">
-                                    <a href="#">Author Name</a>
+                <section class="latest">
+                    <article class="card latest__post--featured">
+                        <div class="card__body">
+                            <header class="card__header">
+                                <div class="card__info">
+                                    <p class="card__type">
+                                        Featured post
+                                    </p>
+                                    <p class="card__date">
+                                        <time datetime="2020-05-16"
+                                            >May 16, 2020</time
+                                        >
+                                    </p>
+                                </div>
+                                <div class="card__heading-wrapper">
+                                    <img
+                                        class="card__thumbnail"
+                                        src="https://via.placeholder.com/75x75?text=Author+Avatar"
+                                        alt="Author avatar"
+                                    />
+                                    <div class="card__heading">
+                                        <h3 class="card__title">
+                                            <a href="posts/post01.html"
+                                                >Blog post title</a
+                                            >
+                                        </h3>
+                                        <p class="card__subheading">
+                                            <a href="#">
+                                                Author Name
+                                            </a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </header>
+                            <figure class="card__figure">
+                                <picture class="card__picture">
+                                    <source
+                                        srcset="
+                                            https://via.placeholder.com/728x520?text=Latest+Post+Picture
+                                        "
+                                        media="(min-width: 768px)"
+                                    />
+                                    <source
+                                        srcset="
+                                            https://via.placeholder.com/360x270?text=Latest+Post+Picture
+                                        "
+                                        media="(min-width: 460px)"
+                                    />
+                                    <img
+                                        src="https://via.placeholder.com/300x200?text=Latest+Post+Picture"
+                                        alt="Something about the post"
+                                        class="card__img"
+                                    />
+                                </picture>
+                                <figcaption class="card__figcaption">
+                                    A caption for the picture.
+                                </figcaption>
+                            </figure>
+                            <div class="card__text--featured">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Pariatur impedit assumenda
+                                    eligendi, exercitationem nemo ipsa
+                                    voluptatem error nulla, eius optio officiis
+                                    aperiam ipsam mollitia quasi, reprehenderit
+                                    aliquam dolorum tempore quisquam. Lorem
+                                    ipsum dolor sit, amet consectetur
+                                    adipisicing elit. Quibusdam sunt maxime
+                                    beatae ducimus molestiae consectetur?
+                                    Aperiam explicabo tempore adipisci omnis
+                                    consequatur itaque quam pariatur at cum
+                                    velit, nulla natus vitae. Lorem ipsum, dolor
+                                    sit amet consectetur adipisicing elit.
+                                    Repellat quo, maiores vero suscipit ratione
+                                    quos, dolorem odit perspiciatis nihil
+                                    voluptatum dolore optio eum eligendi
+                                    necessitatibus dolores temporibus vel
+                                    nesciunt quibusdam?
+                                </p>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Pariatur impedit assumenda
+                                    eligendi, exercitationem nemo ipsa
+                                    voluptatem error nulla, eius optio officiis
+                                    aperiam ipsam mollitia quasi, reprehenderit
+                                    aliquam dolorum tempore quisquam. Lorem
+                                    ipsum dolor sit, amet consectetur
+                                    adipisicing elit. Quibusdam sunt maxime
+                                    beatae ducimus molestiae consectetur?
+                                    Aperiam explicabo tempore adipisci omnis
+                                    consequatur itaque quam pariatur at cum
+                                    velit, nulla natus vitae. Lorem ipsum, dolor
+                                    sit amet consectetur adipisicing elit.
+                                    Repellat quo, maiores vero suscipit ratione
+                                    quos, dolorem odit perspiciatis nihil
+                                    voluptatum dolore optio eum eligendi
+                                    necessitatibus dolores temporibus vel
+                                    nesciunt quibusdam?
                                 </p>
                             </div>
                         </div>
-                    </header>
-                    <p class="card__text">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing
-                        elit. Alias asperiores rem totam, ullam eveniet
-                        molestias quisquam soluta. Amet accusantium
-                        voluptatibus, placeat dicta asperiores dolor. Expedita
-                        quibusdam mollitia voluptatem minus molestias!
-                    </p>
-                    <footer>
-                        <p class="card__cta">
-                            <a href="posts/post04.html"
-                                >Keep reading
-                                <span class="screen-reader-only"
-                                    >the blog post 1</span
-                                ></a
-                            >
-                        </p>
-                        <ul class="card__tag-area">
-                            <li class="card__tag">
-                                <a href="#" rel="tag"></a>Tag 1
-                            </li>
-                            <li class="card__tag">
-                                <a href="#" rel="tag"></a>Tag 2
-                            </li>
-                            <li class="card__tag">
-                                <a href="#" rel="tag"></a>Tag 3
-                            </li>
-                        </ul>
-                    </footer>
-                </article>
-                <article class="card">
-                    <header class="card__header">
-                        <div class="card__info">
-                            <p class="card__type">Recent post</p>
-                            <p>
-                                <time class="card__date" datetime="2020-05-16">
-                                    May 16, 2020
-                                </time>
+                        <footer class="card__footer">
+                            <p class="button button--raising">
+                                <a href="posts/post01.html"
+                                    >Keep reading
+                                    <span class="screen-reader-only"
+                                        >the blog post 1</span
+                                    ></a
+                                >
+                            </p>
+                            <ul class="card__tag-list">
+                                <li class="tag">
+                                    <a href="#" rel="tag">Tag 1</a>
+                                </li>
+                                <li class="tag">
+                                    <a href="#" rel="tag">Tag 2</a>
+                                </li>
+                                <li class="tag">
+                                    <a href="#" rel="tag">Tag 3</a>
+                                </li>
+                            </ul>
+                        </footer>
+                    </article>
+                    <article class="card latest__post--first">
+                        <div class="card__body">
+                            <header class="card__header">
+                                <div class="card__info">
+                                    <p class="card__type">Recent post</p>
+                                    <p class="card__date">
+                                        <time datetime="2020-05-16">
+                                            May 16, 2020
+                                        </time>
+                                    </p>
+                                </div>
+                                <div class="card__heading-wrapper">
+                                    <img
+                                        class="card__thumbnail"
+                                        src="https://via.placeholder.com/150x150?text=Post+Thumbnail"
+                                        alt="Post thumbnail"
+                                    />
+                                    <div class="card__heading">
+                                        <h3 class="card__title">
+                                            <a href="posts/post04.html"
+                                                >Post title</a
+                                            >
+                                        </h3>
+                                        <p class="card__subheading">
+                                            <a href="#">Author Name</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </header>
+                            <p class="card__text">
+                                Lorem ipsum dolor sit, amet consectetur
+                                adipisicing elit. Alias asperiores rem totam,
+                                ullam eveniet molestias quisquam soluta. Amet
+                                accusantium voluptatibus, placeat dicta
+                                asperiores dolor. Expedita quibusdam mollitia
+                                voluptatem minus molestias!
                             </p>
                         </div>
-                        <div class="card__heading-wrapper">
-                            <img
-                                class="card__thumbnail"
-                                src="https://via.placeholder.com/150x150?text=Post+Thumbnail"
-                                alt="Post thumbnail"
-                            />
-                            <div class="card__heading">
-                                <h3 class="card__title">
-                                    <a href="posts/post04.html">Post title</a>
-                                </h3>
-                                <p class="card__author">
-                                    <a href="#">Author Name</a>
-                                </p>
-                            </div>
+                        <footer class="card__footer">
+                            <p class="button button--raising">
+                                <a href="posts/post02.html"
+                                    >Keep reading
+                                    <span class="screen-reader-only"
+                                        >the blog post 2</span
+                                    ></a
+                                >
+                            </p>
+                            <ul class="card__tag-list">
+                                <li class="tag">
+                                    <a href="#" rel="tag">Tag 1</a>
+                                </li>
+                                <li class="tag">
+                                    <a href="#" rel="tag">Tag 2</a>
+                                </li>
+                                <li class="tag">
+                                    <a href="#" rel="tag">Tag 3</a>
+                                </li>
+                            </ul>
+                        </footer>
+                    </article>
+                    <article class="card latest__post--second">
+                        <div class="card__body">
+                            <header class="card__header">
+                                <div class="card__info">
+                                    <p class="card__type">Recent post</p>
+                                    <p class="card__date">
+                                        <time datetime="2020-05-16">
+                                            May 16, 2020
+                                        </time>
+                                    </p>
+                                </div>
+                                <div class="card__heading-wrapper">
+                                    <img
+                                        class="card__thumbnail"
+                                        src="https://via.placeholder.com/150x150?text=Post+Thumbnail"
+                                        alt="Post thumbnail"
+                                    />
+                                    <div class="card__heading">
+                                        <h3 class="card__title">
+                                            <a href="posts/post04.html"
+                                                >Post title</a
+                                            >
+                                        </h3>
+                                        <p class="card__subheading">
+                                            <a href="#">Author Name</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </header>
+                            <p class="card__text">
+                                Lorem ipsum dolor sit, amet consectetur
+                                adipisicing elit. Alias asperiores rem totam,
+                                ullam eveniet molestias quisquam soluta. Amet
+                                accusantium voluptatibus, placeat dicta
+                                asperiores dolor. Expedita quibusdam mollitia
+                                voluptatem minus molestias!
+                            </p>
                         </div>
-                    </header>
-                    <p class="card__text">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing
-                        elit. Alias asperiores rem totam, ullam eveniet
-                        molestias quisquam soluta. Amet accusantium
-                        voluptatibus, placeat dicta asperiores dolor. Expedita
-                        quibusdam mollitia voluptatem minus molestias!
-                    </p>
-                    <footer>
-                        <p class="card__cta">
-                            <a href="posts/post04.html"
-                                >Keep reading
-                                <span class="screen-reader-only"
-                                    >the blog post 1</span
-                                ></a
-                            >
-                        </p>
-                        <ul class="card__tag-area">
-                            <li class="card__tag">
-                                <a href="#" rel="tag"></a>Tag 1
-                            </li>
-                            <li class="card__tag">
-                                <a href="#" rel="tag"></a>Tag 2
-                            </li>
-                            <li class="card__tag">
-                                <a href="#" rel="tag"></a>Tag 3
-                            </li>
-                        </ul>
-                    </footer>
-                </article>
-            </section>
-            <section>
+                        <footer class="card__footer">
+                            <p class="button button--raising">
+                                <a href="posts/post03.html"
+                                    >Keep reading
+                                    <span class="screen-reader-only"
+                                        >the blog post 3</span
+                                    ></a
+                                >
+                            </p>
+                            <ul class="card__tag-list">
+                                <li class="tag">
+                                    <a href="#" rel="tag">Tag 1</a>
+                                </li>
+                                <li class="tag">
+                                    <a href="#" rel="tag">Tag 2</a>
+                                </li>
+                                <li class="tag">
+                                    <a href="#" rel="tag">Tag 3</a>
+                                </li>
+                            </ul>
+                        </footer>
+                    </article>
+                </section>
                 <h2>Popular posts</h2>
-                <article class="card">
-                    <header class="card__header">
-                        <div class="card__info">
-                            <p class="card__type">Popular post</p>
-                            <p>
-                                <time class="card__date" datetime="2020-05-16">
-                                    May 16, 2020
-                                </time>
+                <section class="popular">
+                    <article class="card popular__post--first">
+                        <div class="card__body">
+                            <header class="card__header">
+                                <div class="card__info">
+                                    <p class="card__type">Popular post</p>
+                                    <p class="card__date">
+                                        <time datetime="2020-05-16">
+                                            May 16, 2020
+                                        </time>
+                                    </p>
+                                </div>
+                                <div class="card__heading-wrapper">
+                                    <img
+                                        class="card__thumbnail"
+                                        src="https://via.placeholder.com/150x150?text=Post+Thumbnail"
+                                        alt="Post thumbnail"
+                                    />
+                                    <div class="card__heading">
+                                        <h3 class="card__title">
+                                            <a href="posts/post04.html"
+                                                >Post title</a
+                                            >
+                                        </h3>
+                                        <p class="card__subheading">
+                                            <a href="#">Author Name</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </header>
+                            <p class="card__text">
+                                Lorem ipsum dolor sit, amet consectetur
+                                adipisicing elit. Alias asperiores rem totam,
+                                ullam eveniet molestias quisquam soluta. Amet
+                                accusantium voluptatibus, placeat dicta
+                                asperiores dolor. Expedita quibusdam mollitia
+                                voluptatem minus molestias!
                             </p>
                         </div>
-                        <div class="card__heading-wrapper">
-                            <img
-                                class="card__thumbnail"
-                                src="https://via.placeholder.com/150x150?text=Post+Thumbnail"
-                                alt="Post thumbnail"
-                            />
-                            <div class="card__heading">
-                                <h3 class="card__title">
-                                    <a href="posts/post04.html">Post title</a>
-                                </h3>
-                                <p class="card__author">
-                                    <a href="#">Author Name</a>
-                                </p>
-                            </div>
-                        </div>
-                    </header>
-                    <p class="card__text">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing
-                        elit. Alias asperiores rem totam, ullam eveniet
-                        molestias quisquam soluta. Amet accusantium
-                        voluptatibus, placeat dicta asperiores dolor. Expedita
-                        quibusdam mollitia voluptatem minus molestias!
-                    </p>
-                    <footer>
-                        <p class="card__cta">
-                            <a href="posts/post04.html"
-                                >Keep reading
-                                <span class="screen-reader-only"
-                                    >the blog post 1</span
-                                ></a
-                            >
-                        </p>
-                        <ul class="card__tag-area">
-                            <li class="card__tag">
-                                <a href="#" rel="tag"></a>Tag 1
-                            </li>
-                            <li class="card__tag">
-                                <a href="#" rel="tag"></a>Tag 2
-                            </li>
-                            <li class="card__tag">
-                                <a href="#" rel="tag"></a>Tag 3
-                            </li>
-                        </ul>
-                    </footer>
-                </article></article>
-                <article class="card">
-                    <header class="card__header">
-                        <div class="card__info">
-                            <p class="card__type">Popular post</p>
-                            <p>
-                                <time class="card__date" datetime="2020-05-16">
-                                    May 16, 2020
-                                </time>
+                        <footer class="card__footer">
+                            <p class="button button--raising">
+                                <a href="posts/post04.html"
+                                    >Keep reading
+                                    <span class="screen-reader-only"
+                                        >the blog post 4</span
+                                    ></a
+                                >
+                            </p>
+                            <ul class="card__tag-list">
+                                <li class="tag">
+                                    <a href="#" rel="tag">Tag 1</a>
+                                </li>
+                                <li class="tag">
+                                    <a href="#" rel="tag">Tag 2</a>
+                                </li>
+                                <li class="tag">
+                                    <a href="#" rel="tag">Tag 3</a>
+                                </li>
+                            </ul>
+                        </footer>
+                    </article>
+                    <article class="card popular__post--second">
+                        <div class="card__body">
+                            <header class="card__header">
+                                <div class="card__info">
+                                    <p class="card__type">Popular post</p>
+                                    <p class="card__date">
+                                        <time datetime="2020-05-16">
+                                            May 16, 2020
+                                        </time>
+                                    </p>
+                                </div>
+                                <div class="card__heading-wrapper">
+                                    <img
+                                        class="card__thumbnail"
+                                        src="https://via.placeholder.com/150x150?text=Post+Thumbnail"
+                                        alt="Post thumbnail"
+                                    />
+                                    <div class="card__heading">
+                                        <h3 class="card__title">
+                                            <a href="posts/post04.html"
+                                                >Post title</a
+                                            >
+                                        </h3>
+                                        <p class="card__subheading">
+                                            <a href="#">Author Name</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </header>
+                            <p class="card__text">
+                                Lorem ipsum dolor sit, amet consectetur
+                                adipisicing elit. Alias asperiores rem totam,
+                                ullam eveniet molestias quisquam soluta. Amet
+                                accusantium voluptatibus, placeat dicta
+                                asperiores dolor. Expedita quibusdam mollitia
+                                voluptatem minus molestias!
                             </p>
                         </div>
-                        <div class="card__heading-wrapper">
-                            <img
-                                class="card__thumbnail"
-                                src="https://via.placeholder.com/150x150?text=Post+Thumbnail"
-                                alt="Post thumbnail"
-                            />
-                            <div class="card__heading">
-                                <h3 class="card__title">
-                                    <a href="posts/post04.html">Post title</a>
-                                </h3>
-                                <p class="card__author">
-                                    <a href="#">Author Name</a>
-                                </p>
-                            </div>
-                        </div>
-                    </header>
-                    <p class="card__text">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing
-                        elit. Alias asperiores rem totam, ullam eveniet
-                        molestias quisquam soluta. Amet accusantium
-                        voluptatibus, placeat dicta asperiores dolor. Expedita
-                        quibusdam mollitia voluptatem minus molestias!
-                    </p>
-                    <footer>
-                        <p class="card__cta">
-                            <a href="posts/post04.html"
-                                >Keep reading
-                                <span class="screen-reader-only"
-                                    >the blog post 1</span
-                                ></a
-                            >
-                        </p>
-                        <ul class="card__tag-area">
-                            <li class="card__tag">
-                                <a href="#" rel="tag"></a>Tag 1
-                            </li>
-                            <li class="card__tag">
-                                <a href="#" rel="tag"></a>Tag 2
-                            </li>
-                            <li class="card__tag">
-                                <a href="#" rel="tag"></a>Tag 3
-                            </li>
-                        </ul>
-                    </footer>
-                </article>
-                <article class="card">
-                    <header class="card__header">
-                        <div class="card__info">
-                            <p class="card__type">Popular post</p>
-                            <p>
-                                <time class="card__date" datetime="2020-05-16">
-                                    May 16, 2020
-                                </time>
+                        <footer class="card__footer">
+                            <p class="button button--raising">
+                                <a href="posts/post05.html"
+                                    >Keep reading
+                                    <span class="screen-reader-only"
+                                        >the blog post 5</span
+                                    ></a
+                                >
+                            </p>
+                            <ul class="card__tag-list">
+                                <li class="tag">
+                                    <a href="#" rel="tag">Tag 1</a>
+                                </li>
+                                <li class="tag">
+                                    <a href="#" rel="tag">Tag 2</a>
+                                </li>
+                                <li class="tag">
+                                    <a href="#" rel="tag">Tag 3</a>
+                                </li>
+                            </ul>
+                        </footer>
+                    </article>
+                    <article class="card popular__post--third">
+                        <div class="card__body">
+                            <header class="card__header">
+                                <div class="card__info">
+                                    <p class="card__type">Popular post</p>
+                                    <p class="card__date">
+                                        <time datetime="2020-05-16">
+                                            May 16, 2020
+                                        </time>
+                                    </p>
+                                </div>
+                                <div class="card__heading-wrapper">
+                                    <img
+                                        class="card__thumbnail"
+                                        src="https://via.placeholder.com/150x150?text=Post+Thumbnail"
+                                        alt="Post thumbnail"
+                                    />
+                                    <div class="card__heading">
+                                        <h3 class="card__title">
+                                            <a href="posts/post04.html"
+                                                >Post title</a
+                                            >
+                                        </h3>
+                                        <p class="card__subheading">
+                                            <a href="#">Author Name</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </header>
+                            <p class="card__text">
+                                Lorem ipsum dolor sit, amet consectetur
+                                adipisicing elit. Alias asperiores rem totam,
+                                ullam eveniet molestias quisquam soluta. Amet
+                                accusantium voluptatibus, placeat dicta
+                                asperiores dolor. Expedita quibusdam mollitia
+                                voluptatem minus molestias!
                             </p>
                         </div>
-                        <div class="card__heading-wrapper">
-                            <img
-                                class="card__thumbnail"
-                                src="https://via.placeholder.com/150x150?text=Post+Thumbnail"
-                                alt="Post thumbnail"
-                            />
-                            <div class="card__heading">
-                                <h3 class="card__title">
-                                    <a href="posts/post04.html">Post title</a>
-                                </h3>
-                                <p class="card__author">
-                                    <a href="#">Author Name</a>
-                                </p>
-                            </div>
-                        </div>
-                    </header>
-                    <p class="card__text">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing
-                        elit. Alias asperiores rem totam, ullam eveniet
-                        molestias quisquam soluta. Amet accusantium
-                        voluptatibus, placeat dicta asperiores dolor. Expedita
-                        quibusdam mollitia voluptatem minus molestias!
+                        <footer class="card__footer">
+                            <p class="button button--raising">
+                                <a href="posts/post06.html"
+                                    >Keep reading
+                                    <span class="screen-reader-only"
+                                        >the blog post 6</span
+                                    ></a
+                                >
+                            </p>
+                            <ul class="card__tag-list">
+                                <li class="tag">
+                                    <a href="#" rel="tag">Tag 1</a>
+                                </li>
+                                <li class="tag">
+                                    <a href="#" rel="tag">Tag 2</a>
+                                </li>
+                                <li class="tag">
+                                    <a href="#" rel="tag">Tag 3</a>
+                                </li>
+                            </ul>
+                        </footer>
+                    </article>
+                </section>
+            </main>
+            <aside class="signup">
+                <div class="signup__header">
+                    <h2 class="signup__heading">Don't miss a post!</h2>
+                    <p class="signup__subheading">
+                        Sign up for our newsletter
                     </p>
-                    <footer>
-                        <p class="card__cta">
-                            <a href="posts/post04.html"
-                                >Keep reading
-                                <span class="screen-reader-only"
-                                    >the blog post 1</span
-                                ></a
+                </div>
+
+                <!-- TODO: Change method to post and handle the data gracefully in a new url -->
+                <form action="index.html" class="signup__form">
+                    <div class="signup__name">
+                        <label class="signup__label" for="name"
+                            >Name:
+                            <span
+                                class="signup__error"
+                                aria-live="assertive"
+                                id="name-error"
+                            ></span>
+                        </label>
+                        <input
+                            class="signup__field"
+                            type="text"
+                            name="name"
+                            id="name"
+                            placeholder="Name"
+                            autocomplete="name"
+                            aria-invalid="false"
+                            aria-required="true"
+                            required
+                        />
+                        <div class="signup__icon">
+                            <svg
+                                class="icon icon-valid"
+                                aria-hidden="true"
+                                focusable="false"
                             >
-                        </p>
-                        <ul class="card__tag-area">
-                            <li class="card__tag">
-                                <a href="#" rel="tag"></a>Tag 1
+                                <use
+                                    xlink:href="images/sprite.svg#icon-checkmark"
+                                ></use>
+                            </svg>
+                            <svg
+                                class="icon icon-invalid"
+                                aria-hidden="true"
+                                focusable="false"
+                            >
+                                <use
+                                    xlink:href="images/sprite.svg#icon-cross"
+                                ></use>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="signup__email">
+                        <label class="signup__label" for="email"
+                            >Email:
+                            <span
+                                class="signup__error"
+                                aria-live="assertive"
+                                id="email-error"
+                            ></span>
+                        </label>
+                        <input
+                            class="signup__field"
+                            type="email"
+                            name="email"
+                            id="email"
+                            placeholder="Email"
+                            autocomplete="email"
+                            aria-invalid="false"
+                            aria-required="true"
+                            required
+                        />
+                        <div class="signup__icon">
+                            <svg
+                                class="icon icon-valid"
+                                aria-hidden="true"
+                                focusable="false"
+                            >
+                                <use
+                                    xlink:href="images/sprite.svg#icon-checkmark"
+                                ></use>
+                            </svg>
+                            <svg
+                                class="icon icon-invalid"
+                                aria-hidden="true"
+                                focusable="false"
+                            >
+                                <use
+                                    xlink:href="images/sprite.svg#icon-cross"
+                                ></use>
+                            </svg>
+                        </div>
+                    </div>
+                    <input
+                        class="button button--raising signup__button"
+                        type="submit"
+                        value="Sign Up!"
+                    />
+                </form>
+            </aside>
+            <footer class="footer">
+                <div class="footer__container">
+                    <nav
+                        class="footer__navigation"
+                        aria-label="Footer Navigation"
+                    >
+                        <ul class="footer__list">
+                            <li class="footer__li">
+                                <a
+                                    class="footer__link"
+                                    href="design-system/index.html"
+                                >
+                                    Design System
+                                </a>
                             </li>
-                            <li class="card__tag">
-                                <a href="#" rel="tag"></a>Tag 2
+                            <li class="footer__li">
+                                <a class="footer__link" href="about.html">
+                                    About
+                                </a>
                             </li>
-                            <li class="card__tag">
-                                <a href="#" rel="tag"></a>Tag 3
+                            <li class="footer__li">
+                                <a class="footer__link" href="contact.html">
+                                    Contact
+                                </a>
                             </li>
                         </ul>
-                    </footer>
-                </article>
-            </section>
-        </main>
-        <aside>
-            <h2>Don't miss a post!</h2>
-            <p>Sign up for our newsletter</p>
-            <!-- TODO: Change method to post and handle the data gracefully in a new url -->
-            <form action="index.html">
-                <label for="fullname">Name: </label>
-                <input type="text" name="fullname" id="fullname" />
-                <label for="email">Email: </label>
-                <input type="email" name="email" id="email" />
-                <input type="submit" value="Sign Up" />
-            </form>
-        </aside>
-        <footer>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="design-system/index.html">Design System</a>
-                    </li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-            <p>Follow us on social media</p>
-            <ul>
-                <li><a href="#">Facebook</a></li>
-                <li><a href="#">Twitter</a></li>
-                <li><a href="#">LinkedIn</a></li>
-            </ul>
-            <p><small>&copy; Pablo Asencio Sánchez 2020</small></p>
-        </footer>
+                    </nav>
+                    <div class="footer__social-media">
+                        <p>Follow us on social media</p>
+                        <ul class="footer__icons">
+                            <li>
+                                <a
+                                    href="#"
+                                    aria-labelledby="facebook"
+                                    class="footer__icon-link"
+                                >
+                                    <svg
+                                        class="icon icon-facebook"
+                                        aria-hidden="true"
+                                        focusable="false"
+                                    >
+                                        <title id="facebook">
+                                            Follow us on Facebook
+                                        </title>
+                                        <use
+                                            xlink:href="images/sprite.svg#icon-facebook2"
+                                        ></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    aria-labelledby="twitter"
+                                    class="footer__icon-link"
+                                >
+                                    <svg
+                                        class="icon icon-twitter"
+                                        aria-hidden="true"
+                                        focusable="false"
+                                    >
+                                        <title id="twitter">
+                                            Follow us on Twitter
+                                        </title>
+                                        <use
+                                            xlink:href="images/sprite.svg#icon-twitter"
+                                        ></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    aria-labelledby="linkedin"
+                                    class="footer__icon-link"
+                                >
+                                    <svg
+                                        class="icon icon-linkedin"
+                                        aria-hidden="true"
+                                        focusable="false"
+                                    >
+                                        <title id="linkedin">
+                                            Follow us on LinkedIn
+                                        </title>
+                                        <use
+                                            xlink:href="images/sprite.svg#icon-linkedin"
+                                        ></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <p class="footer__credits">
+                        <small
+                            >Icons designed by
+                            <a class="footer__link" href="http://keyamoon.com"
+                                >Keyamoon</a
+                            >
+                            from
+                            <a class="footer__link" href="https://icomoon.io"
+                                >IcoMoon</a
+                            ></small
+                        >
+                    </p>
+                    <p class="footer__copyright">
+                        <small>&copy; Pablo Asencio Sánchez 2020</small>
+                    </p>
+                </div>
+            </footer>
+        </div>
     </body>
 </html>
