@@ -1,0 +1,199 @@
+.design-section {
+    padding: 1.424rem 1.424rem 1rem 1.424rem;
+}
+
+.display-area {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--card-background-color);
+    padding: 1rem 1rem 1.424rem 1.424rem;
+    margin: 1.424rem 0.5rem 0 0;
+    box-shadow: 1rem 1.5rem 1.5rem var(--card-shadow-color);
+    border-radius: 0.214rem;
+}
+
+.inner-display-area {
+    background-color: var(--navigation-background-color);
+    border-radius: 0.214rem;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-button-area {
+    width: 4.5rem;
+    height: 4.5rem;
+}
+
+/* Mobile landscape */
+@media (min-width: 550px) {
+    .buttons__container {
+        display: grid;
+        grid-template: auto 1fr auto 1fr / 1fr 1fr;
+        grid-template-areas:
+            'heading-primary heading-search'
+            'primary search'
+            'heading-tag heading-menu'
+            'tag menu';
+        column-gap: 1.5rem;
+    }
+
+    .heading-primary {
+        grid-area: heading-primary;
+    }
+
+    .primary-sample {
+        grid-area: primary;
+    }
+
+    .heading-search {
+        grid-area: heading-search;
+    }
+
+    .search-sample {
+        grid-area: search;
+    }
+
+    .heading-tag {
+        grid-area: heading-tag;
+    }
+
+    .tag-sample {
+        grid-area: tag;
+    }
+
+    .heading-menu {
+        grid-area: heading-menu;
+    }
+
+    .menu-sample {
+        grid-area: menu;
+    }
+
+    .forms-container {
+        display: grid;
+        grid-template: auto 1fr / 1fr 1fr;
+        grid-template-areas:
+            'heading-search-bar heading-text-field'
+            'search-bar text-field';
+        column-gap: 1.5rem;
+    }
+
+    .heading-search-bar {
+        grid-area: heading-search-bar;
+    }
+
+    .search-bar-sample {
+        grid-area: search-bar;
+    }
+
+    .heading-text-field {
+        grid-area: heading-text-field;
+    }
+
+    .text-field-sample {
+        grid-area: text-field;
+    }
+}
+
+/* Tablet portrait */
+@media (min-width: 768px) {
+    .typography__container {
+        display: grid;
+        grid-template: repeat(auto, 3) 1fr / 1fr 1fr;
+        grid-template-areas:
+            'heading-h heading-h'
+            'headings headings'
+            'heading-p heading-b'
+            'paragraph blockquote';
+        justify-items: stretch;
+        align-items: stretch;
+        column-gap: 1.5rem;
+    }
+
+    .heading-headings {
+        grid-area: heading-h;
+    }
+
+    .headings {
+        grid-area: headings;
+    }
+
+    .heading-paragraph {
+        grid-area: heading-p;
+    }
+
+    .paragraph {
+        grid-area: paragraph;
+    }
+
+    .heading-blockquote {
+        grid-area: heading-b;
+    }
+
+    .blockquote {
+        grid-area: blockquote;
+    }
+}
+
+/* Tablet landscape */
+@media (min-width: 1024px) {
+    .typography__container {
+        display: grid;
+        grid-template: auto 1fr / auto 1fr 1fr;
+        grid-template-areas:
+            'heading-h heading-p heading-b'
+            'headings paragraph blockquote';
+        column-gap: 1.5rem;
+    }
+
+    .cards__container {
+        display: grid;
+        grid-template: repeat(auto, 3) 1fr / 1fr 1fr;
+        grid-template-areas:
+            'heading-featured heading-featured'
+            'featured featured'
+            'heading-regular heading-author'
+            'regular author';
+        column-gap: 1.5rem;
+    }
+
+    .heading-featured {
+        grid-area: heading-featured;
+    }
+
+    .featured {
+        grid-area: featured;
+    }
+
+    .heading-regular {
+        grid-area: heading-regular;
+    }
+
+    .regular {
+        grid-area: regular;
+    }
+
+    .heading-author {
+        grid-area: heading-author;
+    }
+
+    .author {
+        grid-area: author;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1600px) {
+    .cards__container {
+        display: grid;
+        grid-template: auto 1fr auto 1fr / 2fr 1fr;
+        grid-template-areas:
+            'heading-featured heading-regular'
+            'featured regular'
+            'featured heading-author'
+            'featured author';
+        column-gap: 1.5rem;
+    }
+}

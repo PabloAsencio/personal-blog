@@ -1,0 +1,126 @@
+.header__skip-link-container {
+    position: absolute;
+    z-index: 999;
+    top: -9rem;
+    left: 0;
+    right: 0;
+    color: var(--skiplink-on-color);
+    background-color: var(--skiplink-background-color);
+    text-align: center;
+    padding: 1.424rem;
+    overflow: hidden;
+    transition: transform 0.5s;
+}
+
+.header__skip-link-container:focus-within {
+    padding: 1.802rem;
+    transform: translateY(7.5rem);
+}
+
+.header__skip-link {
+    color: inherit;
+    font-size: 1.424rem;
+}
+
+.header__skip-link:focus,
+.header__skip-link:active {
+    text-decoration: underline;
+    padding: 0.624rem;
+    box-shadow: 0 0 3px 3px var(--skiplink-outline-color);
+    border-radius: 10rem;
+}
+
+.header {
+    background-image: linear-gradient(
+            to right bottom,
+            var(--header-gradient-color-top),
+            var(--header-gradient-color-bottom)
+        ),
+        url('../../images/candidate-pictures/IMG_8486.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.header__headline {
+    color: var(--header-heading-color);
+    margin-bottom: -1rem;
+    z-index: 2;
+}
+
+.header__heading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    margin: 0.214rem 0 0 1.266rem;
+    text-shadow: 1px 1px 1px var(--header-heading-shadow-color);
+}
+
+.header__intro-container {
+    background-color: var(--header-intro-background-color);
+    box-shadow: 1px 1px 1px var(--header-intro-border-color);
+    border-radius: 50%;
+    width: 18rem;
+    height: 18rem;
+    padding: 3rem;
+    position: relative;
+    top: 1rem;
+    left: 0.712rem;
+}
+
+.header__intro {
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.3333;
+    margin: 1.3333em 0;
+    color: var(--header-intro-color);
+}
+
+/* Mobile Landscape */
+@media (max-height: 425px) {
+    .header__intro-container {
+        top: -3rem;
+        left: 3rem;
+    }
+}
+
+/* Mobile S */
+@media (min-width: 360px) and (min-height: 425px) {
+    .header__intro-container {
+        top: 2.5rem;
+        left: 1.424rem;
+    }
+}
+
+/* Mobile M */
+@media (min-width: 425px) and (min-height: 425px) {
+    .header__intro-container {
+        top: 7.5rem;
+        left: 3rem;
+        width: 20rem;
+        height: 20rem;
+    }
+}
+
+/* Mobile L */
+@media (min-width: 600px) and (min-height: 425px) {
+    .header__intro-container {
+        top: 20vh;
+        left: 33vw;
+        width: 22rem;
+        height: 22rem;
+        transform: translate(-55%, -45%);
+    }
+}
+
+/* Desktop 4K */
+@media (min-width: 2560px) {
+    .header__intro-container {
+        top: 29vh;
+        left: 26vw;
+        width: 30rem;
+        height: 30rem;
+    }
+}

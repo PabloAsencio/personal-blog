@@ -1,0 +1,106 @@
+.navigation__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 1.424rem 0;
+    width: 100%;
+    padding: 0.356rem;
+    z-index: 500;
+}
+
+.navigation__button--open {
+    margin: 0.712rem;
+}
+
+.navigation__slide-out {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    background-color: var(--navigation-background-color);
+    overflow-x: hidden;
+    transition: width 0.5s;
+    padding: 6rem 0;
+    visibility: hidden;
+}
+
+.navigation__search {
+    display: flex;
+    margin: 0.712rem 1rem 0.712rem 0;
+}
+
+.navigation__search-bar {
+    font-size: 1.424rem;
+    border-radius: 10rem 0 0 10rem;
+    padding: 0.356rem 1rem;
+    width: 12rem;
+    background-color: var(--input-background-color);
+    color: var(--input-on-color);
+    border: solid var(--input-border-color);
+    border-width: 0.4px 0 0.4px 0.4px;
+    box-shadow: 0.1rem 0.1rem 0.1rem var(--input-shadow-color);
+    -webkit-appearance: none; /* Necessary to make the shape work on Safari for iOS*/
+}
+
+.navigation__search-bar::placeholder {
+    color: var(--input-placeholder-color);
+}
+
+.navigation__item {
+    padding: 0.624rem 0.624rem 0.624rem 2.281rem;
+    font-size: 1.802rem;
+    margin: 0 1.802rem;
+    color: var(--navigation-on-color);
+    display: block;
+}
+
+.navigation__search-bar:focus,
+.navigation__item:focus,
+.navigation__search-bar:active,
+.navigation__item:active {
+    box-shadow: 0 0 3px 3px var(--navigation-outline-color);
+    outline: none;
+}
+
+.navigation__button--close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1.424rem 1.424rem;
+}
+
+.navigation__item:hover,
+.navigation__item:focus {
+    text-decoration: underline;
+}
+
+.visible {
+    visibility: visible;
+}
+
+.active {
+    width: 17.857rem;
+}
+
+.icon {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+}
+
+.navigation__icon-menu,
+.navigation__icon-cross {
+    width: 2.027rem;
+    height: 2.027rem;
+    color: var(--navigation-on-color);
+}
+
+.navigation__icon-menu:hover,
+.navigation__icon-cross:hover {
+    color: var(--navigation-icon-hover-color);
+}
