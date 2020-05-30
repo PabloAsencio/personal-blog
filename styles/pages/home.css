@@ -63,3 +63,17 @@ main {
         grid-template-areas: 'first second third';
     }
 }
+
+@media (min-width: 1240px) {
+    .popular {
+        grid-template-areas:
+            'first first'
+            'second third';
+    }
+}
+
+@media (min-width: 1600px) {
+    .popular {
+        grid-template-areas: 'first second third';
+    }
+}
