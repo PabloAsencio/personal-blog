@@ -6,101 +6,206 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Post 01</title>
         <link rel="stylesheet" href="../styles/main.css" />
+        <script src="../scripts/script.js" async></script>
     </head>
     <body>
         <!-- TODO: Replace lorem ipsum placeholders with meaningful text -->
-        <!-- TODO: Replace image placeholders with real images -->
-        <!-- TODO: Make images responsive -->
-        <header>
-            <p><a href="#main">Skip to main</a></p>
-            <nav>
-                <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li>
-                        <a href="../design-system/index.html">Design System</a>
-                    </li>
-                    <!-- TODO: Create about and contact pages -->
-                    <li><a href="../about.html">About</a></li>
-                    <li><a href="../contact.html">Contact</a></li>
-                </ul>
-            </nav>
-            <form>
-                <label for="search-box">Search: </label>
-                <input type="search" name="search" id="search-box" />
-                <input type="submit" value="Search" />
-            </form>
-        </header>
-        <main id="main">
-            <header>
-                <p>
-                    <time datetime="2020-05-16">May 16, 2020</time>
-                </p>
-                <h1>Post 1 title</h1>
-                <p>
-                    Short introduction. Lorem ipsum dolor sit amet, consectetur
-                    adipisicing elit. Eos repudiandae voluptate, explicabo,
-                    repellendus beatae animi nisi molestiae, placeat quod
-                    aliquid facere incidunt quis. Excepturi cum deleniti
-                    repudiandae commodi eveniet doloribus?
-                </p>
-                <p>
-                    <a href="#author-card">
-                        <img
-                            src="https://via.placeholder.com/75x75?text=Author+Avatar"
-                            alt="Author avatar"
-                        />
-                        Author Name
+        <div class="grid grid--post">
+            <header class="header">
+                <p class="header__skip-link-container">
+                    <a href="#content" class="header__skip-link">
+                        Skip to Content (Press Enter)
                     </a>
                 </p>
+                <nav class="navigation__nav">
+                    <div class="navigation__slide">
+                        <button
+                            type="button"
+                            class="menu-button navigation__button--open"
+                            aria-label="Open navigation menu"
+                            aria-controls="navigation-content"
+                            aria-expanded="false"
+                        >
+                            <svg
+                                class="icon icon-menu"
+                                aria-hidden="true"
+                                focusable="false"
+                            >
+                                <use
+                                    xlink:href="../images/sprite.svg#icon-menu"
+                                ></use>
+                            </svg>
+                        </button>
+                        <div class="navigation__slide-out">
+                            <button
+                                class="menu-button navigation__button--close"
+                                aria-label="Close navigation menu"
+                            >
+                                <svg
+                                    class="icon icon-menu"
+                                    aria-hidden="true"
+                                    focusable="false"
+                                >
+                                    <use
+                                        xlink:href="../images/sprite.svg#icon-cross"
+                                    ></use>
+                                </svg>
+                            </button>
+                            <div id="navigation-content">
+                                <ul>
+                                    <li>
+                                        <a
+                                            href="../index.html"
+                                            class="navigation__item"
+                                            >Home</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="../design-system/index.html"
+                                            class="navigation__item"
+                                            >Design System</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="../about.html"
+                                            class="navigation__item"
+                                            >About</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="../contact.html"
+                                            class="navigation__item"
+                                            >Contact</a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="navigation__search">
+                        <label for="search-bar" class="screen-reader-only"
+                            >Search:
+                        </label>
+                        <input
+                            class="navigation__search-bar"
+                            type="search"
+                            name="search"
+                            id="search-bar"
+                            placeholder="Search"
+                        />
+                        <button
+                            type="submit"
+                            class="button button--search"
+                            aria-label="Search"
+                        >
+                            <svg
+                                class="icon icon-search"
+                                aria-hidden="true"
+                                focusable="false"
+                            >
+                                <use
+                                    xlink:href="../images/sprite.svg#icon-search"
+                                ></use>
+                            </svg>
+                        </button>
+                    </form>
+                </nav>
+                <div class="header__intro-container">
+                    <div class="header__heading">
+                        <h1 class="header__headline">Post&nbsp;1&nbsp;title</h1>
+                        <p class="header__intro">
+                            Short website description. Lorem ipsum dolor sit
+                            amet, consectetur adipisicing elit.
+                        </p>
+                    </div>
+                </div>
             </header>
-            <figure>
-                <picture>
-                    <source
-                        srcset="
-                            https://via.placeholder.com/728x520?text=Latest+Post+Picture
-                        "
-                        media="(min-width: 768px)"
-                    />
-                    <source
-                        srcset="
-                            https://via.placeholder.com/320x260?text=Latest+Post+Picture
-                        "
-                        media="(min-width: 460px)"
-                    />
-                    <img
-                        src="https://via.placeholder.com/170x120?text=Latest+Post+Picture"
-                        alt="Something about the post"
-                    />
-                </picture>
-                <figcaption>A caption for the picture.</figcaption>
-            </figure>
-            <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo
-                dolores ea harum, laboriosam corrupti perferendis sequi quam
-                laudantium corporis quidem voluptatem nulla, consequatur qui
-                minus delectus at magni, quaerat adipisci! Lorem ipsum dolor sit
-                amet consectetur adipisicing elit. Id harum odio fuga neque non
-                repellat rerum maxime cupiditate ea nam doloremque delectus
-                aspernatur nesciunt porro nisi, expedita deleniti eveniet dicta.
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut
-                atque aperiam quod quo, expedita unde in vero sint enim ratione
-                maxime consequatur similique, doloremque, delectus id dolorum
-                veritatis facere fuga. Lorem ipsum dolor sit, amet consectetur
-                adipisicing elit. Perferendis, accusantium neque sint quas,
-                totam nisi velit tempora iste ad ullam amet soluta nobis hic
-                vitae blanditiis recusandae, quod modi explicabo! Lorem ipsum
-                dolor sit amet consectetur adipisicing elit. Quisquam ullam
-                voluptatibus, corporis, explicabo in doloribus nihil ipsa porro
-                earum accusantium fugit! Excepturi iste vel labore dignissimos
-                qui ex dolorem facere! Lorem ipsum dolor sit amet, consectetur
-                adipisicing elit. Fugit voluptatum magni minima. Facere
-                voluptatem eum neque facilis quis, dignissimos labore iure
-                itaque delectus optio officia vitae! Unde reprehenderit
-                inventore perferendis.
-            </p>
-            <section>
-                <h2>Section title</h2>
-                <p>
+            <main class="post">
+                <header class="post__header">
+                    <picture>
+                        <source
+                            srcset="
+                                ../images/author-thumbnail_1x.webp 1x,
+                                ../images/author-thumbnail_2x.webp 2x
+                            "
+                            type="image/webp"
+                        />
+                        <img
+                            class="post__thumbnail"
+                            type="image/jpeg"
+                            src="../images/author-thumbnail_2x.jpg"
+                            alt="Author thumbnail"
+                        />
+                    </picture>
+                    <div class="post__heading">
+                        <p class="post__author">
+                            <a href="#author-card">
+                                Author Name
+                            </a>
+                        </p>
+                        <p class="post__date">
+                            <time datetime="2020-05-16">May 16, 2020</time>
+                        </p>
+                    </div>
+                </header>
+                <figure class="post__figure">
+                    <picture class="post__picture">
+                        <source
+                            srcset="
+                                ../images/porto-xl_1x.webp 1x,
+                                ../images/porto-xl_2x.webp 2x
+                            "
+                            type="image/webp"
+                            media="(min-width: 1441px)"
+                        />
+                        <source
+                            srcset="
+                                ../images/porto-md_1x.webp 1x,
+                                ../images/porto-md_2x.webp 2x
+                            "
+                            type="image/webp"
+                            media="(min-width: 601px)"
+                        />
+                        <source
+                            srcset="
+                                ../images/porto-sm_1x.webp 1x,
+                                ../images/porto-sm_2x.webp 2x
+                            "
+                            type="image/webp"
+                        />
+                        <source
+                            srcset="
+                                ../images/porto-lg_1x.webp 1x,
+                                ../images/porto-lg_2x.webp 2x
+                            "
+                            type="image/webp"
+                            media="(min-width: 901px)"
+                        />
+                        <img
+                            srcset="
+                                ../images/porto-xl_2x.jpg 3101w,
+                                ../images/porto-xl_1x.jpg 2562w,
+                                ../images/porto-lg_2x.jpg 2880w,
+                                ../images/porto-xl_1x.jpg 1440w,
+                                ../images/porto-md_2x.jpg 1800w,
+                                ../images/porto-md_1x.jpg  900w,
+                                ../images/porto-sm_2x.jpg 1200w,
+                                ../images/porto-sm_1x.jpg  600w
+                            "
+                            src="../images/porto-lg_1x.jpg"
+                            type="image/jpeg"
+                            alt="The beautiful city of Porto seen from Vila Nova de Gaia accross the Douro on a summer day"
+                            class="post__img"
+                        />
+                    </picture>
+                    <figcaption class="post__figcaption">
+                        A caption for the picture.
+                    </figcaption>
+                </figure>
+                <p class="post__intro">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                     Illo dolores ea harum, laboriosam corrupti perferendis sequi
                     quam laudantium corporis quidem voluptatem nulla,
@@ -125,176 +230,645 @@
                     dignissimos labore iure itaque delectus optio officia vitae!
                     Unde reprehenderit inventore perferendis.
                 </p>
-                <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Illo dolores ea harum, laboriosam corrupti perferendis sequi
-                    quam laudantium corporis quidem voluptatem nulla,
-                    consequatur qui minus delectus at magni, quaerat adipisci!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
-                    harum odio fuga neque non repellat rerum maxime cupiditate
-                    ea nam doloremque delectus aspernatur nesciunt porro nisi,
-                    expedita deleniti eveniet dicta. Lorem ipsum dolor sit amet
-                    consectetur, adipisicing elit. Aut atque aperiam quod quo,
-                    expedita unde in vero sint enim ratione maxime consequatur
-                    similique, doloremque, delectus id dolorum veritatis facere
-                    fuga. Lorem ipsum dolor sit, amet consectetur adipisicing
-                    elit. Perferendis, accusantium neque sint quas, totam nisi
-                    velit tempora iste ad ullam amet soluta nobis hic vitae
-                    blanditiis recusandae, quod modi explicabo! Lorem ipsum
-                    dolor sit amet consectetur adipisicing elit. Quisquam ullam
-                    voluptatibus, corporis, explicabo in doloribus nihil ipsa
-                    porro earum accusantium fugit! Excepturi iste vel labore
-                    dignissimos qui ex dolorem facere! Lorem ipsum dolor sit
-                    amet, consectetur adipisicing elit. Fugit voluptatum magni
-                    minima. Facere voluptatem eum neque facilis quis,
-                    dignissimos labore iure itaque delectus optio officia vitae!
-                    Unde reprehenderit inventore perferendis.
-                </p>
-            </section>
-            <section>
-                <h2>Section title</h2>
-                <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Illo dolores ea harum, laboriosam corrupti perferendis sequi
-                    quam laudantium corporis quidem voluptatem nulla,
-                    consequatur qui minus delectus at magni, quaerat adipisci!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
-                    harum odio fuga neque non repellat rerum maxime cupiditate
-                    ea nam doloremque delectus aspernatur nesciunt porro nisi,
-                    expedita deleniti eveniet dicta. Lorem ipsum dolor sit amet
-                    consectetur, adipisicing elit. Aut atque aperiam quod quo,
-                    expedita unde in vero sint enim ratione maxime consequatur
-                    similique, doloremque, delectus id dolorum veritatis facere
-                    fuga. Lorem ipsum dolor sit, amet consectetur adipisicing
-                    elit. Perferendis, accusantium neque sint quas, totam nisi
-                    velit tempora iste ad ullam amet soluta nobis hic vitae
-                    blanditiis recusandae, quod modi explicabo! Lorem ipsum
-                    dolor sit amet consectetur adipisicing elit. Quisquam ullam
-                    voluptatibus, corporis, explicabo in doloribus nihil ipsa
-                    porro earum accusantium fugit! Excepturi iste vel labore
-                    dignissimos qui ex dolorem facere! Lorem ipsum dolor sit
-                    amet, consectetur adipisicing elit. Fugit voluptatum magni
-                    minima. Facere voluptatem eum neque facilis quis,
-                    dignissimos labore iure itaque delectus optio officia vitae!
-                    Unde reprehenderit inventore perferendis.
-                </p>
-                <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Illo dolores ea harum, laboriosam corrupti perferendis sequi
-                    quam laudantium corporis quidem voluptatem nulla,
-                    consequatur qui minus delectus at magni, quaerat adipisci!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
-                    harum odio fuga neque non repellat rerum maxime cupiditate
-                    ea nam doloremque delectus aspernatur nesciunt porro nisi,
-                    expedita deleniti eveniet dicta. Lorem ipsum dolor sit amet
-                    consectetur, adipisicing elit. Aut atque aperiam quod quo,
-                    expedita unde in vero sint enim ratione maxime consequatur
-                    similique, doloremque, delectus id dolorum veritatis facere
-                    fuga. Lorem ipsum dolor sit, amet consectetur adipisicing
-                    elit. Perferendis, accusantium neque sint quas, totam nisi
-                    velit tempora iste ad ullam amet soluta nobis hic vitae
-                    blanditiis recusandae, quod modi explicabo! Lorem ipsum
-                    dolor sit amet consectetur adipisicing elit. Quisquam ullam
-                    voluptatibus, corporis, explicabo in doloribus nihil ipsa
-                    porro earum accusantium fugit! Excepturi iste vel labore
-                    dignissimos qui ex dolorem facere! Lorem ipsum dolor sit
-                    amet, consectetur adipisicing elit. Fugit voluptatum magni
-                    minima. Facere voluptatem eum neque facilis quis,
-                    dignissimos labore iure itaque delectus optio officia vitae!
-                    Unde reprehenderit inventore perferendis.
-                </p>
-            </section>
-            <section>
-                <h2>Section title</h2>
-                <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Illo dolores ea harum, laboriosam corrupti perferendis sequi
-                    quam laudantium corporis quidem voluptatem nulla,
-                    consequatur qui minus delectus at magni, quaerat adipisci!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
-                    harum odio fuga neque non repellat rerum maxime cupiditate
-                    ea nam doloremque delectus aspernatur nesciunt porro nisi,
-                    expedita deleniti eveniet dicta. Lorem ipsum dolor sit amet
-                    consectetur, adipisicing elit. Aut atque aperiam quod quo,
-                    expedita unde in vero sint enim ratione maxime consequatur
-                    similique, doloremque, delectus id dolorum veritatis facere
-                    fuga. Lorem ipsum dolor sit, amet consectetur adipisicing
-                    elit. Perferendis, accusantium neque sint quas, totam nisi
-                    velit tempora iste ad ullam amet soluta nobis hic vitae
-                    blanditiis recusandae, quod modi explicabo! Lorem ipsum
-                    dolor sit amet consectetur adipisicing elit. Quisquam ullam
-                    voluptatibus, corporis, explicabo in doloribus nihil ipsa
-                    porro earum accusantium fugit! Excepturi iste vel labore
-                    dignissimos qui ex dolorem facere! Lorem ipsum dolor sit
-                    amet, consectetur adipisicing elit. Fugit voluptatum magni
-                    minima. Facere voluptatem eum neque facilis quis,
-                    dignissimos labore iure itaque delectus optio officia vitae!
-                    Unde reprehenderit inventore perferendis.
-                </p>
-            </section>
-            <footer>
-                <ul>
-                    <li><a href="#" rel="tag"></a>Tag 1</li>
-                    <li><a href="#" rel="tag"></a>Tag 2</li>
-                    <li><a href="#" rel="tag"></a>Tag 3</li>
-                </ul>
-                <p>Share on social media</p>
-                <ul>
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">Twitter</a></li>
-                    <li><a href="#">LinkedIn</a></li>
-                </ul>
-                <section id="author-card">
-                    <img
-                        src="https://via.placeholder.com/150x150?text=Author+Avatar"
-                        alt="Author avatar"
-                    />
-                    <p>Author name</p>
-                    <p>Author title</p>
-                    <p>Current Position</p>
+                <section class="post__section">
+                    <h2>Section title</h2>
                     <p>
-                        Short Bio. Lorem ipsum dolor sit amet consectetur
-                        adipisicing elit. Corporis ducimus pariatur ipsum veniam
-                        minima tempora, deleniti aliquid a laborum molestias
-                        expedita, id itaque laudantium aspernatur nobis? Sed
-                        nisi consectetur sapiente. Lorem ipsum dolor sit amet
-                        consectetur adipisicing elit. Officia ipsam esse earum
-                        possimus harum sint minima? Natus suscipit consectetur
-                        laudantium cumque dolores sit, aperiam reprehenderit
-                        rem, voluptates, culpa beatae porro!
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit. Illo dolores ea harum, laboriosam corrupti
+                        perferendis sequi quam laudantium corporis quidem
+                        voluptatem nulla, consequatur qui minus delectus at
+                        magni, quaerat adipisci! Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. Id harum odio fuga neque
+                        non repellat rerum maxime cupiditate ea nam doloremque
+                        delectus aspernatur nesciunt porro nisi, expedita
+                        deleniti eveniet dicta. Lorem ipsum dolor sit amet
+                        consectetur, adipisicing elit. Aut atque aperiam quod
+                        quo, expedita unde in vero sint enim ratione maxime
+                        consequatur similique, doloremque, delectus id dolorum
+                        veritatis facere fuga. Lorem ipsum dolor sit, amet
+                        consectetur adipisicing elit. Perferendis, accusantium
+                        neque sint quas, totam nisi velit tempora iste ad ullam
+                        amet soluta nobis hic vitae blanditiis recusandae, quod
+                        modi explicabo! Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Quisquam ullam voluptatibus, corporis,
+                        explicabo in doloribus nihil ipsa porro earum
+                        accusantium fugit! Excepturi iste vel labore dignissimos
+                        qui ex dolorem facere! Lorem ipsum dolor sit amet,
+                        consectetur adipisicing elit. Fugit voluptatum magni
+                        minima. Facere voluptatem eum neque facilis quis,
+                        dignissimos labore iure itaque delectus optio officia
+                        vitae! Unde reprehenderit inventore perferendis.
+                    </p>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit. Illo dolores ea harum, laboriosam corrupti
+                        perferendis sequi quam laudantium corporis quidem
+                        voluptatem nulla, consequatur qui minus delectus at
+                        magni, quaerat adipisci! Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. Id harum odio fuga neque
+                        non repellat rerum maxime cupiditate ea nam doloremque
+                        delectus aspernatur nesciunt porro nisi, expedita
+                        deleniti eveniet dicta. Lorem ipsum dolor sit amet
+                        consectetur, adipisicing elit. Aut atque aperiam quod
+                        quo, expedita unde in vero sint enim ratione maxime
+                        consequatur similique, doloremque, delectus id dolorum
+                        veritatis facere fuga. Lorem ipsum dolor sit, amet
+                        consectetur adipisicing elit. Perferendis, accusantium
+                        neque sint quas, totam nisi velit tempora iste ad ullam
+                        amet soluta nobis hic vitae blanditiis recusandae, quod
+                        modi explicabo! Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Quisquam ullam voluptatibus, corporis,
+                        explicabo in doloribus nihil ipsa porro earum
+                        accusantium fugit! Excepturi iste vel labore dignissimos
+                        qui ex dolorem facere! Lorem ipsum dolor sit amet,
+                        consectetur adipisicing elit. Fugit voluptatum magni
+                        minima. Facere voluptatem eum neque facilis quis,
+                        dignissimos labore iure itaque delectus optio officia
+                        vitae! Unde reprehenderit inventore perferendis.
                     </p>
                 </section>
+                <section class="post__section">
+                    <h2>Section title</h2>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit. Illo dolores ea harum, laboriosam corrupti
+                        perferendis sequi quam laudantium corporis quidem
+                        voluptatem nulla, consequatur qui minus delectus at
+                        magni, quaerat adipisci! Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. Id harum odio fuga neque
+                        non repellat rerum maxime cupiditate ea nam doloremque
+                        delectus aspernatur nesciunt porro nisi, expedita
+                        deleniti eveniet dicta. Lorem ipsum dolor sit amet
+                        consectetur, adipisicing elit. Aut atque aperiam quod
+                        quo, expedita unde in vero sint enim ratione maxime
+                        consequatur similique, doloremque, delectus id dolorum
+                        veritatis facere fuga. Lorem ipsum dolor sit, amet
+                        consectetur adipisicing elit. Perferendis, accusantium
+                        neque sint quas, totam nisi velit tempora iste ad ullam
+                        amet soluta nobis hic vitae blanditiis recusandae, quod
+                        modi explicabo! Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Quisquam ullam voluptatibus, corporis,
+                        explicabo in doloribus nihil ipsa porro earum
+                        accusantium fugit! Excepturi iste vel labore dignissimos
+                        qui ex dolorem facere! Lorem ipsum dolor sit amet,
+                        consectetur adipisicing elit. Fugit voluptatum magni
+                        minima. Facere voluptatem eum neque facilis quis,
+                        dignissimos labore iure itaque delectus optio officia
+                        vitae! Unde reprehenderit inventore perferendis.
+                    </p>
+                    <blockquote cite="#">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Perspiciatis, laborum possimus at
+                            necessitatibus magnam ex explicabo sed pariatur,
+                            error fuga dicta facere, cum debitis. Corrupti sit
+                            ex beatae rerum corporis.
+                        </p>
+                        <footer>—Author, <cite>Source</cite></footer>
+                    </blockquote>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit. Illo dolores ea harum, laboriosam corrupti
+                        perferendis sequi quam laudantium corporis quidem
+                        voluptatem nulla, consequatur qui minus delectus at
+                        magni, quaerat adipisci! Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. Id harum odio fuga neque
+                        non repellat rerum maxime cupiditate ea nam doloremque
+                        delectus aspernatur nesciunt porro nisi, expedita
+                        deleniti eveniet dicta. Lorem ipsum dolor sit amet
+                        consectetur, adipisicing elit. Aut atque aperiam quod
+                        quo, expedita unde in vero sint enim ratione maxime
+                        consequatur similique, doloremque, delectus id dolorum
+                        veritatis facere fuga. Lorem ipsum dolor sit, amet
+                        consectetur adipisicing elit. Perferendis, accusantium
+                        neque sint quas, totam nisi velit tempora iste ad ullam
+                        amet soluta nobis hic vitae blanditiis recusandae, quod
+                        modi explicabo! Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Quisquam ullam voluptatibus, corporis,
+                        explicabo in doloribus nihil ipsa porro earum
+                        accusantium fugit! Excepturi iste vel labore dignissimos
+                        qui ex dolorem facere! Lorem ipsum dolor sit amet,
+                        consectetur adipisicing elit. Fugit voluptatum magni
+                        minima. Facere voluptatem eum neque facilis quis,
+                        dignissimos labore iure itaque delectus optio officia
+                        vitae! Unde reprehenderit inventore perferendis.
+                    </p>
+                </section>
+                <section class="post__section">
+                    <h2>Section title</h2>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit. Illo dolores ea harum, laboriosam corrupti
+                        perferendis sequi quam laudantium corporis quidem
+                        voluptatem nulla, consequatur qui minus delectus at
+                        magni, quaerat adipisci! Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. Id harum odio fuga neque
+                        non repellat rerum maxime cupiditate ea nam doloremque
+                        delectus aspernatur nesciunt porro nisi, expedita
+                        deleniti eveniet dicta. Lorem ipsum dolor sit amet
+                        consectetur, adipisicing elit. Aut atque aperiam quod
+                        quo, expedita unde in vero sint enim ratione maxime
+                        consequatur similique, doloremque, delectus id dolorum
+                        veritatis facere fuga. Lorem ipsum dolor sit, amet
+                        consectetur adipisicing elit. Perferendis, accusantium
+                        neque sint quas, totam nisi velit tempora iste ad ullam
+                        amet soluta nobis hic vitae blanditiis recusandae, quod
+                        modi explicabo! Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Quisquam ullam voluptatibus, corporis,
+                        explicabo in doloribus nihil ipsa porro earum
+                        accusantium fugit! Excepturi iste vel labore dignissimos
+                        qui ex dolorem facere! Lorem ipsum dolor sit amet,
+                        consectetur adipisicing elit. Fugit voluptatum magni
+                        minima. Facere voluptatem eum neque facilis quis,
+                        dignissimos labore iure itaque delectus optio officia
+                        vitae! Unde reprehenderit inventore perferendis.
+                    </p>
+                </section>
+                <footer>
+                    <div class="post__footer">
+                        <ul class="post__tags">
+                            <li class="tag">
+                                <a href="#" rel="tag">Tag 1</a>
+                            </li>
+                            <li class="tag">
+                                <a href="#" rel="tag">Tag 2</a>
+                            </li>
+                            <li class="tag">
+                                <a href="#" rel="tag">Tag 3</a>
+                            </li>
+                        </ul>
+                        <div class="post__social">
+                            <p class="screen-reader-only">
+                                Share on social media
+                            </p>
+                            <ul class="post__icons">
+                                <li>
+                                    <a
+                                        href="#"
+                                        aria-labelledby="facebook"
+                                        class="post__icon-link"
+                                    >
+                                        <svg
+                                            class="icon icon-facebook"
+                                            aria-hidden="true"
+                                            focusable="false"
+                                        >
+                                            <title id="facebook">
+                                                Follow us on Facebook
+                                            </title>
+                                            <use
+                                                xlink:href="../images/sprite.svg#icon-facebook2"
+                                            ></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="#"
+                                        aria-labelledby="twitter"
+                                        class="post__icon-link"
+                                    >
+                                        <svg
+                                            class="icon icon-twitter"
+                                            aria-hidden="true"
+                                            focusable="false"
+                                        >
+                                            <title id="twitter">
+                                                Follow us on Twitter
+                                            </title>
+                                            <use
+                                                xlink:href="../images/sprite.svg#icon-twitter"
+                                            ></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="#"
+                                        aria-labelledby="linkedin"
+                                        class="post__icon-link"
+                                    >
+                                        <svg
+                                            class="icon icon-linkedin"
+                                            aria-hidden="true"
+                                            focusable="false"
+                                        >
+                                            <title id="linkedin">
+                                                Follow us on LinkedIn
+                                            </title>
+                                            <use
+                                                xlink:href="../images/sprite.svg#icon-linkedin"
+                                            ></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <article id="author-card" class="card author-card">
+                        <div class="card__body">
+                            <header class="card__header">
+                                <div class="card__heading-wrapper">
+                                    <picture>
+                                        <source
+                                            srcset="
+                                                ../images/author-thumbnail_1x.webp 1x,
+                                                ../images/author-thumbnail_2x.webp 2x
+                                            "
+                                            type="image/webp"
+                                        />
+                                        <img
+                                            class="card__thumbnail"
+                                            type="image/jpeg"
+                                            src="../images/author-thumbnail_2x.jpg"
+                                            alt="Author thumbnail"
+                                        />
+                                    </picture>
+                                    <div class="card__heading">
+                                        <p class="card__title">
+                                            Author name
+                                        </p>
+                                        <p class="card__subheading">
+                                            Author title &mdash; Current
+                                            Position
+                                        </p>
+                                    </div>
+                                </div>
+                            </header>
+                            <p class="card__text">
+                                Short Bio. Lorem ipsum dolor sit amet
+                                consectetur adipisicing elit. Corporis ducimus
+                                pariatur ipsum veniam minima tempora, deleniti
+                                aliquid a laborum molestias expedita, id itaque
+                                laudantium aspernatur nobis? Sed nisi
+                                consectetur sapiente. Lorem ipsum dolor sit amet
+                                consectetur adipisicing elit. Officia ipsam esse
+                                earum possimus harum sint minima? Natus suscipit
+                                consectetur laudantium cumque dolores sit,
+                                aperiam reprehenderit rem, voluptates, culpa
+                                beatae porro!
+                            </p>
+                        </div>
+                        <footer class="card__footer">
+                            <p class="button button--raising">
+                                <a href="#">More by this author</a>
+                            </p>
+                        </footer>
+                    </article>
+                </footer>
+            </main>
+            <section class="related">
+                <h2 class="related__heading">Related Posts</h2>
+                <article class="card related__post--first">
+                    <div class="card__body">
+                        <header class="card__header">
+                            <div class="card__info">
+                                <p class="card__type">Related post</p>
+                                <p class="card__date">
+                                    <time datetime="2020-05-16">
+                                        May 16, 2020
+                                    </time>
+                                </p>
+                            </div>
+                            <div class="card__heading-wrapper">
+                                <picture>
+                                    <source
+                                        srcset="
+                                            ../images/sunset-thumbnail_1x.webp 1x,
+                                            ../images/sunset-thumbnail_2x.webp 2x
+                                        "
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        class="card__thumbnail"
+                                        type="image/jpeg"
+                                        src="../images/sunset-thumbnail_2x.jpg"
+                                        alt="Author thumbnail"
+                                    />
+                                </picture>
+                                <div class="card__heading">
+                                    <h3 class="card__title">
+                                        <a href="post04.html">Post title</a>
+                                    </h3>
+                                    <p class="card__subheading">
+                                        <a href="#">Author Name</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </header>
+                        <p class="card__text">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Alias asperiores rem totam, ullam eveniet
+                            molestias quisquam soluta. Amet accusantium
+                            voluptatibus, placeat dicta asperiores dolor.
+                            Expedita quibusdam mollitia voluptatem minus
+                            molestias!
+                        </p>
+                    </div>
+                    <footer class="card__footer">
+                        <p class="button button--raising">
+                            <a href="post04.html"
+                                >Keep reading
+                                <span class="screen-reader-only"
+                                    >the blog post 4</span
+                                ></a
+                            >
+                        </p>
+                        <ul class="card__tag-list">
+                            <li class="tag">
+                                <a href="#" rel="tag">Tag 1</a>
+                            </li>
+                            <li class="tag">
+                                <a href="#" rel="tag">Tag 2</a>
+                            </li>
+                            <li class="tag">
+                                <a href="#" rel="tag">Tag 3</a>
+                            </li>
+                        </ul>
+                    </footer>
+                </article>
+                <article class="card related__post--second">
+                    <div class="card__body">
+                        <header class="card__header">
+                            <div class="card__info">
+                                <p class="card__type">Related post</p>
+                                <p class="card__date">
+                                    <time datetime="2020-05-16">
+                                        May 16, 2020
+                                    </time>
+                                </p>
+                            </div>
+                            <div class="card__heading-wrapper">
+                                <picture>
+                                    <source
+                                        srcset="
+                                            ../images/roofs-thumbnail_1x.webp 1x,
+                                            ../images/roofs-thumbnail_2x.webp 2x
+                                        "
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        class="card__thumbnail"
+                                        type="image/jpeg"
+                                        src="../images/roofs-thumbnail_2x.jpg"
+                                        alt="Author thumbnail"
+                                    />
+                                </picture>
+                                <div class="card__heading">
+                                    <h3 class="card__title">
+                                        <a href="post02.html">Post title</a>
+                                    </h3>
+                                    <p class="card__subheading">
+                                        <a href="#">Author Name</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </header>
+                        <p class="card__text">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Alias asperiores rem totam, ullam eveniet
+                            molestias quisquam soluta. Amet accusantium
+                            voluptatibus, placeat dicta asperiores dolor.
+                            Expedita quibusdam mollitia voluptatem minus
+                            molestias!
+                        </p>
+                    </div>
+                    <footer class="card__footer">
+                        <p class="button button--raising">
+                            <a href="post02.html"
+                                >Keep reading
+                                <span class="screen-reader-only"
+                                    >the blog post 2</span
+                                ></a
+                            >
+                        </p>
+                        <ul class="card__tag-list">
+                            <li class="tag">
+                                <a href="#" rel="tag">Tag 1</a>
+                            </li>
+                            <li class="tag">
+                                <a href="#" rel="tag">Tag 2</a>
+                            </li>
+                            <li class="tag">
+                                <a href="#" rel="tag">Tag 3</a>
+                            </li>
+                        </ul>
+                    </footer>
+                </article>
+            </section>
+            <aside class="signup aside--post">
+                <div class="signup__header">
+                    <h2 class="signup__heading">Don't miss a post!</h2>
+                    <p class="signup__subheading">
+                        Sign up for our newsletter
+                    </p>
+                </div>
+
+                <!-- TODO: Change method to post and handle the data gracefully in a new url -->
+                <form action="index.html" class="signup__form">
+                    <div class="signup__name">
+                        <label class="signup__label" for="name"
+                            >Name:
+                            <span
+                                class="signup__error"
+                                aria-live="assertive"
+                                id="name-error"
+                            ></span>
+                        </label>
+                        <input
+                            class="signup__field"
+                            type="text"
+                            name="name"
+                            id="name"
+                            placeholder="Name"
+                            autocomplete="name"
+                            aria-invalid="false"
+                            aria-required="true"
+                            required
+                        />
+                        <div class="signup__icon">
+                            <svg
+                                class="icon icon-valid"
+                                aria-hidden="true"
+                                focusable="false"
+                            >
+                                <use
+                                    xlink:href="images/sprite.svg#icon-checkmark"
+                                ></use>
+                            </svg>
+                            <svg
+                                class="icon icon-invalid"
+                                aria-hidden="true"
+                                focusable="false"
+                            >
+                                <use
+                                    xlink:href="images/sprite.svg#icon-cross"
+                                ></use>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="signup__email">
+                        <label class="signup__label" for="email"
+                            >Email:
+                            <span
+                                class="signup__error"
+                                aria-live="assertive"
+                                id="email-error"
+                            ></span>
+                        </label>
+                        <input
+                            class="signup__field"
+                            type="email"
+                            name="email"
+                            id="email"
+                            placeholder="Email"
+                            autocomplete="email"
+                            aria-invalid="false"
+                            aria-required="true"
+                            required
+                        />
+                        <div class="signup__icon">
+                            <svg
+                                class="icon icon-valid"
+                                aria-hidden="true"
+                                focusable="false"
+                            >
+                                <use
+                                    xlink:href="images/sprite.svg#icon-checkmark"
+                                ></use>
+                            </svg>
+                            <svg
+                                class="icon icon-invalid"
+                                aria-hidden="true"
+                                focusable="false"
+                            >
+                                <use
+                                    xlink:href="images/sprite.svg#icon-cross"
+                                ></use>
+                            </svg>
+                        </div>
+                    </div>
+                    <input
+                        class="button button--raising signup__button"
+                        type="submit"
+                        value="Sign Up!"
+                    />
+                </form>
+            </aside>
+            <footer class="footer">
+                <div class="footer__container">
+                    <nav
+                        class="footer__navigation"
+                        aria-label="Footer Navigation"
+                    >
+                        <ul class="footer__list">
+                            <li class="footer__li">
+                                <a class="footer__link" href="../index.html">
+                                    Home
+                                </a>
+                            </li>
+                            <li class="footer__li">
+                                <a
+                                    class="footer__link"
+                                    href="../design-system/index.html"
+                                >
+                                    Design System
+                                </a>
+                            </li>
+                            <li class="footer__li">
+                                <a class="footer__link" href="../about.html">
+                                    About
+                                </a>
+                            </li>
+                            <li class="footer__li">
+                                <a class="footer__link" href="../contact.html">
+                                    Contact
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="footer__social-media">
+                        <p>Follow us on social media</p>
+                        <ul class="footer__icons">
+                            <li>
+                                <a
+                                    href="#"
+                                    aria-labelledby="facebook"
+                                    class="footer__icon-link"
+                                >
+                                    <svg
+                                        class="icon icon-facebook"
+                                        aria-hidden="true"
+                                        focusable="false"
+                                    >
+                                        <title id="facebook">
+                                            Follow us on Facebook
+                                        </title>
+                                        <use
+                                            xlink:href="../images/sprite.svg#icon-facebook2"
+                                        ></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    aria-labelledby="twitter"
+                                    class="footer__icon-link"
+                                >
+                                    <svg
+                                        class="icon icon-twitter"
+                                        aria-hidden="true"
+                                        focusable="false"
+                                    >
+                                        <title id="twitter">
+                                            Follow us on Twitter
+                                        </title>
+                                        <use
+                                            xlink:href="../images/sprite.svg#icon-twitter"
+                                        ></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    aria-labelledby="linkedin"
+                                    class="footer__icon-link"
+                                >
+                                    <svg
+                                        class="icon icon-linkedin"
+                                        aria-hidden="true"
+                                        focusable="false"
+                                    >
+                                        <title id="linkedin">
+                                            Follow us on LinkedIn
+                                        </title>
+                                        <use
+                                            xlink:href="../images/sprite.svg#icon-linkedin"
+                                        ></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <p class="footer__credits">
+                        <small
+                            >Icons designed by
+                            <a class="footer__link" href="http://keyamoon.com"
+                                >Keyamoon</a
+                            >
+                            from
+                            <a class="footer__link" href="https://icomoon.io"
+                                >IcoMoon</a
+                            ></small
+                        >
+                    </p>
+                    <p class="footer__copyright">
+                        <small>&copy; Pablo Asencio Sánchez 2020</small>
+                    </p>
+                </div>
             </footer>
-        </main>
-        <aside>
-            <h2>Don't miss a post!</h2>
-            <p>Sign up for our newsletter</p>
-            <!-- TODO: Change method to post and handle the data gracefully in a new url -->
-            <form action="index.html">
-                <label for="fullname">Name: </label>
-                <input type="text" name="fullname" id="fullname" />
-                <label for="email">Email: </label>
-                <input type="email" name="email" id="email" />
-                <input type="submit" value="Sign Up" />
-            </form>
-        </aside>
-        <footer>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="design-system/index.html">Design System</a>
-                    </li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-            <p>Follow us on social media</p>
-            <ul>
-                <li><a href="#">Facebook</a></li>
-                <li><a href="#">Twitter</a></li>
-                <li><a href="#">LinkedIn</a></li>
-            </ul>
-            <p><small>&copy; Pablo Asencio Sánchez 2020</small></p>
-        </footer>
+        </div>
     </body>
 </html>

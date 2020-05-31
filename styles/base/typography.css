@@ -6,6 +6,10 @@ body {
     color: var(--on-color);
 }
 
+main {
+    padding: 0 1.424rem;
+}
+
 h1,
 h2,
 h3 {

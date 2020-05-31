@@ -5,14 +5,18 @@
     border-radius: 0.214rem;
     padding: 0 1rem 1.424rem 1.424rem;
     transition: transform 0.3s;
-    margin: 1.424rem 0.5rem 3rem 0;
+    margin: 1.5rem 0.5rem 3rem 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 .author-card {
+    margin: 3rem auto;
     padding: 1.5rem 1rem 1.424rem 1.424rem;
+    border: 1px solid var(--on-color-primary);
+    box-shadow: none;
+    max-width: 50rem;
 }
 
 .card:hover {
@@ -124,7 +128,7 @@
 
 .card__figure {
     display: table;
-    margin-top: 1.5rem;
+    margin: 1.5rem auto 0 auto;
     max-width: 100%;
     max-height: 100%;
 }
@@ -153,6 +157,10 @@
 @media (min-width: 1800px) {
     .card {
         max-width: 100%;
+    }
+
+    .author-card {
+        max-width: 50rem;
     }
 
     .card__text--featured {

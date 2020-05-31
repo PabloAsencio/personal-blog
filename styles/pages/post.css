@@ -1,0 +1,247 @@
+.grid--post {
+    grid-template-areas:
+        'header'
+        'main'
+        'related'
+        'aside'
+        'footer';
+}
+
+.post {
+    background-color: var(--card-background-color);
+    color: var(--card-on-color);
+    box-shadow: 1rem 1.5rem 1.5rem var(--card-shadow-color);
+    border-radius: 0.214rem;
+    padding: 1.5rem 1rem 1.424rem 1.424rem;
+    margin: 3rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.post__header {
+    font-family: 'Eczar', serif;
+    display: flex;
+    align-items: baseline;
+    margin: 0.5rem 0 1.5rem 0;
+}
+
+.post__thumbnail {
+    width: 4.5rem;
+    height: 4.5rem;
+    position: relative;
+    left: -0.356rem;
+    margin-top: 0.356rem;
+    border-radius: 50%;
+}
+
+.post__heading {
+    align-self: flex-start;
+    margin-left: 0.356rem;
+}
+
+.post__author {
+    margin-top: 0;
+    font-size: 1.802rem;
+    line-height: 1.6648;
+    font-weight: 600;
+    transition: transform 0.3s;
+}
+
+.post__author:hover {
+    text-decoration: underline;
+    transform: translateY(-0.1rem) scale(1.03);
+}
+
+.post__date {
+    margin-top: 0;
+    color: var(--card-date-color);
+}
+
+.post__figure {
+    display: table;
+    margin: 3rem auto 0 auto;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+
+.post__picture {
+    max-width: 100%;
+}
+
+.post__img {
+    max-width: 100%;
+}
+
+.post__figcaption {
+    display: table-caption;
+    caption-side: bottom;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.79rem;
+    line-height: 1.8984;
+    padding bottom: 0.356rem;
+    max-width: 50rem;
+    border-bottom: 1px solid var(--card-on-color);
+}
+
+.post__intro {
+    max-width: 50rem;
+    margin: 1.5rem auto 0 auto;
+}
+
+.post__section {
+    max-width: 50rem;
+    margin: 0 auto;
+}
+
+.post__footer {
+    margin: 1.5rem auto 3rem auto;
+    max-width: 50rem;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.post__tags {
+    display: flex;
+    margin-top: 1.5rem;
+}
+
+.post__social {
+    margin-top: 1.5rem;
+}
+
+.post__icons {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.post__icon-link {
+    padding: 0.712rem;
+    border-radius: 50%;
+    color: var(--on-color-primary);
+    background-color: var(--white-primary);
+}
+
+.post__icon-link:focus,
+.post__icon-link:active {
+    box-shadow: 0 0 3px 3px var(--on-color-primary);
+}
+
+.related {
+    grid-area: related;
+    display: grid;
+    grid-template: auto 1fr 1fr / 1fr;
+    grid-template-areas:
+        'heading'
+        'first'
+        'second';
+    column-gap: 1.5rem;
+    margin: 3rem 0.5rem;
+    padding-top: 1.5rem;
+}
+
+.related__heading {
+    grid-area: heading;
+    margin-left: 1rem;
+}
+
+.related__post--first {
+    grid-area: first;
+}
+
+.related__post--second {
+    grid-area: second;
+}
+
+@media (min-width: 400px) {
+    .post,
+    .related {
+        margin: 1.424rem 1.5rem 3rem 1.5rem;
+    }
+    .post__footer {
+        flex-flow: row nowrap;
+    }
+}
+
+@media (min-width: 768px) {
+    .related {
+
+        grid-template: auto 1fr / 1fr 1fr;
+        grid-template-areas:
+            'heading heading'
+            'first second';
+    }
+
+}
+
+/* Laptop */
+@media (min-width: 1240px) {
+    .grid--post {
+        grid-template-areas:
+            'header header header'
+            'main   main   related '
+            'main   main   aside '
+            'main   main   ..... '
+            'footer footer footer';
+        column-gap: 3rem;
+    }
+
+    .post__header {
+        margin: 0.5rem auto 1.5rem calc((100% - 50rem) / 2);
+        max-width: 50rem;
+    }
+
+    .post__figure,
+    .post__picture,
+    .post__img {
+        max-width: 50rem;
+    }
+
+    .related {
+        margin: 0 1.5rem 0 0;
+        grid-template: auto 1fr 1fr / 1fr;
+        grid-template-areas:
+            'heading'
+            'first'
+            'second';
+        max-width: 25rem;
+        align-self: center;
+        flex-flow: column nowrap;
+        justify-content: center;
+    }
+
+    .related .card {
+        margin-top: 0.286rem;
+    }
+
+    .related__heading {
+        margin-top: 2.004rem;
+    }
+
+    .aside--post {
+        justify-self: inherit;
+        margin-right: 1.5rem;
+    }
+}
+@media (min-width: 1441px) {
+    .post {
+        margin: 1.424rem auto 3rem auto;
+        width: 100%;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1800px) {
+    .grid--post {
+        grid-template-areas:
+            'header header header header'
+            'main   main   main   related'
+            'main   main   main   aside'
+            'main   main   main   .....'
+            'footer footer footer footer';
+    }
+}

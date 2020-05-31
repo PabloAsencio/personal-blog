@@ -1,10 +1,5 @@
 .grid {
     display: grid;
-    grid-template-areas:
-        'header'
-        'main'
-        'aside'
-        'footer';
 }
 
 .header {
@@ -22,31 +17,4 @@ aside {
 
 footer {
     grid-area: footer;
-}
-
-/* Laptop */
-@media (min-width: 1240px) {
-    .grid {
-        grid-template-areas:
-            'header header header'
-            'main   main   aside '
-            'footer footer footer';
-        column-gap: 3rem;
-    }
-
-    aside {
-        align-self: start;
-        position: relative;
-        right: 3rem;
-        top: 4.5rem;
-    }
-}
-/* Desktop */
-@media (min-width: 1800px) {
-    .grid {
-        grid-template-areas:
-            'header header header header header'
-            'main   main   main   main   aside'
-            'footer footer footer footer footer';
-    }
 }
