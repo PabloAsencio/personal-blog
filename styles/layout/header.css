@@ -103,19 +103,10 @@
     color: var(--header-intro-color);
 }
 
-/* FIXME The intro circle is too small on some phones when on landscape mode */
 /* Mobile S Landscape */
 @media (max-height: 425px) {
     .header__circle {
         top: -10vh;
-    }
-}
-
-/* Mobile S */
-@media (min-width: 360px) and (min-height: 425px) {
-    .header__circle {
-        /* top: 2.5rem;
-        left: 1.424rem; */
     }
 }
 
