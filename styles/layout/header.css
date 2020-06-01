@@ -178,7 +178,7 @@
 }
 
 /* Laptop */
-@media (min-width: 1260px) {
+@media (min-width: 1240px) {
     .header__circle {
         top: 0;
     }

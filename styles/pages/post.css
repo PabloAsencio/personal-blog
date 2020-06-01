@@ -180,6 +180,22 @@
 
 /* Laptop */
 @media (min-width: 1240px) {
+    .post__header {
+        margin: 0.5rem auto 1.5rem calc((100% - 50rem) / 2);
+        max-width: 50rem;
+    }
+
+    .post__figure,
+    .post__picture,
+    .post__img {
+        max-width: 50rem;
+    }
+
+
+}
+
+/* Laptop large */
+@media (min-width: 1440px) {
     .grid--post {
         grid-template-areas:
             'header header header'
@@ -190,15 +206,9 @@
         column-gap: 3rem;
     }
 
-    .post__header {
-        margin: 0.5rem auto 1.5rem calc((100% - 50rem) / 2);
-        max-width: 50rem;
-    }
-
-    .post__figure,
-    .post__picture,
-    .post__img {
-        max-width: 50rem;
+    .post {
+        margin: 1.424rem auto 3rem auto;
+        width: 100%;
     }
 
     .related {
@@ -225,12 +235,6 @@
     .aside--post {
         justify-self: inherit;
         margin-right: 1.5rem;
-    }
-}
-@media (min-width: 1441px) {
-    .post {
-        margin: 1.424rem auto 3rem auto;
-        width: 100%;
     }
 }
 
