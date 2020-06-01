@@ -168,16 +168,6 @@ window.onload = () => {
     const sampleField = document.getElementById('sample');
     const sampleError = document.getElementById('sample-error');
 
-    sampleField.addEventListener('focus', () => {
-        sampleField.nextElementSibling.querySelector(
-            '.icon-invalid'
-        ).style.visibility = 'hidden';
-        sampleField.nextElementSibling.querySelector(
-            '.icon-valid'
-        ).style.visibility = 'hidden';
-        sampleField.style.boxShadow = `0 0 3px 3px ${inputOutlineColor}`;
-    });
-
     const validateSampleField = (e) => {
         if (sampleField.checkValidity()) {
             sampleField.setAttribute('aria-invalid', 'false');
@@ -214,6 +204,18 @@ window.onload = () => {
         }
     };
 
-    sampleField.addEventListener('input', validateSampleField);
-    sampleField.addEventListener('blur', validateSampleField);
+    if (sampleField) {
+        sampleField.addEventListener('focus', () => {
+            sampleField.nextElementSibling.querySelector(
+                '.icon-invalid'
+            ).style.visibility = 'hidden';
+            sampleField.nextElementSibling.querySelector(
+                '.icon-valid'
+            ).style.visibility = 'hidden';
+            sampleField.style.boxShadow = `0 0 3px 3px ${inputOutlineColor}`;
+        });
+
+        sampleField.addEventListener('input', validateSampleField);
+        sampleField.addEventListener('blur', validateSampleField);
+    }
 };
