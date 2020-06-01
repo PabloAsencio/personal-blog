@@ -1,3 +1,40 @@
+.header {
+    background-image: linear-gradient(
+            to right bottom,
+            var(--header-gradient-color-top),
+            var(--header-gradient-color-bottom)
+        ),
+        url('../../images/tiles-sm_1x.jpg');
+
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: grid;
+    grid-template: auto repeat(6, 1fr) / repeat(6, 1fr);
+    grid-template-areas:
+        'navigation navigation navigation navigation navigation navigation'
+        '.......... circle     .......... .......... .......... ..........'
+        '.......... .......... .......... .......... .......... ..........'
+        '.......... .......... .......... .......... .......... ..........'
+        '.......... .......... .......... .......... .......... ..........'
+        '.......... .......... .......... .......... .......... ..........';
+}
+
+@supports (background-image: image-set(url(''))) or
+    (background-image: -webkit-image-set(url(''))) {
+    .header {
+        background-image: linear-gradient(
+                to right bottom,
+                var(--header-gradient-color-top),
+                var(--header-gradient-color-bottom)
+            ),
+            -webkit-image-set(url(../../images/tiles-sm_1x.jpg) 1x, url(../../images/tiles-sm_2x.jpg)
+                        2x);
+    }
+}
+
+/* Skip link */
 .header__skip-link-container {
     position: absolute;
     z-index: 999;
@@ -30,36 +67,16 @@
     border-radius: 10rem;
 }
 
-.header {
-    background-image: linear-gradient(
-            to right bottom,
-            var(--header-gradient-color-top),
-            var(--header-gradient-color-bottom)
-        ),
-        url('../../images/tiles-sm_1x.jpg');
-
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
-}
-
-@supports (background-image: image-set(url(''))) or
-    (background-image: -webkit-image-set(url(''))) {
-    .header {
-        background-image: linear-gradient(
-                to right bottom,
-                var(--header-gradient-color-top),
-                var(--header-gradient-color-bottom)
-            ),
-            -webkit-image-set(url(../../images/tiles-sm_1x.jpg) 1x, url(../../images/tiles-sm_2x.jpg)
-                        2x);
-    }
-}
-
-.header__headline {
-    color: var(--header-heading-color);
-    margin-bottom: -1rem;
-    z-index: 2;
+/* Main heading */
+.header__circle {
+    background-color: var(--header-intro-background-color);
+    box-shadow: 1px 1px 1px var(--header-intro-border-color);
+    border-radius: 50%;
+    width: 18rem;
+    height: 18rem;
+    padding: 3rem;
+    grid-area: circle;
+    position: relative;
 }
 
 .header__heading {
@@ -72,19 +89,13 @@
     text-shadow: 1px 1px 1px var(--header-heading-shadow-color);
 }
 
-.header__intro-container {
-    background-color: var(--header-intro-background-color);
-    box-shadow: 1px 1px 1px var(--header-intro-border-color);
-    border-radius: 50%;
-    width: 18rem;
-    height: 18rem;
-    padding: 3rem;
-    position: relative;
-    top: 1rem;
-    left: 0.712rem;
+.header__headline {
+    color: var(--header-heading-color);
+    margin-bottom: -1rem;
+    z-index: 2;
 }
 
-.header__intro {
+.header__subheading {
     font-size: 1.125rem;
     font-weight: 600;
     line-height: 1.3333;
@@ -92,27 +103,26 @@
     color: var(--header-intro-color);
 }
 
-/* Mobile Landscape */
+/* FIXME The intro circle is too small on some phones when on landscape mode */
+/* Mobile S Landscape */
 @media (max-height: 425px) {
-    .header__intro-container {
-        top: -3rem;
-        left: 3rem;
+    .header__circle {
+        top: -10vh;
     }
 }
 
 /* Mobile S */
 @media (min-width: 360px) and (min-height: 425px) {
-    .header__intro-container {
-        top: 2.5rem;
-        left: 1.424rem;
+    .header__circle {
+        /* top: 2.5rem;
+        left: 1.424rem; */
     }
 }
 
 /* Mobile M */
 @media (min-width: 425px) and (min-height: 425px) {
-    .header__intro-container {
-        top: 7.5rem;
-        left: 3rem;
+    .header__circle {
+        top: 5rem;
         width: 20rem;
         height: 20rem;
     }
@@ -142,15 +152,16 @@
         }
     }
 
-    .header__intro-container {
-        top: 20vh;
-        left: 33vw;
-        width: 24rem;
-        height: 24rem;
-        transform: translate(-55%, -45%);
+    .header__circle {
+        /* top: 20vh;
+        left: 33vw; */
+        width: 25rem;
+        height: 25rem;
+        /* transform: translate(-55%, -45%); */
     }
 }
 
+/* Tablet Landscape */
 @media (min-width: 900px) {
     .header {
         background-image: linear-gradient(
@@ -172,6 +183,26 @@
                 -webkit-image-set(url(../../images/tiles-lg_1x.jpg) 1x, url(../../images/tiles-lg_2x.jpg)
                             2x);
         }
+    }
+}
+
+/* Laptop */
+@media (min-width: 1260px) {
+    .header__circle {
+        top: 0;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1600px) {
+    .header {
+        grid-template-areas:
+            'navigation navigation navigation navigation navigation navigation'
+            '.......... .......... .......... .......... .......... ..........'
+            '.......... .......... .......... .......... .......... ..........'
+            '.......... circle     .......... .......... .......... ..........'
+            '.......... .......... .......... .......... .......... ..........'
+            '.......... .......... .......... .......... .......... ..........';
     }
 }
 
@@ -199,9 +230,9 @@
         }
     }
 
-    .header__intro-container {
-        top: 29vh;
-        left: 26vw;
+    .header__circle {
+        /* top: 29vh;
+        left: 26vw; */
         width: 30rem;
         height: 30rem;
     }
