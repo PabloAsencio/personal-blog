@@ -88,6 +88,9 @@
     text-transform: uppercase;
     letter-spacing: 0.1rem;
     font-weight: 400;
+}
+
+.card__author {
     transition: transform 0.3s;
 }
 
