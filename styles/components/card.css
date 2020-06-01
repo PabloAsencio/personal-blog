@@ -11,7 +11,7 @@
     justify-content: space-between;
 }
 
-.author-card {
+.card--author {
     margin: 3rem auto;
     padding: 1.5rem 1rem 1.424rem 1.424rem;
     border: 1px solid var(--on-color-primary);
@@ -162,7 +162,7 @@
         max-width: 100%;
     }
 
-    .author-card {
+    .card--author {
         max-width: 50rem;
     }
 

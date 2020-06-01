@@ -9,7 +9,7 @@
         <script src="../scripts/script.js" async></script>
     </head>
     <body>
-        <div class="grid">
+        <div class="grid grid--design">
             <header class="header">
                 <p class="header__skip-link-container">
                     <a href="#content" class="header__skip-link">
@@ -116,19 +116,25 @@
                 </div>
             </header>
             <main>
-                <section class="design-section">
+                <section class="design__section">
                     <h2>Typography</h2>
-                    <div class="typography__container">
-                        <h3 class="heading-headings">Headings</h3>
-                        <div class="display-area headings">
+                    <div class="typography">
+                        <h3 class="typography__heading--headings">Headings</h3>
+                        <div
+                            class="design__subsection typography__sample--headings"
+                        >
                             <ol class="heading-list">
                                 <li><h1>Heading&nbsp;1</h1></li>
                                 <li><h2>Heading&nbsp;2</h2></li>
                                 <li><h3>Heading&nbsp;3</h3></li>
                             </ol>
                         </div>
-                        <h3 class="heading-p">Paragraph</h3>
-                        <div class="display-area paragraph">
+                        <h3 class="typography__heading--paragraph">
+                            Paragraph
+                        </h3>
+                        <div
+                            class="design__subsection typography__sample--paragraph"
+                        >
                             <p>
                                 Lorem ipsum dolor sit amet consectetur,
                                 adipisicing elit. Odio quaerat modi delectus.
@@ -143,8 +149,12 @@
                             </p>
                         </div>
 
-                        <h3 class="heading-blockquote">Blockquote</h3>
-                        <div class="display-area blockquote">
+                        <h3 class="typography__heading--blockquote">
+                            Blockquote
+                        </h3>
+                        <div
+                            class="design__subsection typography__sample--blockquote"
+                        >
                             <blockquote cite="#">
                                 <p>
                                     Lorem ipsum dolor sit amet consectetur
@@ -159,17 +169,21 @@
                         </div>
                     </div>
                 </section>
-                <section class="design-section">
+                <section class="design__section">
                     <h2>Buttons</h2>
-                    <div class="buttons__container">
-                        <h3 class="heading-primary">Primary Button</h3>
-                        <div class="display-area primary-sample">
+                    <div class="buttons">
+                        <h3 class="buttons__heading--primary">
+                            Primary Button
+                        </h3>
+                        <div
+                            class="design__subsection buttons__sample--primary"
+                        >
                             <p class="button button--raising">
                                 <a href="#">Primary Button </a>
                             </p>
                         </div>
-                        <h3 class="heading-search">Search Button</h3>
-                        <div class="display-area search-sample">
+                        <h3 class="buttons__heading--search">Search Button</h3>
+                        <div class="design__subsection buttons__sample--search">
                             <button type="button" class="button button--search">
                                 <svg
                                     class="icon icon-search"
@@ -182,15 +196,17 @@
                                 </svg>
                             </button>
                         </div>
-                        <h3 class="heading-tag">Tag Button</h3>
-                        <div class="display-area tag-sample">
+                        <h3 class="buttons__heading--tag">Tag Button</h3>
+                        <div class="design__subsection buttons__sample--tag">
                             <p class="tag">
                                 <a href="#" rel="tag">Tag Button</a>
                             </p>
                         </div>
-                        <h3 class="heading-menu">Menu Buttons</h3>
-                        <div class="display-area menu-sample">
-                            <div class="inner-display-area menu-button-area">
+                        <h3 class="buttons__heading--menu">Menu Buttons</h3>
+                        <div class="design__subsection buttons__sample--menu">
+                            <div
+                                class="design__background design__background--menu-button"
+                            >
                                 <button type="button" class="menu-button">
                                     <svg
                                         class="icon icon-menu"
@@ -203,7 +219,9 @@
                                     </svg>
                                 </button>
                             </div>
-                            <div class="inner-display-area menu-button-area">
+                            <div
+                                class="design__background design__background--menu-button"
+                            >
                                 <button class="menu-button">
                                     <svg
                                         class="icon icon-menu"
@@ -219,12 +237,12 @@
                         </div>
                     </div>
                 </section>
-                <section class="design-section">
+                <section class="design__section">
                     <h2>Forms</h2>
-                    <div class="forms-container">
-                        <h3 class="heading-search-bar">Search Bar</h3>
-                        <div class="display-area search-bar-sample">
-                            <div class="inner-display-area">
+                    <div class="forms">
+                        <h3 class="forms__heading--search">Search Bar</h3>
+                        <div class="design__subsection forms__sample--search">
+                            <div class="design__background">
                                 <form class="navigation__search">
                                     <label
                                         for="sample-search-bar"
@@ -256,9 +274,9 @@
                                 </form>
                             </div>
                         </div>
-                        <h3 class="heading-text-field">Text Fields</h3>
-                        <div class="display-area text-field-sample">
-                            <div class="inner-display-area">
+                        <h3 class="forms__heading--text">Text Fields</h3>
+                        <div class="design__subsection forms__sample--text">
+                            <div class="design__background">
                                 <form>
                                     <div class="signup__email">
                                         <label
@@ -306,11 +324,13 @@
                         </div>
                     </div>
                 </section>
-                <section class="design-section">
+                <section class="design__section">
                     <h2>Cards</h2>
-                    <div class="cards__container">
-                        <h3 class="heading-featured">Featured Card</h3>
-                        <article class="card featured">
+                    <div class="cards">
+                        <h3 class="cards__heading--featured">Featured Card</h3>
+                        <article
+                            class="card design__card cards__sample--featured"
+                        >
                             <div class="card__body">
                                 <header class="card__header">
                                     <div class="card__info">
@@ -476,8 +496,10 @@
                                 </ul>
                             </footer>
                         </article>
-                        <h3 class="headin-regular">Regular Card</h3>
-                        <article class="card regular">
+                        <h3 class="cards__heading--regular">Regular Card</h3>
+                        <article
+                            class="card design__card cards__sample--regular"
+                        >
                             <div class="card__body">
                                 <header class="card__header">
                                     <div class="card__info">
@@ -500,7 +522,7 @@
                                             <img
                                                 class="card__thumbnail"
                                                 type="image/jpeg"
-                                                src="../imagessunset-thumbnail_2x.jpg"
+                                                src="../images/sunset-thumbnail_2x.jpg"
                                                 alt="Author thumbnail"
                                             />
                                         </picture>
@@ -550,10 +572,10 @@
                                 </ul>
                             </footer>
                         </article>
-                        <h3 class="heading-author">Author Card</h3>
+                        <h3 class="cards__heading--author">Author Card</h3>
                         <article
                             id="author-card"
-                            class="card author-card author"
+                            class="card design__card card--author cards__sample--author"
                         >
                             <div class="card__body">
                                 <header class="card__header">
@@ -607,7 +629,7 @@
                         </article>
                     </div>
                 </section>
-                <section class="design-section">
+                <section class="design__section">
                     <h2>Sign-up form</h2>
                     <div class="signup">
                         <div class="signup__header">
