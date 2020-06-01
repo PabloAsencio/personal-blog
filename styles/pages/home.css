@@ -48,6 +48,7 @@
     grid-area: third;
 }
 
+/* Tablet portrait */
 @media (min-width: 768px) {
     .latest {
         grid-template-areas:
@@ -62,13 +63,15 @@
     }
 }
 
+/* Tablet landscape */
 @media (min-width: 1024px) {
     .popular {
         grid-template-areas: 'first second third';
     }
 }
 
-@media (min-width: 1240px) {
+/* Laptop large*/
+@media (min-width: 1440px) {
     .grid--home {
         grid-template-areas:
             'header header header'
@@ -88,20 +91,6 @@
         grid-template-areas:
             'first first'
             'second third';
-    }
-}
-
-/* Laptop */
-@media (min-width: 1240px) {
-    .grid {
-        grid-template-areas:
-            'header header header'
-            'main   main   aside '
-            'footer footer footer';
-        column-gap: 3rem;
-    }
-
-    aside {
     }
 }
 
