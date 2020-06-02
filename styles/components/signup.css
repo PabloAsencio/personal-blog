@@ -54,6 +54,18 @@
     padding: 0.356rem 0.712rem;
 }
 
+.signup__field--focused {
+    box-shadow: 0 0 3px 3px var(--input-outline-color);
+}
+
+.signup__field--valid {
+    box-shadow: 0 0 3px 3px var(--input-valid-color);
+}
+
+.signup__field--invalid {
+    box-shadow: 0 0 3px 3px var(--input-invalid-color);
+}
+
 .signup__field::placeholder {
     color: var(--input-placeholder-color);
 }

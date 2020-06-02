@@ -73,42 +73,39 @@ emailField.errorMessages = {
     invalid: 'Please enter a valid email address',
 };
 
-// CSS color variables
-const inputOutlineColor = getComputedStyle(
-    document.documentElement
-).getPropertyValue('--input-outline-color');
-const validColor = getComputedStyle(document.documentElement).getPropertyValue(
-    '--input-valid-color'
-);
-const invalidColor = getComputedStyle(
-    document.documentElement
-).getPropertyValue('--input-invalid-color');
-
 // ** Helper functions **
+const resetField = (field) => {
+    field.classList.remove('signup__field--focused');
+    field.classList.remove('signup__field--valid');
+    field.classList.remove('signup__field--invalid');
+};
+
 const setValid = (event, field) => {
+    resetField(field);
     field.setAttribute('aria-invalid', 'false');
-    field.nextElementSibling.querySelector('.icon-invalid').style.visibility =
-        'hidden';
-    field.nextElementSibling.querySelector('.icon-valid').style.visibility =
-        'visible';
+    field.nextElementSibling
+        .querySelector('.icon-invalid')
+        .classList.remove('icon--visible');
+    field.nextElementSibling
+        .querySelector('.icon-valid')
+        .classList.add('icon--visible');
     field.parentElement.querySelector('.signup__error').innerHTML = '';
     if (event.type === 'input') {
-        field.style.boxShadow = `0 0 3px 3px ${validColor}`;
-    } else {
-        field.style.boxShadow = 'none';
+        field.classList.add('signup__field--valid');
     }
 };
 
 const setInvalid = (event, field) => {
+    resetField(field);
     field.setAttribute('aria-invalid', 'true');
-    field.nextElementSibling.querySelector('.icon-valid').style.visibility =
-        'hidden';
-    field.nextElementSibling.querySelector('.icon-invalid').style.visibility =
-        'visible';
+    field.nextElementSibling
+        .querySelector('.icon-valid')
+        .classList.remove('icon--visible');
+    field.nextElementSibling
+        .querySelector('.icon-invalid')
+        .classList.add('icon--visible');
     if (event.type === 'input') {
-        field.style.boxShadow = `0 0 3px 3px ${invalidColor}`;
-    } else {
-        field.style.boxShadow = 'none';
+        field.classList.add('signup__field--invalid');
     }
 };
 
@@ -124,11 +121,14 @@ const setErrorMessage = (field) => {
 
 // ** Event handlers **
 const setFocus = (field) => {
-    field.nextElementSibling.querySelector('.icon-invalid').style.visibility =
-        'hidden';
-    field.nextElementSibling.querySelector('.icon-valid').style.visibility =
-        'hidden';
-    field.style.boxShadow = `0 0 3px 3px ${inputOutlineColor}`;
+    resetField(field);
+    field.nextElementSibling
+        .querySelector('.icon-invalid')
+        .classList.remove('icon--visible');
+    field.nextElementSibling
+        .querySelector('.icon-valid')
+        .classList.remove('icon--visible');
+    field.classList.add('signup__field--focused');
 };
 
 const validate = (event, field) => {
