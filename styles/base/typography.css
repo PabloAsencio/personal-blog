@@ -80,6 +80,7 @@ cite {
     font-style: italic;
 }
 
+/* Mobile Landscape */
 @media (min-width: 425px) {
     h1 {
         font-size: 2.281rem;
@@ -88,6 +89,7 @@ cite {
     }
 }
 
+/* Mobile L */
 @media (min-width: 600px) and (min-height: 425px) {
     h1 {
         font-size: 3.247rem;
