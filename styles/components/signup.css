@@ -50,7 +50,6 @@
 .signup__field {
     background-color: var(--white-primary);
     color: var(--on-color-primary);
-    border: 1px solid var(--gray-secondary-light);
     border-radius: 10rem;
     line-height: 1.5;
     padding: 0.356rem 0.712rem;
