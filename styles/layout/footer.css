@@ -21,6 +21,7 @@
     flex: 0 1 100%;
 }
 
+/* Navigation */
 .footer__navigation {
     grid-area: nav;
     justify-self: center;
@@ -39,6 +40,7 @@
     margin-top: 1.1852em;
 }
 
+/* Social media */
 .footer__social-media {
     font-size: 1.266rem;
     line-height: 1.1852;
@@ -70,6 +72,7 @@
     color: var(--footer-background-color);
 }
 
+/* Credits and copyright */
 .footer__credits {
     grid-area: credits;
     justify-self: center;
@@ -82,6 +85,7 @@
     margin: 0;
 }
 
+/* Hover and focus effects */
 .footer__link:hover {
     text-decoration: underline;
 }
@@ -104,6 +108,7 @@
     color: var(--footer-on-color);
 }
 
+/* Mobile L */
 @media (min-width: 460px) {
     .footer__navigation {
         justify-self: center;
