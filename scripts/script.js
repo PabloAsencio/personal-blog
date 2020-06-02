@@ -11,7 +11,10 @@ const lastLink = links[links.length - 1];
 
 // ** Event handlers **
 const openNavigation = () => {
-    slideOut.classList.add('visible', 'active');
+    slideOut.classList.add(
+        'navigation__slide-out--visible',
+        'navigation__slide-out--active'
+    );
     setTimeout(() => {
         closeButton.focus();
     }, 1);
@@ -25,14 +28,14 @@ const closeNavigation = (e) => {
         return;
     }
 
-    slideOut.classList.remove('active');
+    slideOut.classList.remove('navigation__slide-out--active');
     main.removeAttribute('aria-hidden');
     openButton.removeAttribute('aria-hidden');
     setTimeout(() => {
         openButton.focus();
     }, 1);
     setTimeout(() => {
-        slideOut.classList.remove('visible');
+        slideOut.classList.remove('navigation__slide-out--visible');
     }, 501);
 };
 
