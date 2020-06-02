@@ -23,26 +23,25 @@
 }
 
 /* Input validation icons */
-.icon-valid {
-    color: var(--input-valid-color);
+.icon-validation {
+    width: 1rem;
+    height: 1rem;
     position: absolute;
     top: 0;
     right: 0;
     visibility: hidden;
+}
+
+.icon-valid {
+    color: var(--input-valid-color);
 }
 
 .icon-invalid {
     color: var(--input-invalid-color);
-    position: absolute;
-    top: 0;
-    right: 0;
-    visibility: hidden;
 }
 
 .icon--visible {
     visibility: visible;
-    width: 1rem;
-    height: 1rem;
 }
 
 /* Social media icons */
