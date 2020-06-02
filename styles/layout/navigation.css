@@ -84,24 +84,3 @@
 .active {
     width: 17.857rem;
 }
-
-.icon {
-    display: inline-block;
-    width: 1rem;
-    height: 1rem;
-    stroke-width: 0;
-    stroke: currentColor;
-    fill: currentColor;
-}
-
-.navigation__icon-menu,
-.navigation__icon-cross {
-    width: 2.027rem;
-    height: 2.027rem;
-    color: var(--navigation-on-color);
-}
-
-.navigation__icon-menu:hover,
-.navigation__icon-cross:hover {
-    color: var(--navigation-icon-hover-color);
-}
