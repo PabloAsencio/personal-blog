@@ -1,8 +1,8 @@
 .header {
     background-image: linear-gradient(
             to right bottom,
-            var(--header-gradient-color-top),
-            var(--header-gradient-color-bottom)
+            var(--color-primary-dark-transparent),
+            var(--white-primary-transparent)
         ),
         url('../../images/tiles-sm_1x.jpg');
 
@@ -26,8 +26,8 @@
     .header {
         background-image: linear-gradient(
                 to right bottom,
-                var(--header-gradient-color-top),
-                var(--header-gradient-color-bottom)
+                var(--color-primary-dark-transparent),
+                var(--white-primary-transparent)
             ),
             -webkit-image-set(url(../../images/tiles-sm_1x.jpg) 1x, url(../../images/tiles-sm_2x.jpg)
                         2x);
@@ -41,8 +41,8 @@
     top: -9rem;
     left: 0;
     right: 0;
-    color: var(--skiplink-on-color);
-    background-color: var(--skiplink-background-color);
+    color: var(--on-color-primary);
+    background-color: var(--color-primary);
     text-align: center;
     padding: 1.424rem;
     overflow: hidden;
@@ -63,14 +63,14 @@
 .header__skip-link:active {
     text-decoration: underline;
     padding: 0.624rem;
-    box-shadow: 0 0 3px 3px var(--skiplink-outline-color);
+    box-shadow: 0 0 3px 3px var(--color-tertiary);
     border-radius: 10rem;
 }
 
 /* Main heading */
 .header__circle {
-    background-color: var(--header-intro-background-color);
-    box-shadow: 1px 1px 1px var(--header-intro-border-color);
+    background-color: var(--white-primary);
+    box-shadow: 1px 1px 1px var(--gray-secondary-shadow);
     border-radius: 50%;
     width: 18rem;
     height: 18rem;
@@ -86,11 +86,11 @@
     transform: translate(-50%, -50%);
     width: 75%;
     margin: 0.214rem 0 0 1.266rem;
-    text-shadow: 1px 1px 1px var(--header-heading-shadow-color);
+    text-shadow: 1px 1px 1px var(--white-primary-transparent);
 }
 
 .header__headline {
-    color: var(--header-heading-color);
+    color: var(--color-secondary);
     margin-bottom: -1rem;
     z-index: 2;
 }
@@ -100,7 +100,7 @@
     font-weight: 600;
     line-height: 1.3333;
     margin: 1.3333em 0;
-    color: var(--header-intro-color);
+    color: var(--on-color-primary);
 }
 
 /* Mobile S Landscape */
@@ -124,8 +124,8 @@
     .header {
         background-image: linear-gradient(
                 to right bottom,
-                var(--header-gradient-color-top),
-                var(--header-gradient-color-bottom)
+                var(--color-primary-dark-transparent),
+                var(--white-primary-transparent)
             ),
             url('../../images/tiles-md_1x.jpg');
     }
@@ -135,8 +135,8 @@
         .header {
             background-image: linear-gradient(
                     to right bottom,
-                    var(--header-gradient-color-top),
-                    var(--header-gradient-color-bottom)
+                    var(--color-primary-dark-transparent),
+                    var(--white-primary-transparent)
                 ),
                 -webkit-image-set(url(../../images/tiles-md_1x.jpg) 1x, url(../../images/tiles-md_2x.jpg)
                             2x);
@@ -157,8 +157,8 @@
     .header {
         background-image: linear-gradient(
                 to right bottom,
-                var(--header-gradient-color-top),
-                var(--header-gradient-color-bottom)
+                var(--color-primary-dark-transparent),
+                var(--white-primary-transparent)
             ),
             url('../../images/tiles-lg_1x.jpg');
     }
@@ -168,8 +168,8 @@
         .header {
             background-image: linear-gradient(
                     to right bottom,
-                    var(--header-gradient-color-top),
-                    var(--header-gradient-color-bottom)
+                    var(--color-primary-dark-transparent),
+                    var(--white-primary-transparent)
                 ),
                 -webkit-image-set(url(../../images/tiles-lg_1x.jpg) 1x, url(../../images/tiles-lg_2x.jpg)
                             2x);
@@ -202,8 +202,8 @@
     .header {
         background-image: linear-gradient(
                 to right bottom,
-                var(--header-gradient-color-top),
-                var(--header-gradient-color-bottom)
+                var(--color-primary-dark-transparent),
+                var(--white-primary-transparent)
             ),
             url('../../images/tiles-xl_1x.jpg');
     }
@@ -213,8 +213,8 @@
         .header {
             background-image: linear-gradient(
                     to right bottom,
-                    var(--header-gradient-color-top),
-                    var(--header-gradient-color-bottom)
+                    var(--color-primary-dark-transparent),
+                    var(--white-primary-transparent)
                 ),
                 -webkit-image-set(url(../../images/tiles-xl_1x.jpg) 1x, url(../../images/tiles-xl_2x.jpg)
                             2x);

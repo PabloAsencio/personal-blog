@@ -1,10 +1,10 @@
 .signup {
-    background-color: var(--signup-background-color);
-    color: var(--signup-on-color);
+    background-color: var(--color-primary);
+    color: var(--on-color-primary);
     max-width: 20rem;
     margin: 1.424rem 0.5rem 3rem 0;
     padding: 1.424rem;
-    border: 3px solid var(--signup-border-color);
+    border: 3px solid var(--on-color-primary);
     border-radius: 0.214rem;
     display: flex;
     flex-flow: column nowrap;
@@ -48,28 +48,28 @@
 }
 
 .signup__field {
-    background-color: var(--input-background-color);
-    color: var(--input-on-color);
-    border: 1px solid var(--input-border-color);
+    background-color: var(--white-primary);
+    color: var(--on-color-primary);
+    border: 1px solid var(--gray-secondary-light);
     border-radius: 10rem;
     line-height: 1.5;
     padding: 0.356rem 0.712rem;
 }
 
 .signup__field--focused {
-    box-shadow: 0 0 3px 3px var(--input-outline-color);
+    box-shadow: 0 0 3px 3px var(--color-tertiary);
 }
 
 .signup__field--valid {
-    box-shadow: 0 0 3px 3px var(--input-valid-color);
+    box-shadow: 0 0 3px 3px var(--color-green);
 }
 
 .signup__field--invalid {
-    box-shadow: 0 0 3px 3px var(--input-invalid-color);
+    box-shadow: 0 0 3px 3px var(--color-red);
 }
 
 .signup__field::placeholder {
-    color: var(--input-placeholder-color);
+    color: var(--gray-secondary-light);
 }
 
 .signup__icon {

@@ -17,7 +17,7 @@
     z-index: 3;
     top: 0;
     left: 0;
-    background-color: var(--navigation-background-color);
+    background-color: var(--color-primary);
     overflow-x: hidden;
     transition: width 0.5s;
     padding: 6rem 0;
@@ -47,7 +47,7 @@
     padding: 0.624rem 0.624rem 0.624rem 2.281rem;
     font-size: 1.802rem;
     margin: 0 1.802rem;
-    color: var(--navigation-on-color);
+    color: var(--color-secondary);
     display: block;
 }
 
@@ -58,7 +58,7 @@
 
 .navigation__item:focus,
 .navigation__item:active {
-    box-shadow: 0 0 3px 3px var(--navigation-outline-color);
+    box-shadow: 0 0 3px 3px var(--color-tertiary);
 }
 
 /* Search */
@@ -72,19 +72,19 @@
     border-radius: 10rem 0 0 10rem;
     padding: 0.356rem 1rem;
     width: 12rem;
-    background-color: var(--input-background-color);
-    color: var(--input-on-color);
-    border: solid var(--input-border-color);
+    background-color: var(--white-primary);
+    color: var(--on-color-primary);
+    border: solid var(--gray-secondary-light);
     border-width: 0.4px 0 0.4px 0.4px;
-    box-shadow: 0.1rem 0.1rem 0.1rem var(--input-shadow-color);
+    box-shadow: 0.1rem 0.1rem 0.1rem var(--gray-secondary-shadow);
     -webkit-appearance: none; /* Necessary to make the shape work on Safari for iOS*/
 }
 
 .navigation__search-bar::placeholder {
-    color: var(--input-placeholder-color);
+    color: var(--gray-secondary-light);
 }
 
 .navigation__search-bar:focus,
 .navigation__search-bar:active {
-    box-shadow: 0 0 3px 3px var(--navigation-outline-color);
+    box-shadow: 0 0 3px 3px var(--color-tertiary);
 }

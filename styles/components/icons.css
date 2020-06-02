@@ -9,11 +9,11 @@
 .icon-menu {
     width: 2.027rem;
     height: 2.027rem;
-    color: var(--navigation-on-color);
+    color: var(--color-secondary);
 }
 
 .icon-menu:hover {
-    color: var(--navigation-icon-hover-color);
+    color: var(--color-tertiary);
 }
 
 /* Search Icons */
@@ -33,11 +33,11 @@
 }
 
 .icon-valid {
-    color: var(--input-valid-color);
+    color: var(--color-green);
 }
 
 .icon-invalid {
-    color: var(--input-invalid-color);
+    color: var(--color-red);
 }
 
 .icon--visible {

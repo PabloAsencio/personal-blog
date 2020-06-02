@@ -1,21 +1,21 @@
 /* Primary Button */
 .button {
     display: inline-block;
-    background-color: var(--button-background-color);
-    color: var(--button-on-color);
+    background-color: var(--color-secondary);
+    color: var(--on-color-secondary);
     font-weight: 600;
-    box-shadow: 0.1rem 0.1rem 0.1rem var(--button-shadow-color);
+    box-shadow: 0.1rem 0.1rem 0.1rem var(--gray-secondary-shadow);
 }
 
 .button:hover {
-    background-color: var(--button-hover-color);
-    color: var(--button-hover-on-color);
+    background-color: var(--color-tertiary);
+    color: var(--on-color-secondary);
 }
 
 .button:focus,
 .button:active,
 .button:focus-within {
-    box-shadow: 0 0 3px 3px var(--button-outline-color);
+    box-shadow: 0 0 3px 3px var(---color-tertiary);
 }
 
 .button--raising {
@@ -38,19 +38,19 @@
 
 .button-search:focus,
 .button-search:active {
-    box-shadow: 0 0 3px 3px var(--button-outline-color);
+    box-shadow: 0 0 3px 3px var(---color-tertiary);
 }
 
 /* Tag buttons */
 
 .tag {
     display: inline-block;
-    background-color: var(--tag-background-color);
-    color: var(--tag-on-color);
+    background-color: var(--color-primary);
+    color: var(--on-color-primary);
     padding: 0.712rem 0.712rem;
     margin: 1.5rem 0.3rem 0 0;
     border-radius: 10rem;
-    box-shadow: 0.1rem 0.1rem 0.1rem var(--tag-shadow-color);
+    box-shadow: 0.1rem 0.1rem 0.1rem var(--gray-primary-shadow);
     transition: transform 0.3s;
 }
 
@@ -59,13 +59,13 @@
 }
 
 .tag:focus-within {
-    box-shadow: 0 0 3px 3px var(--tag-outline-color);
+    box-shadow: 0 0 3px 3px var(--color-tertiary);
 }
 
 /* Menu buttons */
 .menu-button {
     font-size: 1.802rem;
-    background-color: var(--navigation-button-background-color);
+    background-color: var(--white-primary-transparent);
     padding: 0.5rem 0.5rem 0.1rem 0.5rem;
     border-radius: 50%;
 }
@@ -73,5 +73,5 @@
 .menu-button:focus,
 .menu-button:active {
     background-color: transparent;
-    box-shadow: 0 0 3px 3px var(--navigation-outline-color);
+    box-shadow: 0 0 3px 3px var(--color-tertiary);
 }

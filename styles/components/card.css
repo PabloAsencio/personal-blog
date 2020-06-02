@@ -1,7 +1,7 @@
 .card {
-    background-color: var(--card-background-color);
-    color: var(--card-on-color);
-    box-shadow: 1rem 1.5rem 1.5rem var(--card-shadow-color);
+    background-color: var(--white-primary);
+    color: var(--on-color-primary);
+    box-shadow: 1rem 1.5rem 1.5rem var(--gray-primary-shadow);
     border-radius: 0.214rem;
     padding: 0 1rem 1.424rem 1.424rem;
     transition: transform 0.3s;
@@ -39,11 +39,11 @@
 
 .card__type {
     font-weight: 500;
-    color: var(--card-type-color);
+    color: var(--gray-secondary-dark);
 }
 
 .card__date {
-    color: var(--card-date-color);
+    color: var(--gray-secondary-light);
 }
 
 .card__type, .card__date {
@@ -101,7 +101,7 @@
 
 .card__title:focus-within,
 .card__author:focus-within {
-    box-shadow: 0 0 3px 3px var(--card-heading-outline-color);
+    box-shadow: 0 0 3px 3px var(--on-color-primary);
     border-radius: 3px;
 }
 
@@ -157,12 +157,12 @@
     line-height: 1.8984;
     padding bottom: 0.356rem;
     max-width: 100%;
-    border-bottom: 1px solid var(--card-on-color);
+    border-bottom: 1px solid var(--on-color-primary);
 }
 
 .card__figcaption small {
     font-size: inherit;
-    color: var(--card-date-color);
+    color: var(--gray-secondary-light);
 }
 
 /* Desktop */

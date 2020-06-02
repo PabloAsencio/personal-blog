@@ -8,9 +8,9 @@
 }
 
 .post {
-    background-color: var(--card-background-color);
-    color: var(--card-on-color);
-    box-shadow: 1rem 1.5rem 1.5rem var(--card-shadow-color);
+    background-color: var(--white-primary);
+    color: var(--on-color-primary);
+    box-shadow: 1rem 1.5rem 1.5rem var(--gray-primary-shadow);
     border-radius: 0.214rem;
     padding: 1.5rem 1rem 1.424rem 1.424rem;
     margin: 3rem 0.5rem;
@@ -55,7 +55,7 @@
 
 .post__date {
     margin-top: 0;
-    color: var(--card-date-color);
+    color: var(--gray-secondary-light);
 }
 
 .post__figure {
@@ -82,7 +82,7 @@
     line-height: 1.8984;
     padding bottom: 0.356rem;
     max-width: 50rem;
-    border-bottom: 1px solid var(--card-on-color);
+    border-bottom: 1px solid var(--on-color-primary);
 }
 
 .post__intro {

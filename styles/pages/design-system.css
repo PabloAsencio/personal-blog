@@ -12,15 +12,15 @@
 .design__subsection {
     display: flex;
     justify-content: space-around;
-    background-color: var(--card-background-color);
+    background-color: var(--white-primary);
     padding: 1rem 1rem 1.424rem 1.424rem;
     margin: 1.424rem 0.5rem 0 0;
-    box-shadow: 1rem 1.5rem 1.5rem var(--card-shadow-color);
+    box-shadow: 1rem 1.5rem 1.5rem var(--gray-primary-shadow);
     border-radius: 0.214rem;
 }
 
 .design__background {
-    background-color: var(--navigation-background-color);
+    background-color: var(--color-primary);
     border-radius: 0.214rem;
     padding: 0.5rem;
     display: flex;
