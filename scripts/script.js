@@ -58,6 +58,8 @@ slideOut.addEventListener('keyup', closeNavigation);
 closeButton.addEventListener('keydown', moveFocusToBottom);
 lastLink.addEventListener('keydown', moveFocusToTop);
 
+// *******************************************************************************
+
 // ***** Input validation *****
 
 // ** Constants **
@@ -80,15 +82,37 @@ const resetField = (field) => {
     field.classList.remove('signup__field--invalid');
 };
 
-const setValid = (event, field) => {
-    resetField(field);
-    field.setAttribute('aria-invalid', 'false');
+const hideIcons = (field) => {
+    field.nextElementSibling
+        .querySelector('.icon-invalid')
+        .classList.remove('icon--visible');
+    field.nextElementSibling
+        .querySelector('.icon-valid')
+        .classList.remove('icon--visible');
+};
+
+const setIconsToValid = (field) => {
     field.nextElementSibling
         .querySelector('.icon-invalid')
         .classList.remove('icon--visible');
     field.nextElementSibling
         .querySelector('.icon-valid')
         .classList.add('icon--visible');
+};
+
+const setIconsToInvalid = (field) => {
+    field.nextElementSibling
+        .querySelector('.icon-valid')
+        .classList.remove('icon--visible');
+    field.nextElementSibling
+        .querySelector('.icon-invalid')
+        .classList.add('icon--visible');
+};
+
+const setValid = (event, field) => {
+    resetField(field);
+    field.setAttribute('aria-invalid', 'false');
+    setIconsToValid(field);
     field.parentElement.querySelector('.signup__error').innerHTML = '';
     if (event.type === 'input') {
         field.classList.add('signup__field--valid');
@@ -98,12 +122,7 @@ const setValid = (event, field) => {
 const setInvalid = (event, field) => {
     resetField(field);
     field.setAttribute('aria-invalid', 'true');
-    field.nextElementSibling
-        .querySelector('.icon-valid')
-        .classList.remove('icon--visible');
-    field.nextElementSibling
-        .querySelector('.icon-invalid')
-        .classList.add('icon--visible');
+    setIconsToInvalid(field);
     if (event.type === 'input') {
         field.classList.add('signup__field--invalid');
     }
@@ -122,12 +141,7 @@ const setErrorMessage = (field) => {
 // ** Event handlers **
 const setFocus = (field) => {
     resetField(field);
-    field.nextElementSibling
-        .querySelector('.icon-invalid')
-        .classList.remove('icon--visible');
-    field.nextElementSibling
-        .querySelector('.icon-valid')
-        .classList.remove('icon--visible');
+    hideIcons(field);
     field.classList.add('signup__field--focused');
 };
 
@@ -142,19 +156,19 @@ const validate = (event, field) => {
 
 // ** Adding event listeners **
 
-// Name Validation
+// Name
 nameField.addEventListener('focus', () => setFocus(nameField));
 nameField.addEventListener('input', (event) => validate(event, nameField));
 nameField.addEventListener('blur', (event) => validate(event, nameField));
 
-// Email validation
+// Email
 emailField.addEventListener('focus', () => setFocus(emailField));
 emailField.addEventListener('input', (event) => validate(event, emailField));
 emailField.addEventListener('blur', (event) => validate(event, emailField));
 
-// Sample email field for the design system.
+// ** Sample email field for the design system.**
 const sampleField = document.getElementById('sample');
-// Sample field validation
+
 if (sampleField) {
     sampleField.errorMessages = emailField.errorMessages;
     sampleField.addEventListener('focus', () => setFocus(sampleField));
