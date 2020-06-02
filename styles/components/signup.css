@@ -44,7 +44,7 @@
 }
 
 .signup__error {
-    color: var(--input-invalid-color);
+    color: var(--on-color-primary);
 }
 
 .signup__field {
