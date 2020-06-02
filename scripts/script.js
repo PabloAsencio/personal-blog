@@ -1,221 +1,167 @@
-window.onload = () => {
-    // Menu functionality
-    const openButton = document.querySelector('.navigation__button--open');
-    const slideOut = document.querySelector('.navigation__slide-out');
-    const closeButton = document.querySelector('.navigation__button--close');
-    const main = document.querySelector('main');
-    const firstFocusableElement = closeButton;
-    const links = slideOut.getElementsByTagName('a');
-    const lastFocusableElement = links[links.length - 1];
+// ***** Menu functionality *****
+// Accesible Slide Menu adapted from https://knowbility.org/blog/2020/accessible-slide-menus/
 
-    openButton.addEventListener('click', openNavigation);
-    closeButton.addEventListener('click', closeNavigation);
-    slideOut.addEventListener('keyup', closeNavigation);
-    firstFocusableElement.addEventListener('keydown', moveFocusToBottom);
-    lastFocusableElement.addEventListener('keydown', moveFocusToTop);
+// ** Constants **
+const openButton = document.querySelector('.navigation__button--open');
+const slideOut = document.querySelector('.navigation__slide-out');
+const closeButton = document.querySelector('.navigation__button--close');
+const main = document.querySelector('main');
+const links = slideOut.getElementsByTagName('a');
+const lastLink = links[links.length - 1];
 
-    function openNavigation() {
-        slideOut.classList.add('visible', 'active');
-        setTimeout(() => {
-            firstFocusableElement.focus();
-        }, 1);
-        main.setAttribute('aria-hidden', 'true');
-        openButton.setAttribute('aria-hidden', 'true');
+// ** Event handlers **
+const openNavigation = () => {
+    slideOut.classList.add('visible', 'active');
+    setTimeout(() => {
+        closeButton.focus();
+    }, 1);
+    main.setAttribute('aria-hidden', 'true');
+    openButton.setAttribute('aria-hidden', 'true');
+};
+
+// The timeouts in the previous and next function are necessary for the transitions to be properly animated
+const closeNavigation = (e) => {
+    if (e.type == 'keyup' && e.key !== 'Escape') {
+        return;
     }
 
-    function closeNavigation(e) {
-        if (e.type == 'keyup' && e.key !== 'Escape') {
-            return;
-        }
+    slideOut.classList.remove('active');
+    main.removeAttribute('aria-hidden');
+    openButton.removeAttribute('aria-hidden');
+    setTimeout(() => {
+        openButton.focus();
+    }, 1);
+    setTimeout(() => {
+        slideOut.classList.remove('visible');
+    }, 501);
+};
 
-        slideOut.classList.remove('active');
-        main.removeAttribute('aria-hidden');
-        openButton.removeAttribute('aria-hidden');
-        setTimeout(() => {
-            openButton.focus();
-        }, 1);
-        setTimeout(() => {
-            slideOut.classList.remove('visible');
-        }, 501);
-    }
-
-    function moveFocusToTop(e) {
-        if (e.key === 'Tab' && !e.shiftKey) {
-            e.preventDefault();
-            firstFocusableElement.focus();
-        }
-    }
-
-    function moveFocusToBottom(e) {
-        if (e.key === 'Tab' && e.shiftKey) {
-            e.preventDefault();
-            lastFocusableElement.focus();
-        }
-    }
-
-    // Input validation
-    const nameField = document.getElementById('name');
-    const emailField = document.getElementById('email');
-    const nameError = document.getElementById('name-error');
-    const emailError = document.getElementById('email-error');
-    const inputOutlineColor = getComputedStyle(
-        document.documentElement
-    ).getPropertyValue('--input-outline-color');
-    const validColor = getComputedStyle(
-        document.documentElement
-    ).getPropertyValue('--input-valid-color');
-    const invalidColor = getComputedStyle(
-        document.documentElement
-    ).getPropertyValue('--input-invalid-color');
-
-    // Name Validation
-    nameField.addEventListener('focus', () => {
-        nameField.nextElementSibling.querySelector(
-            '.icon-invalid'
-        ).style.visibility = 'hidden';
-        nameField.nextElementSibling.querySelector(
-            '.icon-valid'
-        ).style.visibility = 'hidden';
-        nameField.style.boxShadow = `0 0 3px 3px ${inputOutlineColor}`;
-    });
-
-    const validateName = (e) => {
-        if (nameField.checkValidity()) {
-            nameField.setAttribute('aria-invalid', 'false');
-            nameField.nextElementSibling.querySelector(
-                '.icon-invalid'
-            ).style.visibility = 'hidden';
-            nameField.nextElementSibling.querySelector(
-                '.icon-valid'
-            ).style.visibility = 'visible';
-            nameError.innerHTML = '';
-            if (e.type === 'input') {
-                nameField.style.boxShadow = `0 0 3px 3px ${validColor}`;
-            } else {
-                nameField.style.boxShadow = 'none';
-            }
-        } else {
-            nameField.setAttribute('aria-invalid', 'true');
-            nameField.nextElementSibling.querySelector(
-                '.icon-valid'
-            ).style.visibility = 'hidden';
-            nameField.nextElementSibling.querySelector(
-                '.icon-invalid'
-            ).style.visibility = 'visible';
-            nameError.innerHTML = 'Please enter your name';
-            if (e.type === 'input') {
-                nameField.style.boxShadow = `0 0 3px 3px ${invalidColor}`;
-            } else {
-                nameField.style.boxShadow = 'none';
-            }
-        }
-    };
-
-    nameField.addEventListener('input', validateName);
-    nameField.addEventListener('blur', validateName);
-
-    // Email validation
-    emailField.addEventListener('focus', () => {
-        emailField.nextElementSibling.querySelector(
-            '.icon-invalid'
-        ).style.visibility = 'hidden';
-        emailField.nextElementSibling.querySelector(
-            '.icon-valid'
-        ).style.visibility = 'hidden';
-        emailField.style.boxShadow = `0 0 3px 3px ${inputOutlineColor}`;
-    });
-
-    const validateEmail = (e) => {
-        if (emailField.checkValidity()) {
-            emailField.setAttribute('aria-invalid', 'false');
-            emailField.nextElementSibling.querySelector(
-                '.icon-invalid'
-            ).style.visibility = 'hidden';
-            emailField.nextElementSibling.querySelector(
-                '.icon-valid'
-            ).style.visibility = 'visible';
-            emailError.innerHTML = '';
-            if (e.type === 'input') {
-                emailField.style.boxShadow = `0 0 3px 3px ${validColor}`;
-            } else {
-                emailField.style.boxShadow = 'none';
-            }
-        } else {
-            emailField.setAttribute('aria-invalid', 'true');
-            emailField.nextElementSibling.querySelector(
-                '.icon-valid'
-            ).style.visibility = 'hidden';
-            emailField.nextElementSibling.querySelector(
-                '.icon-invalid'
-            ).style.visibility = 'visible';
-            if (e.type === 'input') {
-                emailField.style.boxShadow = `0 0 3px 3px ${invalidColor}`;
-            } else {
-                emailField.style.boxShadow = 'none';
-            }
-            if (emailField.value.length === 0) {
-                emailError.innerHTML = 'Please enter an email address';
-            } else {
-                emailError.innerHTML = 'Please enter a valid email address';
-            }
-        }
-    };
-
-    emailField.addEventListener('input', validateEmail);
-    emailField.addEventListener('blur', validateEmail);
-
-    // Sample input field validation for the design system
-    const sampleField = document.getElementById('sample');
-    const sampleError = document.getElementById('sample-error');
-
-    const validateSampleField = (e) => {
-        if (sampleField.checkValidity()) {
-            sampleField.setAttribute('aria-invalid', 'false');
-            sampleField.nextElementSibling.querySelector(
-                '.icon-invalid'
-            ).style.visibility = 'hidden';
-            sampleField.nextElementSibling.querySelector(
-                '.icon-valid'
-            ).style.visibility = 'visible';
-            emailError.innerHTML = '';
-            if (e.type === 'input') {
-                sampleField.style.boxShadow = `0 0 3px 3px ${validColor}`;
-            } else {
-                sampleField.style.boxShadow = 'none';
-            }
-        } else {
-            sampleField.setAttribute('aria-invalid', 'true');
-            sampleField.nextElementSibling.querySelector(
-                '.icon-valid'
-            ).style.visibility = 'hidden';
-            sampleField.nextElementSibling.querySelector(
-                '.icon-invalid'
-            ).style.visibility = 'visible';
-            if (e.type === 'input') {
-                sampleField.style.boxShadow = `0 0 3px 3px ${invalidColor}`;
-            } else {
-                sampleField.style.boxShadow = 'none';
-            }
-            sampleError.innerHTML = 'Please enter a valid email address';
-            if (sampleField.value.length === 0) {
-                sampleError.innerHTML = 'Please enter an email address';
-            } else {
-            }
-        }
-    };
-
-    if (sampleField) {
-        sampleField.addEventListener('focus', () => {
-            sampleField.nextElementSibling.querySelector(
-                '.icon-invalid'
-            ).style.visibility = 'hidden';
-            sampleField.nextElementSibling.querySelector(
-                '.icon-valid'
-            ).style.visibility = 'hidden';
-            sampleField.style.boxShadow = `0 0 3px 3px ${inputOutlineColor}`;
-        });
-
-        sampleField.addEventListener('input', validateSampleField);
-        sampleField.addEventListener('blur', validateSampleField);
+// The next two functions ensure that the focus stays within the menu when it is open
+const moveFocusToTop = (e) => {
+    if (e.key === 'Tab' && !e.shiftKey) {
+        e.preventDefault();
+        closeButton.focus();
     }
 };
+
+const moveFocusToBottom = (e) => {
+    if (e.key === 'Tab' && e.shiftKey) {
+        e.preventDefault();
+        lastLink.focus();
+    }
+};
+
+// ** Adding event listeners **
+openButton.addEventListener('click', openNavigation);
+closeButton.addEventListener('click', closeNavigation);
+slideOut.addEventListener('keyup', closeNavigation);
+closeButton.addEventListener('keydown', moveFocusToBottom);
+lastLink.addEventListener('keydown', moveFocusToTop);
+
+// ***** Input validation *****
+
+// ** Constants **
+const nameField = document.getElementById('name');
+nameField.errorMessages = {
+    empty: 'Please enter your name',
+    invalid: 'Please enter a valid name',
+};
+
+const emailField = document.getElementById('email');
+emailField.errorMessages = {
+    empty: 'Please enter an email address',
+    invalid: 'Please enter a valid email address',
+};
+
+// CSS color variables
+const inputOutlineColor = getComputedStyle(
+    document.documentElement
+).getPropertyValue('--input-outline-color');
+const validColor = getComputedStyle(document.documentElement).getPropertyValue(
+    '--input-valid-color'
+);
+const invalidColor = getComputedStyle(
+    document.documentElement
+).getPropertyValue('--input-invalid-color');
+
+// ** Helper functions **
+const setValid = (event, field) => {
+    field.setAttribute('aria-invalid', 'false');
+    field.nextElementSibling.querySelector('.icon-invalid').style.visibility =
+        'hidden';
+    field.nextElementSibling.querySelector('.icon-valid').style.visibility =
+        'visible';
+    field.parentElement.querySelector('.signup__error').innerHTML = '';
+    if (event.type === 'input') {
+        field.style.boxShadow = `0 0 3px 3px ${validColor}`;
+    } else {
+        field.style.boxShadow = 'none';
+    }
+};
+
+const setInvalid = (event, field) => {
+    field.setAttribute('aria-invalid', 'true');
+    field.nextElementSibling.querySelector('.icon-valid').style.visibility =
+        'hidden';
+    field.nextElementSibling.querySelector('.icon-invalid').style.visibility =
+        'visible';
+    if (event.type === 'input') {
+        field.style.boxShadow = `0 0 3px 3px ${invalidColor}`;
+    } else {
+        field.style.boxShadow = 'none';
+    }
+};
+
+const setErrorMessage = (field) => {
+    if (field.value.length === 0) {
+        field.parentElement.querySelector('.signup__error').innerHTML =
+            field.errorMessages['empty'];
+    } else {
+        field.parentElement.querySelector('.signup__error').innerHTML =
+            field.errorMessages['invalid'];
+    }
+};
+
+// ** Event handlers **
+const setFocus = (field) => {
+    field.nextElementSibling.querySelector('.icon-invalid').style.visibility =
+        'hidden';
+    field.nextElementSibling.querySelector('.icon-valid').style.visibility =
+        'hidden';
+    field.style.boxShadow = `0 0 3px 3px ${inputOutlineColor}`;
+};
+
+const validate = (event, field) => {
+    if (field.checkValidity()) {
+        setValid(event, field);
+    } else {
+        setInvalid(event, field);
+        setErrorMessage(field);
+    }
+};
+
+// ** Adding event listeners **
+
+// Name Validation
+nameField.addEventListener('focus', () => setFocus(nameField));
+nameField.addEventListener('input', (event) => validate(event, nameField));
+nameField.addEventListener('blur', (event) => validate(event, nameField));
+
+// Email validation
+emailField.addEventListener('focus', () => setFocus(emailField));
+emailField.addEventListener('input', (event) => validate(event, emailField));
+emailField.addEventListener('blur', (event) => validate(event, emailField));
+
+// Sample email field for the design system.
+const sampleField = document.getElementById('sample');
+// Sample field validation
+if (sampleField) {
+    sampleField.errorMessages = emailField.errorMessages;
+    sampleField.addEventListener('focus', () => setFocus(sampleField));
+    sampleField.addEventListener('input', (event) =>
+        validate(event, sampleField)
+    );
+    sampleField.addEventListener('blur', (event) =>
+        validate(event, sampleField)
+    );
+}
