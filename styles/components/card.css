@@ -157,6 +157,11 @@
     border-bottom: 1px solid var(--card-on-color);
 }
 
+.card__figcaption small {
+    font-size: inherit;
+    color: var(--card-date-color);
+}
+
 @media (min-width: 1800px) {
     .card {
         max-width: 100%;
