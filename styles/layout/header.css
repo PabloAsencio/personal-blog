@@ -29,7 +29,7 @@
                 var(--color-primary-dark-transparent),
                 var(--white-primary-transparent)
             ),
-            -webkit-image-set(url(../../images/tiles-sm_1x.jpg) 1x, url(../../images/tiles-sm_2x.jpg)
+            -webkit-image-set(url('../../images/tiles-sm_1x.jpg') 1x, url('../../images/tiles-sm_2x.jpg')
                         2x);
     }
 }
@@ -138,7 +138,7 @@
                     var(--color-primary-dark-transparent),
                     var(--white-primary-transparent)
                 ),
-                -webkit-image-set(url(../../images/tiles-md_1x.jpg) 1x, url(../../images/tiles-md_2x.jpg)
+                -webkit-image-set(url('../../images/tiles-md_1x.jpg') 1x, url('../../images/tiles-md_2x.jpg')
                             2x);
         }
     }
@@ -171,7 +171,7 @@
                     var(--color-primary-dark-transparent),
                     var(--white-primary-transparent)
                 ),
-                -webkit-image-set(url(../../images/tiles-lg_1x.jpg) 1x, url(../../images/tiles-lg_2x.jpg)
+                -webkit-image-set(url('../../images/tiles-lg_1x.jpg') 1x, url('../../images/tiles-lg_2x.jpg')
                             2x);
         }
     }
@@ -216,7 +216,7 @@
                     var(--color-primary-dark-transparent),
                     var(--white-primary-transparent)
                 ),
-                -webkit-image-set(url(../../images/tiles-xl_1x.jpg) 1x, url(../../images/tiles-xl_2x.jpg)
+                -webkit-image-set(url('../../images/tiles-xl_1x.jpg') 1x, url('../../images/tiles-xl_2x.jpg')
                             2x);
         }
     }
