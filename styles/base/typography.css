@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Eczar:wght@400;500;600;800&family=Montserrat:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Eczar:wght@400;500;600;800&family=Montserrat:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap');
 
 body {
     font-family: 'Montserrat', sans-serif;
@@ -11,7 +11,8 @@ main {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
     font-family: 'Eczar', serif;
 }
 
@@ -19,6 +20,8 @@ h3 {
    Calculated using https://modularscale.com and https://drewish.com/tools/vertical-rhythm/
    to achieve vertical rhythm
 */
+
+/* Headings */
 h1 {
     color: var(--color-secondary);
     font-size: 2.027rem;
@@ -43,6 +46,16 @@ h3 {
     font-weight: 600;
 }
 
+h4 {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-top: 1.5em;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+/* Paragraphs */
 p {
     font-size: 1rem;
     line-height: 1.5;
@@ -52,10 +65,35 @@ p {
     text-size-adjust: 100%;
 }
 
+em {
+    font-style: italic;
+}
+
+strong {
+    font-weight: 700;
+    font-size: 112.5%;
+    letter-spacing: 0.2em;
+}
+
+mark {
+    text-decoration: underline;
+    background-color: inherit;
+}
+
+.p__place-name {
+    font-weight: 600;
+}
+
+.p__foreign {
+    font-style: italic;
+    letter-spacing: 0.05em;
+}
+
 /* Anchor inside paragraphs */
 a {
     color: var(--on-color-primary);
     font-weight: 600;
+    text-decoration: underline dotted var(--on-color-primary);
 }
 
 a:hover {
@@ -72,6 +110,7 @@ a:active {
 .link--reset {
     color: inherit;
     font-weight: inherit;
+    text-decoration: none;
 }
 
 .link--reset:hover {
