@@ -121,7 +121,7 @@
     margin-top: 1.5rem;
 }
 
-.card__text--featured p:first-child {
+.card__first-paragraph {
     margin-top: 0;
 }
 
@@ -160,7 +160,7 @@
     border-bottom: 1px solid var(--on-color-primary);
 }
 
-.card__figcaption small {
+.card__attribution {
     font-size: inherit;
     color: var(--gray-secondary-light);
 }
@@ -182,7 +182,7 @@
         margin-top: 1.5rem;
     }
 
-    .card__text--featured p:first-child {
+    .card__first-paragraph {
         margin-top: 0;
     }
 }

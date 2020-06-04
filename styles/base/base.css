@@ -20,6 +20,18 @@ a {
     color: inherit;
 }
 
+em,
+strong,
+b,
+u,
+i,
+mark {
+    font-style: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+}
+
 /* Outlines are replaced with box shadows to indicate focus for keyboard navigation*/
 :focus,
 :active {

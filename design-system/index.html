@@ -11,7 +11,7 @@
         <div class="grid grid--design">
             <header class="header">
                 <p class="header__skip-link-container">
-                    <a href="#content" class="header__skip-link">
+                    <a href="#content" class="link--reset header__skip-link">
                         Skip to Content (Press Enter)
                     </a>
                 </p>
@@ -54,17 +54,21 @@
                                     <li>
                                         <a
                                             href="../index.html"
-                                            class="navigation__item"
+                                            class="link--reset navigation__item"
                                             >Home</a
                                         >
                                     </li>
                                     <li>
-                                        <a href="#" class="navigation__item"
+                                        <a
+                                            href="#"
+                                            class="link--reset navigation__item"
                                             >About</a
                                         >
                                     </li>
                                     <li>
-                                        <a href="#" class="navigation__item"
+                                        <a
+                                            href="#"
+                                            class="link--reset navigation__item"
                                             >Contact</a
                                         >
                                     </li>
@@ -124,6 +128,7 @@
                                 <li><h1>Heading&nbsp;1</h1></li>
                                 <li><h2>Heading&nbsp;2</h2></li>
                                 <li><h3>Heading&nbsp;3</h3></li>
+                                <li><h4>Heading&nbsp;4</h4></li>
                             </ol>
                         </div>
                         <h3 class="typography__heading--paragraph">
@@ -132,18 +137,66 @@
                         <div
                             class="design__subsection typography__sample--paragraph"
                         >
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur,
-                                adipisicing elit. Odio quaerat modi delectus.
-                                Ipsam quos possimus maxime nam in sequi iure
-                                architecto ullam eos minus laboriosam unde,
-                                aspernatur a voluptatibus cum. Lorem ipsum dolor
-                                sit amet consectetur adipisicing elit. Id rerum
-                                magni accusamus reiciendis. Corporis ipsa dicta
-                                adipisci. Facilis autem perferendis consectetur,
-                                soluta numquam ullam laboriosam maiores quas
-                                exercitationem pariatur iure?
-                            </p>
+                            <div class="typography__sample--text">
+                                <h4>Regular</h4>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur,
+                                    adipisicing elit.
+                                </p>
+                            </div>
+                            <div class="typography__sample--text">
+                                <h4>Link</h4>
+                                <p>
+                                    <a href="#">This is a sample link</a> inside
+                                    a paragraph.
+                                </p>
+                            </div>
+                            <div class="typography__sample--text">
+                                <h4>Emphasis</h4>
+                                <p>
+                                    You <em>must</em> try the local
+                                    specialities.
+                                </p>
+                            </div>
+                            <div class="typography__sample--text">
+                                <h4>Strong</h4>
+                                <p>
+                                    <strong
+                                        >Taking pictures inside is not
+                                        allowed.</strong
+                                    >
+                                </p>
+                            </div>
+                            <div class="typography__sample--text">
+                                <h4>Relevant Information</h4>
+                                <p>
+                                    This is one of the most popular squares in
+                                    the city.
+                                    <mark>
+                                        On its southern corner there is an
+                                        excellent restaurant.
+                                    </mark>
+                                </p>
+                            </div>
+                            <div class="typography__sample--text">
+                                <h4>Place Names</h4>
+                                <p>
+                                    Across the river you can see the town of
+                                    <b class="p__place-name"
+                                        >Vila Nova de Gaia</b
+                                    >.
+                                </p>
+                            </div>
+                            <div class="typography__sample--text">
+                                <h4>Foreign Words</h4>
+                                <p>
+                                    The
+                                    <i class="p__foreign" lang="pt"
+                                        >francesinha</i
+                                    >
+                                    is one of the most popular local dishes.
+                                </p>
+                            </div>
                         </div>
 
                         <h3 class="typography__heading--blockquote">
@@ -152,6 +205,14 @@
                         <div
                             class="design__subsection typography__sample--blockquote"
                         >
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur
+                                adipisicing elit. Laudantium sapiente facilis
+                                cupiditate obcaecati quisquam. Laboriosam a
+                                provident laborum corporis reiciendis placeat,
+                                atque itaque sequi illum libero nihil quis
+                                numquam in?
+                            </p>
                             <blockquote cite="#">
                                 <p>
                                     Lorem ipsum dolor sit amet consectetur
@@ -163,6 +224,13 @@
                                 </p>
                                 <footer>—Author, <cite>Source</cite></footer>
                             </blockquote>
+                            <p>
+                                Lorem, ipsum dolor sit amet consectetur
+                                adipisicing elit. Qui dicta provident, omnis
+                                perspiciatis amet maxime voluptate praesentium
+                                in, optio, dolore fuga ullam eius. Aut debitis
+                                earum fugit eligendi suscipit! Ut!
+                            </p>
                         </div>
                     </div>
                 </section>
@@ -176,7 +244,9 @@
                             class="design__subsection buttons__sample--primary"
                         >
                             <p class="button button--raising">
-                                <a href="#">Primary Button </a>
+                                <a href="#" class="link--reset"
+                                    >Primary Button
+                                </a>
                             </p>
                         </div>
                         <h3 class="buttons__heading--search">Search Button</h3>
@@ -196,7 +266,9 @@
                         <h3 class="buttons__heading--tag">Tag Button</h3>
                         <div class="design__subsection buttons__sample--tag">
                             <p class="tag">
-                                <a href="#" rel="tag">Tag Button</a>
+                                <a href="#" rel="tag" class="link--reset"
+                                    >Tag Button</a
+                                >
                             </p>
                         </div>
                         <h3 class="buttons__heading--menu">Menu Buttons</h3>
@@ -358,14 +430,16 @@
                                         </picture>
                                         <div class="card__heading">
                                             <h3 class="card__title">
-                                                <a href="posts/post01.html"
+                                                <a
+                                                    href="posts/post01.html"
+                                                    class="link--reset"
                                                     >Blog post title</a
                                                 >
                                             </h3>
                                             <p
                                                 class="card__subheading card__author"
                                             >
-                                                <a href="#">
+                                                <a href="#" class="link--reset">
                                                     Author Name
                                                 </a>
                                             </p>
@@ -424,11 +498,13 @@
                                     </picture>
                                     <figcaption class="card__figcaption">
                                         A caption for the picture.
-                                        <small>Photo attribution</small>
+                                        <small class="card__attribution"
+                                            >Photo attribution</small
+                                        >
                                     </figcaption>
                                 </figure>
                                 <div class="card__text--featured">
-                                    <p>
+                                    <p class="card__first-paragraph">
                                         Lorem ipsum dolor sit amet consectetur
                                         adipisicing elit. Pariatur impedit
                                         assumenda eligendi, exercitationem nemo
@@ -474,7 +550,9 @@
                             </div>
                             <footer class="card__footer">
                                 <p class="button button--raising">
-                                    <a href="posts/post01.html"
+                                    <a
+                                        href="posts/post01.html"
+                                        class="link--reset"
                                         >Keep reading
                                         <span class="screen-reader-only"
                                             >the blog post 1</span
@@ -483,13 +561,28 @@
                                 </p>
                                 <ul class="card__tag-list">
                                     <li class="tag">
-                                        <a href="#" rel="tag">Tag 1</a>
+                                        <a
+                                            href="#"
+                                            rel="tag"
+                                            class="link--reset"
+                                            >Tag 1</a
+                                        >
                                     </li>
                                     <li class="tag">
-                                        <a href="#" rel="tag">Tag 2</a>
+                                        <a
+                                            href="#"
+                                            rel="tag"
+                                            class="link--reset"
+                                            >Tag 2</a
+                                        >
                                     </li>
                                     <li class="tag">
-                                        <a href="#" rel="tag">Tag 3</a>
+                                        <a
+                                            href="#"
+                                            rel="tag"
+                                            class="link--reset"
+                                            >Tag 3</a
+                                        >
                                     </li>
                                 </ul>
                             </footer>
@@ -526,14 +619,18 @@
                                         </picture>
                                         <div class="card__heading">
                                             <h3 class="card__title">
-                                                <a href="posts/post04.html"
+                                                <a
+                                                    href="posts/post04.html"
+                                                    class="link--reset"
                                                     >Post title</a
                                                 >
                                             </h3>
                                             <p
                                                 class="card__subheading card__author"
                                             >
-                                                <a href="#">Author Name</a>
+                                                <a href="#" class="link--reset"
+                                                    >Author Name</a
+                                                >
                                             </p>
                                         </div>
                                     </div>
@@ -550,7 +647,9 @@
                             </div>
                             <footer class="card__footer">
                                 <p class="button button--raising">
-                                    <a href="posts/post04.html"
+                                    <a
+                                        href="posts/post04.html"
+                                        class="link--reset"
                                         >Keep reading
                                         <span class="screen-reader-only"
                                             >the blog post 1</span
@@ -559,13 +658,28 @@
                                 </p>
                                 <ul class="card__tag-list">
                                     <li class="tag">
-                                        <a href="#" rel="tag">Tag 1</a>
+                                        <a
+                                            href="#"
+                                            rel="tag"
+                                            class="link--reset"
+                                            >Tag 1</a
+                                        >
                                     </li>
                                     <li class="tag">
-                                        <a href="#" rel="tag">Tag 2</a>
+                                        <a
+                                            href="#"
+                                            rel="tag"
+                                            class="link--reset"
+                                            >Tag 2</a
+                                        >
                                     </li>
                                     <li class="tag">
-                                        <a href="#" rel="tag">Tag 3</a>
+                                        <a
+                                            href="#"
+                                            rel="tag"
+                                            class="link--reset"
+                                            >Tag 3</a
+                                        >
                                     </li>
                                 </ul>
                             </footer>
@@ -621,7 +735,9 @@
                             </div>
                             <footer class="card__footer">
                                 <p class="button button--raising">
-                                    <a href="#">More by this author</a>
+                                    <a href="#" class="link--reset"
+                                        >More by this author</a
+                                    >
                                 </p>
                             </footer>
                         </article>
@@ -735,17 +851,20 @@
                     <nav class="footer__navigation">
                         <ul class="footer__list">
                             <li class="footer__li">
-                                <a class="footer__link" href="../index.html">
+                                <a
+                                    class="link--reset footer__link"
+                                    href="../index.html"
+                                >
                                     Home
                                 </a>
                             </li>
                             <li class="footer__li">
-                                <a class="footer__link" href="#">
+                                <a class="link--reset footer__link" href="#">
                                     About
                                 </a>
                             </li>
                             <li class="footer__li">
-                                <a class="footer__link" href="#">
+                                <a class="link--reset footer__link" href="#">
                                     Contact
                                 </a>
                             </li>
@@ -758,7 +877,7 @@
                                 <a
                                     href="#"
                                     aria-labelledby="facebook"
-                                    class="footer__icon-link"
+                                    class="link--reset footer__icon-link"
                                 >
                                     <svg
                                         class="icon icon-facebook"
@@ -778,7 +897,7 @@
                                 <a
                                     href="#"
                                     aria-labelledby="twitter"
-                                    class="footer__icon-link"
+                                    class="link--reset footer__icon-link"
                                 >
                                     <svg
                                         class="icon icon-twitter"
@@ -798,7 +917,7 @@
                                 <a
                                     href="#"
                                     aria-labelledby="linkedin"
-                                    class="footer__icon-link"
+                                    class="link--reset footer__icon-link"
                                 >
                                     <svg
                                         class="icon icon-linkedin"
@@ -816,20 +935,32 @@
                             </li>
                         </ul>
                     </div>
-                    <p class="footer__credits">
-                        <small
-                            >Icons designed by
-                            <a class="footer__link" href="http://keyamoon.com"
-                                >Keyamoon</a
+                    <div class="footer__credits">
+                        <p class="footer__attribution">
+                            <small>
+                                Icons designed by
+                                <a
+                                    class="link--reset footer__link"
+                                    href="http://keyamoon.com"
+                                    >Keyamoon</a
+                                >
+                                from
+                                <a
+                                    class="link--reset footer__link"
+                                    href="https://icomoon.io"
+                                    >IcoMoon</a
+                                >
+                            </small>
+                        </p>
+                        <p class="footer__attribution">
+                            <small
+                                >Photos by Hatice Yiğit and Pablo Asencio
+                                Sánchez</small
                             >
-                            from
-                            <a class="footer__link" href="https://icomoon.io"
-                                >IcoMoon</a
-                            ></small
-                        >
-                    </p>
+                        </p>
+                    </div>
                     <p class="footer__copyright">
-                        <small>&copy; Pablo Asencio Sánchez 2020</small>
+                        <small>&copy; 2020 Pablo Asencio Sánchez</small>
                     </p>
                 </div>
             </footer>
