@@ -4,7 +4,7 @@
             var(--color-primary-dark-transparent),
             var(--white-primary-transparent)
         ),
-        url('../../images/tiles-sm_1x.jpg');
+        url('/images/tiles-sm_1x.jpg');
 
     background-size: cover;
     width: 100%;
@@ -28,7 +28,7 @@
                 var(--color-primary-dark-transparent),
                 var(--white-primary-transparent)
             ),
-            -webkit-image-set(url('../../images/tiles-sm_1x.jpg') 1x, url('../../images/tiles-sm_2x.jpg')
+            -webkit-image-set(url('/images/tiles-sm_1x.jpg') 1x, url('/images/tiles-sm_2x.jpg')
                         2x);
     }
 }
@@ -41,8 +41,8 @@
                 var(--white-primary-transparent)
             ),
             image-set(
-                url('../../images/tiles-sm_1x.jpg') 1x,
-                url('../../images/tiles-sm_2x.jpg') 2x
+                url('/images/tiles-sm_1x.jpg') 1x,
+                url('/images/tiles-sm_2x.jpg') 2x
             );
     }
 }
@@ -140,7 +140,7 @@
                 var(--color-primary-dark-transparent),
                 var(--white-primary-transparent)
             ),
-            url('../../images/tiles-md_1x.jpg');
+            url('/images/tiles-md_1x.jpg');
     }
 
     @supports (background-image: -webkit-image-set(url(''))) {
@@ -150,7 +150,7 @@
                     var(--color-primary-dark-transparent),
                     var(--white-primary-transparent)
                 ),
-                -webkit-image-set(url('../../images/tiles-md_1x.jpg') 1x, url('../../images/tiles-md_2x.jpg')
+                -webkit-image-set(url('/images/tiles-md_1x.jpg') 1x, url('/images/tiles-md_2x.jpg')
                             2x);
         }
     }
@@ -163,8 +163,8 @@
                     var(--white-primary-transparent)
                 ),
                 image-set(
-                    url('../../images/tiles-md_1x.jpg') 1x,
-                    url('../../images/tiles-md_2x.jpg') 2x
+                    url('/images/tiles-md_1x.jpg') 1x,
+                    url('/images/tiles-md_2x.jpg') 2x
                 );
         }
     }
@@ -186,7 +186,7 @@
                 var(--color-primary-dark-transparent),
                 var(--white-primary-transparent)
             ),
-            url('../../images/tiles-lg_1x.jpg');
+            url('/images/tiles-lg_1x.jpg');
     }
 
     @supports (background-image: -webkit-image-set(url(''))) {
@@ -196,7 +196,7 @@
                     var(--color-primary-dark-transparent),
                     var(--white-primary-transparent)
                 ),
-                -webkit-image-set(url('../../images/tiles-lg_1x.jpg') 1x, url('../../images/tiles-lg_2x.jpg')
+                -webkit-image-set(url('/images/tiles-lg_1x.jpg') 1x, url('/images/tiles-lg_2x.jpg')
                             2x);
         }
     }
@@ -209,8 +209,8 @@
                     var(--white-primary-transparent)
                 ),
                 image-set(
-                    url('../../images/tiles-lg_1x.jpg') 1x,
-                    url('../../images/tiles-lg_2x.jpg') 2x
+                    url('/images/tiles-lg_1x.jpg') 1x,
+                    url('/images/tiles-lg_2x.jpg') 2x
                 );
         }
     }
@@ -244,7 +244,7 @@
                 var(--color-primary-dark-transparent),
                 var(--white-primary-transparent)
             ),
-            url('../../images/tiles-xl_1x.jpg');
+            url('/images/tiles-xl_1x.jpg');
     }
 
     @supports (background-image: -webkit-image-set(url(''))) {
@@ -254,7 +254,7 @@
                     var(--color-primary-dark-transparent),
                     var(--white-primary-transparent)
                 ),
-                -webkit-image-set(url('../../images/tiles-xl_1x.jpg') 1x, url('../../images/tiles-xl_2x.jpg')
+                -webkit-image-set(url('/images/tiles-xl_1x.jpg') 1x, url('/images/tiles-xl_2x.jpg')
                             2x);
         }
     }
@@ -267,8 +267,8 @@
                     var(--white-primary-transparent)
                 ),
                 image-set(
-                    url('../../images/tiles-xl_1x.jpg') 1x,
-                    url('../../images/tiles-xl_2x.jpg') 2x
+                    url('/images/tiles-xl_1x.jpg') 1x,
+                    url('/images/tiles-xl_2x.jpg') 2x
                 );
         }
     }
