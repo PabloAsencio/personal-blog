@@ -53,6 +53,10 @@
     transform: translateY(-0.1rem) scale(1.03);
 }
 
+.post__author:focus-within {
+    box-shadow: 0 0 3px 3px var(--on-color-primary);
+}
+
 .post__date {
     margin-top: 0;
     color: var(--gray-secondary-light);
