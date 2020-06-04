@@ -4,7 +4,7 @@
             var(--color-primary-dark-transparent),
             var(--white-primary-transparent)
         ),
-        url('personal-blog/images/tiles-sm_1x.jpg');
+        url('/personal-blog/images/tiles-sm_1x.jpg');
 
     background-size: cover;
     width: 100%;
@@ -114,7 +114,7 @@
                 var(--color-primary-dark-transparent),
                 var(--white-primary-transparent)
             ),
-            url('personal-blog/images/tiles-md_1x.jpg');
+            url('/personal-blog/images/tiles-md_1x.jpg');
     }
 
     .header__circle {
@@ -134,7 +134,7 @@
                 var(--color-primary-dark-transparent),
                 var(--white-primary-transparent)
             ),
-            url('personal-blog/images/tiles-lg_1x.jpg');
+            url('/personal-blog/images/tiles-lg_1x.jpg');
     }
 }
 
@@ -166,7 +166,7 @@
                 var(--color-primary-dark-transparent),
                 var(--white-primary-transparent)
             ),
-            url('personal-blog/images/tiles-xl_1x.jpg');
+            url('/personal-blog/images/tiles-xl_1x.jpg');
     }
 
     .header__circle {
@@ -184,6 +184,6 @@
                 var(--color-primary-dark-transparent),
                 var(--white-primary-transparent)
             ),
-            url('personal-blog/images/tiles-xl_1x.jpg');
+            url('/personal-blog/images/tiles-xl_1x.jpg');
     }
 }
