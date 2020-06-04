@@ -4,7 +4,7 @@
             var(--color-primary-dark-transparent),
             var(--white-primary-transparent)
         ),
-        url('../../images/tiles-sm_1x.jpg');
+        url('personal-blog/images/tiles-sm_1x.jpg');
 
     background-size: cover;
     width: 100%;
@@ -19,19 +19,6 @@
         '.......... .......... .......... .......... .......... ..........'
         '.......... .......... .......... .......... .......... ..........'
         '.......... .......... .......... .......... .......... ..........';
-}
-
-@supports (background-image: image-set(url(''))) or
-    (background-image: -webkit-image-set(url(''))) {
-    .header {
-        background-image: linear-gradient(
-                to right bottom,
-                var(--color-primary-dark-transparent),
-                var(--white-primary-transparent)
-            ),
-            -webkit-image-set(url('../../images/tiles-sm_1x.jpg') 1x, url('../../images/tiles-sm_2x.jpg')
-                        2x);
-    }
 }
 
 /* Skip link */
@@ -127,20 +114,7 @@
                 var(--color-primary-dark-transparent),
                 var(--white-primary-transparent)
             ),
-            url('../../images/tiles-md_1x.jpg');
-    }
-
-    @supports (background-image: image-set(url(''))) or
-        (background-image: -webkit-image-set(url(''))) {
-        .header {
-            background-image: linear-gradient(
-                    to right bottom,
-                    var(--color-primary-dark-transparent),
-                    var(--white-primary-transparent)
-                ),
-                -webkit-image-set(url('../../images/tiles-md_1x.jpg') 1x, url('../../images/tiles-md_2x.jpg')
-                            2x);
-        }
+            url('personal-blog/images/tiles-md_1x.jpg');
     }
 
     .header__circle {
@@ -160,20 +134,7 @@
                 var(--color-primary-dark-transparent),
                 var(--white-primary-transparent)
             ),
-            url('../../images/tiles-lg_1x.jpg');
-    }
-
-    @supports (background-image: image-set(url(''))) or
-        (background-image: -webkit-image-set(url(''))) {
-        .header {
-            background-image: linear-gradient(
-                    to right bottom,
-                    var(--color-primary-dark-transparent),
-                    var(--white-primary-transparent)
-                ),
-                -webkit-image-set(url('../../images/tiles-lg_1x.jpg') 1x, url('../../images/tiles-lg_2x.jpg')
-                            2x);
-        }
+            url('personal-blog/images/tiles-lg_1x.jpg');
     }
 }
 
@@ -205,20 +166,7 @@
                 var(--color-primary-dark-transparent),
                 var(--white-primary-transparent)
             ),
-            url('../../images/tiles-xl_1x.jpg');
-    }
-
-    @supports (background-image: image-set(url(''))) or
-        (background-image: -webkit-image-set(url(''))) {
-        .header {
-            background-image: linear-gradient(
-                    to right bottom,
-                    var(--color-primary-dark-transparent),
-                    var(--white-primary-transparent)
-                ),
-                -webkit-image-set(url('../../images/tiles-xl_1x.jpg') 1x, url('../../images/tiles-xl_2x.jpg')
-                            2x);
-        }
+            url('personal-blog/images/tiles-xl_1x.jpg');
     }
 
     .header__circle {
@@ -226,5 +174,16 @@
         left: 26vw; */
         width: 30rem;
         height: 30rem;
+    }
+}
+
+@media (min-width: 2560px) {
+    .header {
+        background-image: linear-gradient(
+                to right bottom,
+                var(--color-primary-dark-transparent),
+                var(--white-primary-transparent)
+            ),
+            url('personal-blog/images/tiles-xl_1x.jpg');
     }
 }
