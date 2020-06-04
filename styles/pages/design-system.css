@@ -42,6 +42,12 @@
     flex-flow: column nowrap;
 }
 
+.typography__sample--blockquote {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+}
+
 /* Mobile landscape */
 @media (min-width: 550px) {
     .buttons {
@@ -150,9 +156,6 @@
 
     .typography__sample--blockquote {
         grid-area: blockquote;
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: flex-start;
     }
 }
 
