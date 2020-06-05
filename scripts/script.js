@@ -2,6 +2,7 @@
 // Accesible Slide Menu adapted from https://knowbility.org/blog/2020/accessible-slide-menus/
 
 // ** Constants **
+const mediaQueryList = window.matchMedia('(min-width: 768px)');
 const openButton = document.querySelector('.navigation__button--open');
 const slideOut = document.querySelector('.navigation__slide-out');
 const closeButton = document.querySelector('.navigation__button--close');
@@ -54,13 +55,34 @@ const moveFocusToBottom = (e) => {
     }
 };
 
-// ** Adding event listeners **
-openButton.addEventListener('click', openNavigation);
-closeButton.addEventListener('click', closeNavigation);
-slideOut.addEventListener('keyup', closeNavigation);
-closeButton.addEventListener('keydown', moveFocusToBottom);
-lastLink.addEventListener('keydown', moveFocusToTop);
+// Adds or removes
+const screenTest = (event) => {
+    if (event.matches) {
+        openButton.removeEventListener('click', openNavigation);
+        closeButton.removeEventListener('click', closeNavigation);
+        slideOut.removeEventListener('keyup', closeNavigation);
+        closeButton.removeEventListener('keydown', moveFocusToBottom);
+        lastLink.removeEventListener('keydown', moveFocusToTop);
+    } else {
+        openButton.addEventListener('click', openNavigation);
+        closeButton.addEventListener('click', closeNavigation);
+        slideOut.addEventListener('keyup', closeNavigation);
+        closeButton.addEventListener('keydown', moveFocusToBottom);
+        lastLink.addEventListener('keydown', moveFocusToTop);
+    }
+};
 
+// ** Adding event listeners **
+// Add the sliding menu functionality only if it is a small device
+if (!mediaQueryList.matches) {
+    openButton.addEventListener('click', openNavigation);
+    closeButton.addEventListener('click', closeNavigation);
+    slideOut.addEventListener('keyup', closeNavigation);
+    closeButton.addEventListener('keydown', moveFocusToBottom);
+    lastLink.addEventListener('keydown', moveFocusToTop);
+}
+
+mediaQueryList.addListener(screenTest);
 // *******************************************************************************
 
 // ***** Input validation *****

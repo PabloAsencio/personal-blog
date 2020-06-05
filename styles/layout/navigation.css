@@ -53,6 +53,7 @@
 
 .navigation__item:hover,
 .navigation__item:focus {
+    color: var(--color-secondary);
     text-decoration: underline;
 }
 
@@ -87,4 +88,62 @@
 .navigation__search-bar:focus,
 .navigation__search-bar:active {
     box-shadow: 0 0 3px 3px var(--color-tertiary);
+}
+
+/* Tablet Portrait*/
+@media (min-width: 768px) {
+    .navigation {
+        background-color: var(--color-primary-dark-transparent);
+        position: relative;
+    }
+
+    .navigation__button--open,
+    .navigation__button--close {
+        visibility: hidden;
+    }
+
+    /* Navbar */
+    .navigation__slide-out {
+        width: auto;
+        position: absolute;
+        overflow-x: visible;
+        background-color: transparent;
+        padding: 0.712rem 1rem;
+        visibility: visible;
+    }
+
+    .navigation__list {
+        display: flex;
+        align-items: center;
+    }
+
+    .navigation__item {
+        padding: 0.356rem 1rem;
+        font-size: 1.266rem;
+        margin: 0.712rem 0;
+        color: var(--white-primary);
+        display: inline-block;
+    }
+
+    .navigation__item:hover,
+    .navigation__item:focus {
+        color: var(--color-tertiary);
+    }
+
+    /* Search */
+    .navigation__search-bar {
+        font-size: 1.266rem;
+    }
+}
+
+/* Tablet Landscape */
+@media (min-width: 1024px) {
+    .navigation__item {
+        font-size: 1.424rem;
+        margin: 0.712rem 1.802rem;
+    }
+
+    .navigation__search-bar {
+        font-size: 1.424rem;
+    }
 }
