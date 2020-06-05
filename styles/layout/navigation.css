@@ -121,7 +121,7 @@
         padding: 0.356rem 1rem;
         font-size: 1.266rem;
         margin: 0.712rem 0;
-        color: var(--white-primary);
+        color: var(--on-color-secondary);
         display: inline-block;
     }
 
