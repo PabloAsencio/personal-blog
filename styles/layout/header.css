@@ -28,8 +28,8 @@
     top: -9rem;
     left: 0;
     right: 0;
-    color: var(--on-color-primary);
-    background-color: var(--color-primary);
+    color: var(--white-primary);
+    background-color: var(--color-primary-dark);
     text-align: center;
     padding: 1.424rem;
     overflow: hidden;
