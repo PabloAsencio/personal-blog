@@ -1,11 +1,4 @@
 .header {
-    background-image: linear-gradient(
-            to right bottom,
-            var(--color-primary-dark-transparent),
-            var(--white-primary-transparent)
-        ),
-        url('/personal-blog/images/tiles-sm_1x.jpg');
-
     background-size: cover;
     width: 100%;
     height: 100vh;
@@ -108,33 +101,9 @@
 
 /* Mobile L */
 @media (min-width: 600px) and (min-height: 425px) {
-    .header {
-        background-image: linear-gradient(
-                to right bottom,
-                var(--color-primary-dark-transparent),
-                var(--white-primary-transparent)
-            ),
-            url('/personal-blog/images/tiles-md_1x.jpg');
-    }
-
     .header__circle {
-        /* top: 20vh;
-        left: 33vw; */
         width: 25rem;
         height: 25rem;
-        /* transform: translate(-55%, -45%); */
-    }
-}
-
-/* Tablet Landscape */
-@media (min-width: 900px) {
-    .header {
-        background-image: linear-gradient(
-                to right bottom,
-                var(--color-primary-dark-transparent),
-                var(--white-primary-transparent)
-            ),
-            url('/personal-blog/images/tiles-lg_1x.jpg');
     }
 }
 
@@ -160,30 +129,8 @@
 
 /* Desktop Large */
 @media (min-width: 2560px) {
-    .header {
-        background-image: linear-gradient(
-                to right bottom,
-                var(--color-primary-dark-transparent),
-                var(--white-primary-transparent)
-            ),
-            url('/personal-blog/images/tiles-xl_1x.jpg');
-    }
-
     .header__circle {
-        /* top: 29vh;
-        left: 26vw; */
         width: 30rem;
         height: 30rem;
-    }
-}
-
-@media (min-width: 2560px) {
-    .header {
-        background-image: linear-gradient(
-                to right bottom,
-                var(--color-primary-dark-transparent),
-                var(--white-primary-transparent)
-            ),
-            url('/personal-blog/images/tiles-xl_1x.jpg');
     }
 }
